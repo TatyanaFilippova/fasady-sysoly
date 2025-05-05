@@ -9,7 +9,7 @@ import {
   ShellDescription,
   ButtonFacade,
 } from "@/components/facadesMilling/FacadesMilling.styled";
-import { facadesList } from "@/helpers/facadesList";
+import { homeFacadesList } from "@/helpers/homeFacadesList";
 import kitchen from "../../img/kitchen.png";
 
 const FacadesMilling = () => {
@@ -20,7 +20,7 @@ const FacadesMilling = () => {
         <Container>
           <Img src={kitchen.src} />
           <Shell>
-            {facadesList.map((facades) => (
+            {homeFacadesList.map((facades) => (
               <ShellFacade key={facades.title}>
                 <img src={facades.img} alt="кухня" />
                 <div>&#34;{facades.title}&#34;</div>

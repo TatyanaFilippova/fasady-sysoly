@@ -1,0 +1,55 @@
+import {
+  Title,
+  Wrapper,
+  Img,
+  Shell,
+  Container,
+  ImgFacade,
+} from "@/components/facadesIntegratedHandles/FacadesIntegratedHandles.styled";
+import kitchenIntegrated from "../../img/kitchenIntegrated.png";
+import { homeFacadesIntegrated } from "@/helpers/homeFacadesIntegrated";
+import pen from "../../img/pen.png";
+import {
+  ButtonFacade,
+  Description,
+  ShellDescription,
+} from "@/components/facadesMilling/FacadesMilling.styled";
+
+const FacadesIntegratedHandles = () => {
+  return (
+    <>
+      <Wrapper>
+        <Title>Фасады с интегрированными ручками</Title>
+        <Container>
+          <Img src={kitchenIntegrated.src} />
+          <Shell>
+            {homeFacadesIntegrated.map((facade) => (
+              <div key={facade.img}>
+                <ImgFacade src={facade.img} />
+              </div>
+            ))}
+            <img src={pen.src} />
+          </Shell>
+        </Container>{" "}
+        <div>
+          <ShellDescription>
+            <div>
+              <Description>
+                Производство и покраска готовых фасадов с фрезеровкой
+              </Description>
+              <Description>
+                Большой выбор фрезеровок Красиво смотрятся, легко ухаживать
+              </Description>
+            </div>
+            <div>
+              {" "}
+              <ButtonFacade>Посмотреть все варианты ручек</ButtonFacade>
+            </div>
+          </ShellDescription>
+        </div>
+      </Wrapper>
+    </>
+  );
+};
+
+export default FacadesIntegratedHandles;

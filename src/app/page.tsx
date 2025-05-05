@@ -3,6 +3,7 @@
 import Header from "@/components/header/Header";
 import HomeBanner from "@/components/homeBanner/HomeBanner";
 import FacadesMilling from "@/components/facadesMilling/FacadesMilling";
+import FacadesIntegratedHandles from "@/components/facadesIntegratedHandles/FacadesIntegratedHandles";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <HomeBanner />
       <FacadesMilling />
+      <FacadesIntegratedHandles />
     </>
   );
 }

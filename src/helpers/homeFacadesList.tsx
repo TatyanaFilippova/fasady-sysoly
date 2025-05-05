@@ -9,7 +9,7 @@ export interface Facade {
   title: string;
 }
 
-export const facadesList: Facade[] = [
+export const homeFacadesList: Facade[] = [
   {
     img: catamaran.src,
     title: "Катамаран",
