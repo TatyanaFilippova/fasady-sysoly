@@ -12,31 +12,18 @@ export const Title = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 146px;
+  margin-bottom: 146px;
   ${layout}
 `;
 
 export const Img = styled.img`
-  width: 800px;
-  margin-left: -110px;
-`;
-
-export const Shell = styled.div`
-  display: flex;
-  padding-left: 28px;
-  flex-wrap: wrap;
-  gap: 34px;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
+  height: 600px;
+  width: 100%;
 `;
 
 export const Container = styled.div`
   display: flex;
-`;
-
-export const ImgFacade = styled.img`
-  width: 300px;
-  height: 310px;
-`;
-
-export const ImgPen = styled.img`
-  object-fit: cover;
-  width: 634px;
+  gap: 20px;
 `;

@@ -5,6 +5,7 @@ import {
   Shell,
   Container,
   ImgFacade,
+  ImgPen,
 } from "@/components/facadesIntegratedHandles/FacadesIntegratedHandles.styled";
 import kitchenIntegrated from "../../img/kitchenIntegrated.png";
 import { homeFacadesIntegrated } from "@/helpers/homeFacadesIntegrated";
@@ -28,7 +29,7 @@ const FacadesIntegratedHandles = () => {
                 <ImgFacade src={facade.img} />
               </div>
             ))}
-            <img src={pen.src} />
+            <ImgPen src={pen.src} />
           </Shell>
         </Container>{" "}
         <div>
