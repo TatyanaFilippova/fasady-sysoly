@@ -28,3 +28,28 @@ export const Container = styled.div`
   gap: 20px;
   justify-content: space-between;
 `;
+
+export const ButtonFacade = styled.button`
+  padding: 32px 60px;
+
+  background-color: #4f4f4f;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+`;
+
+export const Description = styled.div`
+  padding-top: 34px;
+  font-size: 36px;
+  color: black;
+  font-weight: 300;
+`;
+
+export const ShellDescription = styled.div`
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  align-items: flex-end;
+`;

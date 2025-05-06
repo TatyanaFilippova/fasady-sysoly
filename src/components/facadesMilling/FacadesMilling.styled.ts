@@ -55,14 +55,14 @@ export const Description = styled.div`
 export const ShellDescription = styled.div`
   margin-top: 104px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-bottom: 10px;
   align-items: flex-end;
 `;
 
 export const ButtonFacade = styled.button`
-  padding: 24px 24px;
-
+  padding: 32px 60px;
+  white-space: nowrap;
   background-color: #4f4f4f;
   color: white;
   font-size: 20px;
