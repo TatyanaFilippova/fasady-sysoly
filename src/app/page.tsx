@@ -7,6 +7,7 @@ import FacadesIntegratedHandles from "@/components/facadesIntegratedHandles/Faca
 import RadiusFacades from "@/components/radiusFacades/RadiusFacades";
 import OtherServices from "@/components/otherServices/OtherServices";
 import WhyUs from "@/components/whyUs/WhyUs";
+import Contacts from "@/components/сontacts/Contacts";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <RadiusFacades />
       <OtherServices />
       <WhyUs />
+      <Contacts />
     </>
   );
 }

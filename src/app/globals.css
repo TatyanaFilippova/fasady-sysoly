@@ -6,7 +6,10 @@
   font-weight: 200;
   color: #4f4f4f;
 }
-
+b {
+  font-weight: 300;
+  color: black;
+}
 *,
 *::before,
 *::after {
@@ -50,6 +53,7 @@ p {
 ul,
 ul li {
   list-style: none;
+  color: inherit;
 }
 
 img {

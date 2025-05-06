@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 226px;
   height: 350px;
-  margin-bottom: 300px;
+  margin-bottom: 146px;
   ${layout}
 `;
 
