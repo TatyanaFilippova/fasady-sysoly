@@ -3,13 +3,13 @@ import {
   Img,
   Title,
   Wrapper,
+  ShellDescription,
 } from "@/components/radiusFacades/RadiusFacades.styled";
 import kitchenRadius from "@/img/kitchenRadius.png";
 import facadesRadius from "@/img/facadesRadius.png";
 import {
   ButtonFacade,
   Description,
-  ShellDescription,
 } from "@/components/facadesMilling/FacadesMilling.styled";
 
 const RadiusFacades = () => {
@@ -30,9 +30,8 @@ const RadiusFacades = () => {
             <Description>
               Производство и покраска готовых фасадов с фрезеровкой
             </Description>
-            <Description>
-              Большой выбор фрезеровок Красиво смотрятся, легко ухаживать
-            </Description>
+            <Description>Большой выбор фрезеровок</Description>
+            <Description>Красиво смотрятся, легко ухаживать</Description>
           </div>
           <div>
             <ButtonFacade>Подробнее о радиусных фасадах</ButtonFacade>

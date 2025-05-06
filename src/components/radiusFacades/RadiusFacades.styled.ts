@@ -28,3 +28,11 @@ export const Container = styled.div`
   gap: 20px;
   justify-content: space-between;
 `;
+
+export const ShellDescription = styled.div`
+  margin-top: 104px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items: flex-end;
+`;

@@ -43,7 +43,7 @@ export const ShellFacade = styled.div`
 `;
 
 export const Description = styled.div`
-  width: 56%;
+  width: 65%;
   font-size: 32px;
   line-height: 60px;
 

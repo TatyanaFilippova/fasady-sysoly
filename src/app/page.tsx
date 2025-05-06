@@ -6,6 +6,7 @@ import FacadesMilling from "@/components/facadesMilling/FacadesMilling";
 import FacadesIntegratedHandles from "@/components/facadesIntegratedHandles/FacadesIntegratedHandles";
 import RadiusFacades from "@/components/radiusFacades/RadiusFacades";
 import OtherServices from "@/components/otherServices/OtherServices";
+import WhyUs from "@/components/whyUs/WhyUs";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <FacadesIntegratedHandles />
       <RadiusFacades />
       <OtherServices />
+      <WhyUs />
     </>
   );
 }

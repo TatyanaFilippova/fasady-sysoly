@@ -38,9 +38,8 @@ const FacadesIntegratedHandles = () => {
               <Description>
                 Производство и покраска готовых фасадов с фрезеровкой
               </Description>
-              <Description>
-                Большой выбор фрезеровок Красиво смотрятся, легко ухаживать
-              </Description>
+              <Description>Большой выбор фрезерово</Description>
+              <Description>Красиво смотрятся, легко ухаживать</Description>
             </div>
             <div>
               {" "}

@@ -33,9 +33,8 @@ const FacadesMilling = () => {
             <Description>
               Производство и покраска готовых фасадов с фрезеровкой
             </Description>
-            <Description>
-              Большой выбор фрезеровок Красиво смотрятся, легко ухаживать
-            </Description>
+            <Description>Большой выбор фрезеровок</Description>
+            <Description>Красиво смотрятся, легко ухаживать</Description>
           </div>
           <div>
             {" "}
