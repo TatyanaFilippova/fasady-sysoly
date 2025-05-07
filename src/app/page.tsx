@@ -8,6 +8,7 @@ import RadiusFacades from "@/components/radiusFacades/RadiusFacades";
 import OtherServices from "@/components/otherServices/OtherServices";
 import WhyUs from "@/components/whyUs/WhyUs";
 import Contacts from "@/components/сontacts/Contacts";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <OtherServices />
       <WhyUs />
       <Contacts />
+      <Footer />
     </>
   );
 }
