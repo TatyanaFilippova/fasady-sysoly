@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { layout } from "@/styles";
+import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -15,24 +16,54 @@ export const Title = styled.div`
   color: black;
   font-weight: 400;
   margin-bottom: 10px;
+
+  ${media.phone} {
+    font-size: 28px;
+  }
 `;
 
 export const Img = styled.img`
-  width: 800px;
-  margin-left: -110px;
+  height: 800px;
+  width: 950px;
+  object-fit: cover;
+  ${media.phone} {
+    height: 500px;
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const ImgFacade = styled.img`
+  ${media.phone} {
+    height: 160px;
+    width: 104px;
+  }
 `;
 
 export const Shell = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 48px;
-
   margin-left: 40px;
+  width: 50%;
+
+  ${media.phone} {
+    margin-left: 0;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+  }
 `;
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
+
+  ${media.phone} {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 export const ShellFacade = styled.div`
@@ -40,6 +71,10 @@ export const ShellFacade = styled.div`
   flex-direction: column;
   gap: 14px;
   font-size: 24px;
+
+  ${media.phone} {
+    gap: 4px;
+  }
 `;
 
 export const Description = styled.div`
@@ -50,6 +85,12 @@ export const Description = styled.div`
   &:first-child {
     line-height: normal;
   }
+
+  ${media.phone} {
+    font-size: 20px;
+    line-height: 30px;
+    width: 90%;
+  }
 `;
 
 export const ShellDescription = styled.div`
@@ -58,6 +99,12 @@ export const ShellDescription = styled.div`
   justify-content: center;
   padding-bottom: 10px;
   align-items: flex-end;
+
+  ${media.phone} {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 52px;
+  }
 `;
 
 export const ButtonFacade = styled.button`
@@ -68,4 +115,26 @@ export const ButtonFacade = styled.button`
   font-size: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+  ${media.phone} {
+    width: 100%;
+    padding: 16px 30px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+`;
+
+export const ImgWrapper = styled.div`
+  margin-left: -110px;
+  width: 60%;
+  ${media.phone} {
+    margin: 0 -24px;
+    width: calc(100% + 48px);
+  }
+`;
+
+export const TItleFacade = styled.div`
+  ${media.phone} {
+    font-size: 16px;
+  }
 `;

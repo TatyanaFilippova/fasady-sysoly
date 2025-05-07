@@ -8,6 +8,9 @@ import {
   Description,
   ShellDescription,
   ButtonFacade,
+  ImgFacade,
+  ImgWrapper,
+  TItleFacade,
 } from "@/components/facadesMilling/FacadesMilling.styled";
 import { homeFacadesList } from "@/helpers/homeFacadesList";
 import kitchen from "../../img/kitchen.png";
@@ -18,12 +21,14 @@ const FacadesMilling = () => {
       <Wrapper>
         <Title>Фасады с фрезеровкой</Title>
         <Container>
-          <Img src={kitchen.src} />
+          <ImgWrapper>
+            <Img src={kitchen.src} />
+          </ImgWrapper>
           <Shell>
             {homeFacadesList.map((facades) => (
               <ShellFacade key={facades.title}>
-                <img src={facades.img} alt="кухня" />
-                <div>&#34;{facades.title}&#34;</div>
+                <ImgFacade src={facades.img} alt="кухня" />
+                <TItleFacade>&#34;{facades.title}&#34;</TItleFacade>
               </ShellFacade>
             ))}
           </Shell>
@@ -37,7 +42,6 @@ const FacadesMilling = () => {
             <Description>Красиво смотрятся, легко ухаживать</Description>
           </div>
           <div>
-            {" "}
             <ButtonFacade>Посмотреть все варианты фрезеровок</ButtonFacade>
           </div>
         </ShellDescription>
