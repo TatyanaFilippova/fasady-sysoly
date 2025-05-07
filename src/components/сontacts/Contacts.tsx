@@ -3,6 +3,7 @@ import {
   Wrapper,
   Content,
   ShellText,
+  MapShell,
 } from "@/components/сontacts/Contacts.styled";
 import { contactsList } from "@/helpers/contactsList";
 import { Map } from "./Map";
@@ -29,7 +30,9 @@ const Contacts = () => {
           <Content>{contactsList.location}</Content>
         </div>
       </ShellText>
-      <Map />
+      <MapShell>
+        <Map />
+      </MapShell>
     </Wrapper>
   );
 };

@@ -46,6 +46,9 @@ export const Shell = styled.div`
   gap: 48px;
   margin-left: 40px;
   width: 50%;
+  & > div {
+    width: calc(50% - 24px);
+  }
 
   ${media.phone} {
     gap: 14px;
@@ -61,6 +64,7 @@ export const Shell = styled.div`
 `;
 
 export const Container = styled.div`
+  display: flex;
   ${media.phone} {
     flex-direction: column;
     width: 100%;
@@ -68,8 +72,8 @@ export const Container = styled.div`
 `;
 
 export const ImgFacade = styled.img`
-  width: 300px;
-  height: 310px;
+  width: 100%;
+  height: 220px;
 
   ${media.phone} {
     height: 140px;
@@ -79,7 +83,7 @@ export const ImgFacade = styled.img`
 
 export const ImgPen = styled.img`
   object-fit: cover;
-  width: 634px;
+  width: 100%;
 `;
 
 export const ImgWrapper = styled.div`

@@ -25,12 +25,13 @@ export const Wrapper = styled.div`
     flex-direction: column;
     gap: 26px;
     height: auto;
+    margin-bottom: 100px;
   }
 `;
 
 export const Title = styled.div`
   font-size: 48px;
-  font-weight: 300;
+  font-weight: 400;
   color: black;
   white-space: nowrap;
 
@@ -46,7 +47,7 @@ export const TitleDescription = styled.div`
   padding-bottom: 10px;
 
   ${media.phone} {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
@@ -59,5 +60,5 @@ export const Container = styled.div`
 `;
 
 export const TextBlock = styled.div`
-  font-size: 14px;
+  font-size: 16px;
 `;

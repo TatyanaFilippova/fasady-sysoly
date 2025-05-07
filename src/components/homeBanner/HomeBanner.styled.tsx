@@ -33,8 +33,13 @@ export const Container = styled.img`
 
 export const HomeBannericon = styled.img`
   position: absolute;
-  right: -140px;
+  right: -20px;
   top: 75px;
+
+  ${media.phone} {
+    right: -130px;
+    top: 95px;
+  }
 `;
 
 export const Title = styled.h1`

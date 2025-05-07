@@ -34,7 +34,7 @@ const FacadesIntegratedHandles = () => {
             ))}
             <ImgPen src={pen.src} />
           </Shell>
-        </Container>{" "}
+        </Container>
         <div>
           <ShellDescription>
             <div>
