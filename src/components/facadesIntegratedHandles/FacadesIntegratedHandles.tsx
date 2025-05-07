@@ -6,6 +6,7 @@ import {
   Container,
   ImgFacade,
   ImgPen,
+  ImgWrapper,
 } from "@/components/facadesIntegratedHandles/FacadesIntegratedHandles.styled";
 import kitchenIntegrated from "../../img/kitchenIntegrated.png";
 import { homeFacadesIntegrated } from "@/helpers/homeFacadesIntegrated";
@@ -22,7 +23,9 @@ const FacadesIntegratedHandles = () => {
       <Wrapper>
         <Title>Фасады с интегрированными ручками</Title>
         <Container>
-          <Img src={kitchenIntegrated.src} />
+          <ImgWrapper>
+            <Img src={kitchenIntegrated.src} />
+          </ImgWrapper>
           <Shell>
             {homeFacadesIntegrated.map((facade) => (
               <div key={facade.img}>

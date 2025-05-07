@@ -4,6 +4,7 @@ import {
   Wrapper,
   TitleDescription,
   Container,
+  TextBlock,
 } from "@/components/whyUs/WhyUs.styled";
 import { description } from "@/helpers/whyUsDescription";
 
@@ -15,7 +16,7 @@ const WhyUs = () => {
         {description.map((item) => (
           <Container key={item.title}>
             <TitleDescription>{item.title}</TitleDescription>
-            <div>{item.text}</div>
+            <TextBlock>{item.text}</TextBlock>
           </Container>
         ))}
       </ShellText>

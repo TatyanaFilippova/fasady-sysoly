@@ -8,7 +8,11 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   margin-bottom: 146px;
 
-  ${layout}
+  ${layout};
+
+  ${media.phone} {
+    margin-bottom: 100px;
+  }
 `;
 
 export const Title = styled.div`
