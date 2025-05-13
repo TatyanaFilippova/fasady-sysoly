@@ -1,3 +1,5 @@
+"use client";
+
 import homeBanner from "../../../img/homeBanner.png";
 import {
   Wrapper,

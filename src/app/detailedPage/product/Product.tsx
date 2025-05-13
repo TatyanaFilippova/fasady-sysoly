@@ -14,15 +14,30 @@ import {
   ButtonProduct,
 } from "./Product.styled";
 
-import imageBlock from "../../../img/imageBlock.png";
+import { imgList } from "@/app/detailedPage/productList/ProductList";
 
 interface IProduct {
   title: string;
   description: string;
   imgProduct: string;
+  imgList: string[];
+  dimensions: string;
+  height: string;
+  thickness: string;
+  width: string;
+  color: string;
 }
 
-const Product = ({ title, description, imgProduct }: IProduct) => {
+const Product = ({
+  title,
+  description,
+  imgProduct,
+  dimensions,
+  thickness,
+  height,
+  width,
+  color,
+}: IProduct) => {
   return (
     <Wrapper>
       <div>
@@ -35,16 +50,15 @@ const Product = ({ title, description, imgProduct }: IProduct) => {
           <ImgBlock>
             <ImgProduct src={imgProduct} />
           </ImgBlock>
-
           <TextBlockShell>
-            <TextBlock>Размеры (min и max): </TextBlock>
-            <TextBlock>Толщина h: </TextBlock>
-            <TextBlock>Высота:</TextBlock>
-            <TextBlock>Ширина: </TextBlock>
+            <TextBlock>Размеры (min и max): {dimensions} </TextBlock>
+            <TextBlock>Толщина h: {thickness}</TextBlock>
+            <TextBlock>Высота: {height}</TextBlock>
+            <TextBlock>Ширина: {width}</TextBlock>
             <TextDescription>
               Рекомендуется изготавливать в МДФ толщиной не менее 19 мм
             </TextDescription>
-            <TextDescription>Цвет:</TextDescription>
+            <TextDescription>Цвет: {color}</TextDescription>
             <TextBlock>
               С каталога RAL, NCS, Wood Color, Color System или подбор
             </TextBlock>
@@ -52,9 +66,9 @@ const Product = ({ title, description, imgProduct }: IProduct) => {
           </TextBlockShell>
         </Shell>
         <WrapperImage>
-          <Img src={imageBlock.src} />
-          <Img src={imageBlock.src} />
-          <Img src={imageBlock.src} />
+          {imgList.map((item) => (
+            <Img src={item} key={item} />
+          ))}
         </WrapperImage>
       </Container>
       <ButtonProduct>Заказать</ButtonProduct>
