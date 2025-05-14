@@ -1,14 +1,16 @@
 "use client";
 
 import Product from "@/app/detailedPage/product/Product";
-import imgProduct from "../../../img/imageBanner.png";
-import imageBlock from "../../../img/imageBlock.png";
-
-export const imgList = [imageBlock.src, imageBlock.src, imageBlock.src];
 
 interface ProductListProps {
   data: {
     title: string;
+    ImgProduct: {
+      url: string;
+    };
+    imgList: {
+      url: string;
+    }[];
   }[];
 }
 
@@ -19,8 +21,10 @@ const ProductList = ({ data }: ProductListProps) => {
         <Product
           title={product.title}
           description="Описание раздела. Может его не быть"
-          imgProduct={imgProduct.src}
-          imgList={imgList}
+          imgProduct={"http://localhost:1337" + product.ImgProduct.url}
+          imgList={product.imgList.map(
+            (product) => "http://localhost:1337" + product.url,
+          )}
           width="23"
           height="23"
           dimensions="23"

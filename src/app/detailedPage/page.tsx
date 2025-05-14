@@ -4,7 +4,7 @@ import ProductList from "@/app/detailedPage/productList/ProductList";
 import Footer from "@/components/footer/Footer";
 
 export default async function Home() {
-  const data = await fetch("http://localhost:1337/api/facades");
+  const data = await fetch("http://localhost:1337/api/facades?populate=*");
   const posts = await data.json();
   return (
     <>

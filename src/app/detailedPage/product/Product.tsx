@@ -14,8 +14,6 @@ import {
   ButtonProduct,
 } from "./Product.styled";
 
-import { imgList } from "@/app/detailedPage/productList/ProductList";
-
 interface IProduct {
   title: string;
   description: string;
@@ -37,6 +35,7 @@ const Product = ({
   height,
   width,
   color,
+  imgList,
 }: IProduct) => {
   return (
     <Wrapper>
