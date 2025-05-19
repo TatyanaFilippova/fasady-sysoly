@@ -2,7 +2,7 @@
 
 import Product from "@/app/detailedPage/product/Product";
 
-interface ProductListProps {
+export interface ProductListProps {
   data: {
     title: string;
     ImgProduct: {
@@ -11,6 +11,11 @@ interface ProductListProps {
     imgList: {
       url: string;
     }[];
+    width: string;
+    height: string;
+    dimensions: string;
+    thickness: string;
+    color: string;
   }[];
 }
 
@@ -25,11 +30,11 @@ const ProductList = ({ data }: ProductListProps) => {
           imgList={product.imgList.map(
             (product) => "http://localhost:1337" + product.url,
           )}
-          width="23"
-          height="23"
-          dimensions="23"
-          thickness="23"
-          color="23"
+          width={product.width}
+          height={product.height}
+          dimensions={product.dimensions}
+          thickness={product.thickness}
+          color={product.color}
           key={product.title}
         ></Product>
       ))}

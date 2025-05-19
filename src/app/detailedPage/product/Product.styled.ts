@@ -64,14 +64,21 @@ export const WrapperImage = styled.div`
 
 export const ImgBlock = styled.div`
   width: 100%;
-  margin-right: 140px;
 `;
 
-export const Img = styled.img`
+export const Img = styled.img<{ $length: string }>`
   width: calc(50% - 12px);
   height: 506px;
   &:nth-child(1) {
-    width: 100%;
+    width: ${(props) => {
+      if (props.$length === "3" || props.$length === "1") {
+        return "100%";
+      } else if (props.$length === "2" || props.$length === "4") {
+        return "calc(50% - 12px)";
+      } else {
+        return "auto"; // значение по умолчанию
+      }
+    }};
   }
 `;
 

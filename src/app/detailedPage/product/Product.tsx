@@ -49,6 +49,7 @@ const Product = ({
           <ImgBlock>
             <ImgProduct src={imgProduct} />
           </ImgBlock>
+
           <TextBlockShell>
             <TextBlock>Размеры (min и max): {dimensions} </TextBlock>
             <TextBlock>Толщина h: {thickness}</TextBlock>
@@ -66,7 +67,7 @@ const Product = ({
         </Shell>
         <WrapperImage>
           {imgList.map((item) => (
-            <Img src={item} key={item} />
+            <Img src={item} key={item} $length={imgList.length.toString()} />
           ))}
         </WrapperImage>
       </Container>
