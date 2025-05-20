@@ -15,7 +15,7 @@ const Header = () => {
         <Title>Фасады Сысолы</Title>
         <Shell>
           <div>Производство фасадов</div>
-          <div>Покраска</div>
+          <div>О компании</div>
           <div>Услуги</div>
           <div>Прочие товары</div>
           <div>Горантия и сроки</div>
