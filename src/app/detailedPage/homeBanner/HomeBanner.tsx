@@ -9,7 +9,7 @@ import {
   Shell,
   Container,
   ButtonHome,
-} from "../homeBanner/homeBanner.styled";
+} from "./HomeBanner.styled";
 
 const HomeBanner = () => {
   return (

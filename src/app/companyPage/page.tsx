@@ -5,11 +5,11 @@ import Connection from "@/app/companyPage/connection/Connection";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Header />
       <HomeBanner />
       <Connection />
       <Footer />
-    </>
+    </div>
   );
 }
