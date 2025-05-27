@@ -11,8 +11,11 @@ import {
 } from "./HomeBanner.styled";
 import icon1 from "./img/icon1.png";
 import icon2 from "./img/icon2.png";
+import React from "react";
+import ModalWindow from "@/components/modalWindow/ModalWindow";
 
 const HomeBanner = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <Content>
       <Wrapper>
@@ -22,7 +25,12 @@ const HomeBanner = () => {
         <Description>
           <Title>Мебельные фасады и не только</Title>
           <BlockText>Обнови свою кухню прямо сейчас</BlockText>
-          <ButtonHomeBanner>Связаться с нами</ButtonHomeBanner>
+          <ButtonHomeBanner onClick={() => setIsOpen(!isOpen)}>
+            Связаться с нами
+          </ButtonHomeBanner>
+          {isOpen && (
+            <ModalWindow isOpen={isOpen} setIsOpen={setIsOpen}></ModalWindow>
+          )}
         </Description>
       </Wrapper>
     </Content>

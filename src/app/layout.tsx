@@ -38,7 +38,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {" "}
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          {children}
+          <div id="Modal"></div>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
