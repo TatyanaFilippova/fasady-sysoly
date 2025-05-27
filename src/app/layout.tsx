@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import LocalFont from "next/font/local";
+import StyledComponentsRegistry from "@/app/lib/registry";
 
 const inter = LocalFont({
   src: [
@@ -35,7 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {" "}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }

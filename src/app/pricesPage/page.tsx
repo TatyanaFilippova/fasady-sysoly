@@ -1,3 +1,5 @@
+"use client";
+
 import Header from "@/components/header/Header";
 import Prices from "@/app/pricesPage/Prices";
 import Footer from "@/components/footer/Footer";

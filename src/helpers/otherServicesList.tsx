@@ -13,7 +13,7 @@ export interface Services {
 export const otherServicesList: Services[] = [
   {
     img: img1.src,
-    title: "Покраска фасадов, и прочих изделий",
+    title: "Покраска фасадов и прочих изделий",
     description:
       "Покраска изделий из дерева, металла, пластика.\n" +
       "Покраска обратной стороны фасада",

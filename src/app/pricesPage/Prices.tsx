@@ -1,4 +1,3 @@
-"use client";
 import {
   Table,
   TableHead,
@@ -9,7 +8,7 @@ import {
   Wrapper,
 } from "@/app/pricesPage/Prices.styled";
 import { prices } from "@/helpers/prices";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Products } from "@/app/pricesPage/Products";
 
 const Prices = () => {

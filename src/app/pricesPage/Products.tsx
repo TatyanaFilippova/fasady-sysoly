@@ -1,3 +1,4 @@
+"use client";
 import {
   TableTd,
   TableTr,
@@ -29,8 +30,8 @@ export const Products = ({ products }: ProductProps) => {
               {isOpen ? "Скрыть" : "Показать все"}
             </Button>
           </TableTdButton>
-          <TableTd></TableTd>
-          <TableTd></TableTd>
+          <td></td>
+          <td></td>
         </TableTr>
       )}
     </>

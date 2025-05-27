@@ -34,9 +34,14 @@ export const Shell = styled.div`
 export const Title = styled.div`
   font-size: 32px;
   font-weight: 400;
+  cursor: pointer;
 
   ${media.phone} {
     font-size: 24px;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 `;
 
@@ -54,4 +59,22 @@ export const Number = styled.div`
 
 export const Border = styled.div`
   border: 1px solid #e6e6e6;
+`;
+
+export const Prices = styled.button`
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+export const Services = styled.button`
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+export const Company = styled.button`
+  &:hover {
+    opacity: 0.7;
+  }
 `;
