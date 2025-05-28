@@ -1,5 +1,16 @@
 import React from "react";
 import Modal from "react-modal";
+import close from "./img/Close.png";
+import qr from "./img/QR.png";
+import {
+  CloseImg,
+  Wrapper,
+  Shell,
+  Title,
+  Content,
+  QrImg,
+  Link,
+} from "@/app/../components/modalWindow/ModalWindow.styled";
 
 const customStyles = {
   content: {
@@ -37,16 +48,33 @@ function ModalWindow({ isOpen, setIsOpen }: Props) {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+        <Shell>
+          <button onClick={closeModal}>
+            <CloseImg src={close.src} />
+          </button>{" "}
+          <Wrapper>
+            <div>
+              <QrImg src={qr.src} />
+            </div>
+            <Title>https://vk.com/centrcveta?from=groups</Title>
+
+            <form>
+              <input />
+              <Content>
+                Чтобы заказать фасад, услугу или просто задать вопрос, напишите
+                нам в Вк
+              </Content>
+
+              <Link
+                href="https://vk.com/centrcveta?from=groups"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Перейти
+              </Link>
+            </form>
+          </Wrapper>
+        </Shell>
       </Modal>
     </div>
   );

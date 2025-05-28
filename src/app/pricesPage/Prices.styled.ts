@@ -12,7 +12,7 @@ export const Title = styled.caption`
   font-weight: 300;
   margin-bottom: 60px;
   text-align: left;
-  margin-top: 150px;
+  margin-top: 100px;
 `;
 
 export const Table = styled.table`
