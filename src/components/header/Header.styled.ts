@@ -78,3 +78,34 @@ export const Company = styled.button`
     opacity: 0.7;
   }
 `;
+
+export const Menu = styled.div`
+  width: 194px;
+  background-color: #aaa6a6;
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: -12px;
+`;
+
+export const ShellMenu = styled.div`
+  position: relative;
+  cursor: pointer;
+`;
+
+export const LabelMenu = styled.div`
+  color: white;
+  line-height: 24px;
+`;
+
+export const ShellLabel = styled.div`
+  padding: 10px 16px;
+
+  &:hover {
+    background-color: rgba(214, 212, 212, 0.91);
+  }
+`;

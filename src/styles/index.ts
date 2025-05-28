@@ -7,5 +7,5 @@ export const layout = css`
   //width: 100vw;
   padding-left: 24px;
   padding-right: 24px;
-  overflow: hidden;
+  //overflow-x: hidden;
 `;
