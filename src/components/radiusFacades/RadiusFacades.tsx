@@ -11,8 +11,10 @@ import {
   ButtonFacade,
   Description,
 } from "@/components/facadesMilling/FacadesMilling.styled";
+import { useRouter } from "next/navigation";
 
 const RadiusFacades = () => {
+  const router = useRouter();
   return (
     <Wrapper>
       <Title>Радиусные фасады</Title>
@@ -34,7 +36,9 @@ const RadiusFacades = () => {
             <Description>Красиво смотрятся, легко ухаживать</Description>
           </div>
           <div>
-            <ButtonFacade>Подробнее о радиусных фасадах</ButtonFacade>
+            <ButtonFacade onClick={() => router.push("/RadiusFacadesPage")}>
+              Подробнее о радиусных фасадах
+            </ButtonFacade>
           </div>
         </ShellDescription>
       </div>

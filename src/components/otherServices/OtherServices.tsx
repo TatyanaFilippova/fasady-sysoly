@@ -8,8 +8,10 @@ import {
   ShellDescription,
 } from "@/components/otherServices/OtherServices.styled";
 import services from "@/img/services.png";
+import { useRouter } from "next/navigation";
 
 const OtherServices = () => {
+  const router = useRouter();
   return (
     <Wrapper>
       <Title>Другие услуги</Title>
@@ -25,7 +27,9 @@ const OtherServices = () => {
       </Container>
       <div>
         <ShellDescription>
-          <ButtonFacade>Посмотреть все услуги</ButtonFacade>
+          <ButtonFacade onClick={() => router.push("otherServicesPage")}>
+            Посмотреть все услуги
+          </ButtonFacade>
         </ShellDescription>
       </div>
     </Wrapper>

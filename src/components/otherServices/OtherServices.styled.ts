@@ -55,6 +55,21 @@ export const ButtonFacade = styled.button`
   border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  display: inline-block;
+  transition: all 0.2s;
+  position: relative;
+  top: 0;
+
+  &:active {
+    top: 3px;
+    box-shadow: 0 2px 0 #387796;
+    transition: all 0.2s;
+  }
+
   ${media.phone} {
     padding: 16px 30px;
     font-size: 16px;
