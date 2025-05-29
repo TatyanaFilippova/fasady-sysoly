@@ -7,18 +7,19 @@ import {
   Title,
   Number,
   Border,
-  Prices,
-  Services,
   Company,
   Menu,
   ShellMenu,
   LabelMenu,
   ShellLabel,
+  CompanyButton,
+  MenuServices,
 } from "@/components/header/Header.styled";
 import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpenServices, setMenuOpenServices] = useState(false);
   const options = [
     { value: "1", label: "Фасады с фрезеровкой", href: "/detailedPage" },
     {
@@ -29,6 +30,11 @@ const Header = () => {
     { value: "3", label: "Радиусные фасады", href: "/RadiusFacadesPage" },
   ];
 
+  const optionsServices = [
+    { value: "1", label: "Покраска", href: "/detailedPage" },
+    { value: "2", label: "Все товары и услуги", href: "/otherServicesPage" },
+  ];
+
   const router = useRouter();
   return (
     <Border>
@@ -36,12 +42,14 @@ const Header = () => {
         <Title onClick={() => router.push("/")}>Фасады Сысолы</Title>
         <Shell>
           <ShellMenu
-            onClick={() => {
-              setMenuOpen(!isMenuOpen);
+            onMouseOver={() => {
+              setMenuOpen(true);
+            }}
+            onMouseLeave={() => {
+              setMenuOpen(false);
             }}
           >
-            <Company> Производство фасадов</Company>
-
+            <CompanyButton> Производство фасадов</CompanyButton>
             {isMenuOpen && (
               <Menu>
                 {options.map((item) => {
@@ -56,20 +64,36 @@ const Header = () => {
               </Menu>
             )}
           </ShellMenu>
-
+          <ShellMenu
+            onMouseOver={() => {
+              setMenuOpenServices(true);
+            }}
+            onMouseLeave={() => {
+              setMenuOpenServices(false);
+            }}
+          >
+            <CompanyButton>Товары и услуги</CompanyButton>
+            {isMenuOpenServices && (
+              <MenuServices>
+                {optionsServices.map((item) => {
+                  return (
+                    <ShellLabel key={item.value}>
+                      <LabelMenu onClick={() => router.push(item.href)}>
+                        {item.label}
+                      </LabelMenu>
+                    </ShellLabel>
+                  );
+                })}
+              </MenuServices>
+            )}
+          </ShellMenu>
+          <Company type="button" onClick={() => router.push("/pricesPage")}>
+            Цены
+          </Company>
           <Company type="button" onClick={() => router.push("/companyPage")}>
             О компании
           </Company>
-          <Services
-            type="button"
-            onClick={() => router.push("/otherServicesPage")}
-          >
-            Услуги
-          </Services>
-          <Prices type="button" onClick={() => router.push("/pricesPage")}>
-            Цены
-          </Prices>
-          <div>Горантия и сроки</div>
+          <Company>Условия и гарантия</Company>
         </Shell>
         <Number>8 800 555 35 35</Number>
       </Wrapper>

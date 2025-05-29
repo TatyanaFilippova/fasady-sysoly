@@ -25,7 +25,7 @@ export const Shell = styled.div`
   gap: 24px;
   font-size: 16px;
   margin-left: auto;
-
+  align-items: center;
   ${media.phone} {
     display: none;
   }
@@ -61,35 +61,29 @@ export const Border = styled.div`
   border: 1px solid #e6e6e6;
 `;
 
-export const Prices = styled.button`
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
-export const Services = styled.button`
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
 export const Company = styled.button`
+  height: 20px;
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+export const CompanyButton = styled.button`
+  height: 40px;
   &:hover {
     opacity: 0.7;
   }
 `;
 
 export const Menu = styled.div`
-  width: 194px;
-  background-color: #aaa6a6;
+  width: 328px;
+  background-color: white;
   overflow: hidden;
   border: none;
-  border-radius: 10px;
   z-index: 100;
   cursor: pointer;
   position: absolute;
   top: 30px;
-  left: -12px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
 `;
 
 export const ShellMenu = styled.div`
@@ -98,8 +92,9 @@ export const ShellMenu = styled.div`
 `;
 
 export const LabelMenu = styled.div`
-  color: white;
+  color: #4f4f4f;
   line-height: 24px;
+  width: 100%;
 `;
 
 export const ShellLabel = styled.div`
@@ -108,4 +103,16 @@ export const ShellLabel = styled.div`
   &:hover {
     background-color: rgba(214, 212, 212, 0.91);
   }
+`;
+
+export const MenuServices = styled.div`
+  width: 200px;
+  background-color: white;
+  overflow: hidden;
+  border: none;
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
 `;
