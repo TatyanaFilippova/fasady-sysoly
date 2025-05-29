@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-
+import menu from "./img/menu.png";
 import {
   Wrapper,
   Shell,
@@ -14,28 +14,33 @@ import {
   ShellLabel,
   CompanyButton,
   MenuServices,
+  MenuImg,
 } from "@/components/header/Header.styled";
 import { useState } from "react";
+import ModalMenu from "@/components/modalMenu/ModalMenu";
+
+export const options = [
+  { value: "1", label: "Фасады с фрезеровкой", href: "/detailedPage" },
+  {
+    value: "2",
+    label: "Фасады с интегрированными ручками",
+    href: "/detailedPage",
+  },
+  { value: "3", label: "Радиусные фасады", href: "/RadiusFacadesPage" },
+];
+
+export const optionsServices = [
+  { value: "1", label: "Покраска", href: "/detailedPage" },
+  { value: "2", label: "Все товары и услуги", href: "/otherServicesPage" },
+];
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isMenuOpenServices, setMenuOpenServices] = useState(false);
-  const options = [
-    { value: "1", label: "Фасады с фрезеровкой", href: "/detailedPage" },
-    {
-      value: "2",
-      label: "Фасады с интегрированными ручками",
-      href: "/detailedPage",
-    },
-    { value: "3", label: "Радиусные фасады", href: "/RadiusFacadesPage" },
-  ];
-
-  const optionsServices = [
-    { value: "1", label: "Покраска", href: "/detailedPage" },
-    { value: "2", label: "Все товары и услуги", href: "/otherServicesPage" },
-  ];
+  const [isMenu, setMenu] = useState(false);
 
   const router = useRouter();
+
   return (
     <Border>
       <Wrapper>
@@ -95,7 +100,14 @@ const Header = () => {
           </Company>
           <Company>Условия и гарантия</Company>
         </Shell>
+        <MenuImg
+          src={menu.src}
+          onClick={() => {
+            setMenu(!isMenu);
+          }}
+        />
         <Number>8 800 555 35 35</Number>
+        {isMenu && <ModalMenu isMenu={isMenu} setMenu={setMenu}></ModalMenu>}
       </Wrapper>
     </Border>
   );

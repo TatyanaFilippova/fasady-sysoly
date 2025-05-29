@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -14,11 +15,22 @@ export const Title = styled.div`
   font-size: 32px;
   color: black;
   font-weight: 400;
+
+  ${media.phone} {
+    font-size: 20px;
+    margin-bottom: 6px;
+    margin-top: 5px;
+  }
 `;
 
 export const CloseImg = styled.img`
   width: 50px;
   height: 50px;
+
+  ${media.phone} {
+    width: 40px;
+    height: 40px;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -32,6 +44,11 @@ export const CloseImg = styled.img`
 export const QrImg = styled.img`
   width: 210px;
   height: 210px;
+
+  ${media.phone} {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const Shell = styled.div`
@@ -40,12 +57,21 @@ export const Shell = styled.div`
   flex-direction: column;
   align-items: flex-end;
   margin-bottom: 40px;
+
+  ${media.phone} {
+    margin-bottom: 0;
+  }
 `;
 
 export const Content = styled.div`
   font-size: 24px;
   color: black;
   margin-bottom: 46px;
+
+  ${media.phone} {
+    font-size: 16px;
+    margin-bottom: 23px;
+  }
 `;
 
 export const Link = styled.a`
@@ -69,5 +95,8 @@ export const Link = styled.a`
     top: 3px;
     box-shadow: 0 2px 0 #387796;
     transition: all 0.2s;
+  }
+  ${media.phone} {
+    font-size: 16px;
   }
 `;

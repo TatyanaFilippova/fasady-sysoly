@@ -11,11 +11,9 @@ export const Wrapper = styled.div`
   ${layout}
 
   ${media.phone} {
-    &:last-child {
-      align-items: end;
-    }
     margin-top: 16px;
     padding-bottom: 16px;
+    justify-content: space-between;
   }
 `;
 
@@ -52,8 +50,7 @@ export const Number = styled.div`
   font-weight: 300;
 
   ${media.phone} {
-    font-size: 20px;
-    white-space: nowrap;
+    display: none;
   }
 `;
 
@@ -115,4 +112,20 @@ export const MenuServices = styled.div`
   position: absolute;
   top: 30px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+`;
+
+export const MenuImg = styled.img`
+  display: none;
+
+  ${media.phone} {
+    display: block;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 1;
+      transform: scale(0.85);
+    }
+  }
 `;
