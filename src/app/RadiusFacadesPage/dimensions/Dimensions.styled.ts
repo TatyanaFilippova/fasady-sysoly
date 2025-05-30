@@ -1,18 +1,22 @@
 import styled from "styled-components";
 import { layout } from "@/styles";
+import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   margin-bottom: 246px;
   ${layout}
-`;
 
-export const Shell = styled.div`
-  justify-content: flex-end;
-  display: flex;
+  ${media.phone} {
+    margin-bottom: 80px;
+  }
 `;
 
 export const ImgScheme = styled.img`
-  //width: 100%;
+  width: 80%;
+
+  ${media.phone} {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.div`
@@ -20,10 +24,20 @@ export const Title = styled.div`
   color: black;
   font-weight: 300;
   margin-bottom: 30px;
+
+  ${media.phone} {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
 `;
 
 export const Content = styled.div`
   font-size: 20px;
+
+  ${media.phone} {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
 `;
 
 export const Container = styled.div`
@@ -35,4 +49,8 @@ export const ShellBlock = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: end;
+
+  ${media.phone} {
+    flex-direction: column;
+  }
 `;

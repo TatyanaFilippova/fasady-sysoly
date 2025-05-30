@@ -1,9 +1,8 @@
 "use client";
 import scheme from "./../img/scheme.png";
-import scheme2 from "./../img/scheme2.png";
+
 import {
   Wrapper,
-  Shell,
   ImgScheme,
   Content,
   Title,
@@ -14,9 +13,6 @@ import {
 const Dimensions = () => {
   return (
     <Wrapper>
-      <Shell>
-        <ImgScheme src={scheme.src} />
-      </Shell>
       <ShellBlock>
         <Container>
           <Title>Большой спектр допустимых размеров</Title>
@@ -27,7 +23,7 @@ const Dimensions = () => {
             <ul> • толщина фасада +/- 1 мм;</ul>
           </Content>
         </Container>
-        <ImgScheme src={scheme2.src} />
+        <ImgScheme src={scheme.src} />
       </ShellBlock>
     </Wrapper>
   );
