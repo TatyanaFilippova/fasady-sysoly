@@ -45,5 +45,6 @@ export const ImgBlock = styled.img`
   ${media.phone} {
     margin-top: 0;
     height: 160px;
+    margin-bottom: 40px;
   }
 `;

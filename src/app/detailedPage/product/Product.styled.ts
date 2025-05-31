@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import { layout } from "@/styles";
+import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 208px;
   ${layout};
+
+  ${media.phone} {
+    margin-bottom: 100px;
+  }
 `;
 
 export const Title = styled.div`
@@ -13,11 +18,20 @@ export const Title = styled.div`
   color: black;
   font-weight: 300;
   padding-bottom: 30px;
+
+  ${media.phone} {
+    font-size: 20px;
+    padding-bottom: 16px;
+  }
 `;
 
 export const Description = styled.div`
   font-size: 20px;
   color: black;
+
+  ${media.phone} {
+    font-size: 16px;
+  }
 `;
 
 export const Shell = styled.div`
@@ -25,18 +39,35 @@ export const Shell = styled.div`
   flex-direction: column;
   width: 40%;
   justify-content: space-between;
+
+  ${media.phone} {
+    flex-direction: row-reverse;
+    width: 100%;
+    gap: 30px;
+    align-items: end;
+  }
 `;
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
   margin-top: 60px;
+
+  ${media.phone} {
+    flex-direction: column;
+  }
 `;
 
 export const ImgProduct = styled.img`
   height: 506px;
   width: 70%;
   margin-bottom: 60px;
+
+  ${media.phone} {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
 `;
 
 export const TextBlock = styled.div`
@@ -60,6 +91,12 @@ export const WrapperImage = styled.div`
   flex-wrap: wrap;
   width: 60%;
   gap: 24px;
+
+  ${media.phone} {
+    margin-top: 50px;
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 export const ImgBlock = styled.div`
@@ -79,6 +116,10 @@ export const Img = styled.img<{ $length: string }>`
         return "auto"; // значение по умолчанию
       }
     }};
+  }
+
+  ${media.phone} {
+    height: 254px;
   }
 `;
 
@@ -100,4 +141,11 @@ export const ButtonProduct = styled.button`
   width: 25%;
   margin-top: 60px;
   margin-left: auto;
+
+  ${media.phone} {
+    padding: 14px 60px;
+    font-size: 20px;
+    width: 50%;
+    margin-top: 30px;
+  }
 `;
