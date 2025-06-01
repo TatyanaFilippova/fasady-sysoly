@@ -26,7 +26,8 @@ jobs:
       - name: Archive build artifacts
         run: |
           mkdir -p artifacts
-          cp -r .next/ artifacts/
+          mv .next/ next/
+          cp -r next/ artifacts/
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
