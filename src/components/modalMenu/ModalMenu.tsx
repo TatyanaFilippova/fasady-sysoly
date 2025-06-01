@@ -37,7 +37,7 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
           {item.label}
         </Ul>
       ))}
-      <Description>Покраска</Description>
+      <Description>Товары и услуги</Description>
       {optionsServices.map((item) => (
         <Ul
           key={item.value}
@@ -49,7 +49,20 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
           {item.label}
         </Ul>
       ))}
-      <Description>Товары и услуги</Description>
+      <Description
+        onClick={() => {
+          router.push("/pricesPage");
+        }}
+      >
+        Цены
+      </Description>
+      <Description
+        onClick={() => {
+          router.push("/companyPage");
+        }}
+      >
+        О компании
+      </Description>
       <Description>Гарантия и сроки</Description>
     </Wrapper>
   );

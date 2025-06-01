@@ -55,6 +55,10 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-size: 20px;
   font-weight: 300;
+
+  &:last-child {
+    text-decoration: line-through;
+  }
 `;
 
 export const Ul = styled.ul`
