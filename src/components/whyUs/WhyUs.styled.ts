@@ -10,7 +10,7 @@ export const ShellText = styled.div`
 
   ${media.phone} {
     flex-direction: row;
-    gap: 25px 70px;
+    gap: 25px 60px;
   }
 `;
 

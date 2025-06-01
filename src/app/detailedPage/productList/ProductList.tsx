@@ -1,14 +1,15 @@
 "use client";
 
 import Product from "@/app/detailedPage/product/Product";
+import { CMS_URL } from "@/constant";
 
 export interface ProductListProps {
   data: {
     title: string;
-    ImgProduct: {
+    ImgProduct?: {
       url: string;
     };
-    imgList: {
+    imgList?: {
       url: string;
     }[];
     width: string;
@@ -26,10 +27,10 @@ const ProductList = ({ data }: ProductListProps) => {
         <Product
           title={product.title}
           description="Описание раздела. Может его не быть"
-          imgProduct={"http://localhost:1337" + product.ImgProduct.url}
-          imgList={product.imgList.map(
-            (product) => "http://localhost:1337" + product.url,
-          )}
+          imgProduct={CMS_URL + product?.ImgProduct?.url}
+          imgList={
+            product?.imgList?.map((product) => CMS_URL + product.url) ?? []
+          }
           width={product.width}
           height={product.height}
           dimensions={product.dimensions}
