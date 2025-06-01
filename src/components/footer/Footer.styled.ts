@@ -80,7 +80,7 @@ export const ShellBlock = styled.div`
 
   ${media.phone} {
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     justify-content: space-between;
   }
 `;
