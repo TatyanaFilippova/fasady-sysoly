@@ -29,7 +29,6 @@ const Connection = () => {
         <Content>Мы находимся по адресу: {contactsList.location}</Content>
       </Content>
       <WrapperMap>
-        {" "}
         <Map />
       </WrapperMap>
     </Wrapper>

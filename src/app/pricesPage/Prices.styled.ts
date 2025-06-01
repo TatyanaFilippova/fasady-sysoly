@@ -1,9 +1,14 @@
 import { layout } from "@/styles";
 import styled from "styled-components";
+import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   ${layout};
   margin-bottom: 200px;
+
+  ${media.phone} {
+    margin-bottom: 100px;
+  }
 `;
 
 export const Title = styled.caption`
@@ -13,10 +18,20 @@ export const Title = styled.caption`
   margin-bottom: 60px;
   text-align: left;
   margin-top: 100px;
+
+  ${media.phone} {
+    font-size: 24px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const Table = styled.table`
   width: 80%;
+
+  ${media.phone} {
+    width: 100%;
+  }
 `;
 
 export const TableHead = styled.th`
@@ -64,6 +79,10 @@ export const TableTdTitle = styled.td`
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  ${media.phone} {
+    font-size: 12px;
+  }
 `;
 
 export const Button = styled.button`
