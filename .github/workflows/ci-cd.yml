@@ -26,8 +26,7 @@ jobs:
       - name: Archive build artifacts
         run: |
           mkdir -p artifacts
-          mv .next/ next/
-          cp -r next/ artifacts/
+          cp -r out/* artifacts/
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -61,7 +60,7 @@ jobs:
           SERVER_PATH: ${{ secrets.SERVER_PATH }}       # Путь на сервере, куда будут копироваться файлы
           SERVER_PASSWORD: ${{ secrets.PASSWORD }} # Пароль для SSH
         run: |
-          sshpass -p "$SERVER_PASSWORD" rsync -avz ./artifacts/ $SERVER_USER@$SERVER_IP:$SERVER_PATH
+          sshpass -p "$SERVER_PASSWORD" rsync -avz --delete ./artifacts/ $SERVER_USER@$SERVER_IP:$SERVER_PATH
 
       - name: Clean up after deployment
         run: echo "Deployment completed successfully!"  # Сообщение о завершении развертывания
