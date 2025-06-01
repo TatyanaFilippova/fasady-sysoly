@@ -34,6 +34,7 @@ export const Img = styled.img`
 
   ${media.phone} {
     height: 400px;
+    object-fit: cover;
   }
 `;
 
