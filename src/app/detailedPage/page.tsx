@@ -6,7 +6,9 @@ import { CMS_URL } from "@/constant";
 
 export default async function Home() {
   const data = await fetch(CMS_URL + "/api/facades?populate=*", {
-    cache: "no-cache",
+    next: {
+      revalidate: 10,
+    },
   });
   console.log(data);
   const posts = await data.json();
