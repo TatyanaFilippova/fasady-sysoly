@@ -30,7 +30,7 @@ export const options = [
 ];
 
 export const optionsServices = [
-  { value: "1", label: "Покраска", href: "/detailedPage" },
+  { value: "1", label: "Покраска", href: "/paintingPage" },
   { value: "2", label: "Все товары и услуги", href: "/otherServicesPage" },
 ];
 
