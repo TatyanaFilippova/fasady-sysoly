@@ -49,7 +49,7 @@ export const Description = styled.div`
 `;
 
 export const Img = styled.img`
-  margin-right: 138px;
+  margin-right: 100px;
 
   ${media.phone} {
     margin-right: 0;

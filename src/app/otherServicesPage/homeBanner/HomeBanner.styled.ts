@@ -20,8 +20,8 @@ export const ImgHome = styled.img`
 
   ${media.phone} {
     margin-top: 0;
-    height: 160px;
     margin-bottom: 40px;
+    width: 100%;
   }
 `;
 
@@ -32,8 +32,6 @@ export const Title = styled.div`
 
   ${media.phone} {
     margin-top: 0;
-    height: 160px;
-
     font-size: 40px;
   }
 `;
@@ -79,22 +77,19 @@ export const Button = styled.button`
 
   ${media.phone} {
     padding: 15px 30px;
-
     font-size: 16px;
   }
 `;
 
 export const Container = styled.div`
   display: flex;
-  gap: 140px;
+  gap: 30px;
   justify-content: space-between;
   width: 100%;
-  align-items: end;
+  flex-direction: column;
+  align-items: flex-start;
 
   ${media.phone} {
-    flex-direction: column;
     ${layout};
-    gap: 30px;
-    align-items: flex-start;
   }
 `;

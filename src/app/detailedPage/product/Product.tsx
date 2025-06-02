@@ -51,14 +51,24 @@ const Product = ({
           </ImgBlock>
 
           <TextBlockShell>
-            <TextBlock>Размеры (min и max): {dimensions} </TextBlock>
-            <TextBlock>Толщина h: {thickness}</TextBlock>
-            <TextBlock>Высота: {height}</TextBlock>
-            <TextBlock>Ширина: {width}</TextBlock>
+            <TextBlock>
+              <b>Размеры (min и max):</b> {dimensions}
+            </TextBlock>
+            <TextBlock>
+              <b>Толщина h:</b> {thickness}
+            </TextBlock>
+            <TextBlock>
+              <b>Высота:</b> {height}
+            </TextBlock>
+            <TextBlock>
+              <b>Ширина:</b> {width}
+            </TextBlock>
             <TextDescription>
               Рекомендуется изготавливать в МДФ толщиной не менее 19 мм
             </TextDescription>
-            <TextDescription>Цвет: {color}</TextDescription>
+            <TextDescription>
+              <b>Цвет:</b> {color}
+            </TextDescription>
             <TextBlock>
               С каталога RAL, NCS, Wood Color, Color System или подбор
             </TextBlock>

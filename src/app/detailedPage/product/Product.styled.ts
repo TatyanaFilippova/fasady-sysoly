@@ -44,7 +44,7 @@ export const Shell = styled.div`
     flex-direction: row-reverse;
     width: 100%;
     gap: 30px;
-    align-items: end;
+    justify-content: space-between;
   }
 `;
 
@@ -59,8 +59,8 @@ export const Container = styled.div`
 `;
 
 export const ImgProduct = styled.img`
-  height: 506px;
-  width: 70%;
+  height: auto;
+  width: 60%;
   margin-bottom: 60px;
 
   ${media.phone} {
@@ -80,16 +80,21 @@ export const TextBlock = styled.div`
 
 export const TextBlockShell = styled.div`
   line-height: 1.4;
+  margin-right: 30px;
 
   :nth-child(1) {
     margin-bottom: 20px;
+  }
+  ${media.phone} {
+    text-align: left;
+    margin-right: 0;
   }
 `;
 
 export const WrapperImage = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 60%;
+  width: 100%;
   gap: 24px;
 
   ${media.phone} {
