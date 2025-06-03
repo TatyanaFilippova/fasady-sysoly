@@ -9,7 +9,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Description = styled.div`
-  font-size: 32px;
+  font-size: 24px;
+  width: 70%;
   color: black;
   ul {
     padding-bottom: 20px;
@@ -46,7 +47,7 @@ export const Shell = styled.div`
   flex-wrap: wrap;
   width: 100%;
 
-  gap: 30px;
+  row-gap: 80px;
   justify-content: space-between;
 `;
 

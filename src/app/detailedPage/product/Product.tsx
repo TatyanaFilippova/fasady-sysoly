@@ -44,7 +44,7 @@ const Product = ({
         <Description>{description}</Description>
         <Description>{description}</Description>
       </div>
-      <Container>
+      <Container $length={imgList.length.toString()}>
         <Shell>
           <ImgBlock>
             <ImgProduct src={imgProduct} />
@@ -81,7 +81,9 @@ const Product = ({
           ))}
         </WrapperImage>
       </Container>
-      <ButtonProduct>Заказать</ButtonProduct>
+      <ButtonProduct $length={imgList.length.toString()}>
+        Заказать
+      </ButtonProduct>
     </Wrapper>
   );
 };

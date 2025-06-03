@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.caption`
-  font-size: 64px;
+  font-size: 44px;
   color: black;
   font-weight: 300;
   margin-bottom: 60px;
@@ -27,7 +27,7 @@ export const Title = styled.caption`
 `;
 
 export const Table = styled.table`
-  width: 80%;
+  width: 90%;
 
   ${media.phone} {
     width: 100%;
@@ -36,7 +36,7 @@ export const Table = styled.table`
 
 export const TableHead = styled.th`
   width: 25%;
-  font-size: 10px;
+  font-size: 12px;
   text-align: left;
   border-bottom: 1px solid #d1d1d1;
   &:nth-child(2) {
@@ -54,7 +54,7 @@ export const TableTd = styled.td`
   border-bottom: 1px solid #d1d1d1;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 12px;
+  font-size: 14px;
   color: black;
   &:nth-child(2) {
     text-align: center;
@@ -68,13 +68,13 @@ export const TableTd = styled.td`
 export const TableTdButton = styled.td`
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 12px;
+  font-size: 14px;
 `;
 
 export const TableTdTitle = styled.td`
   border-bottom: 1px solid #d1d1d1;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   color: black;
   text-align: center;
   padding-top: 5px;

@@ -18,6 +18,7 @@ export const Title = styled.div`
   color: black;
   font-weight: 300;
   padding-bottom: 30px;
+  width: 70%;
 
   ${media.phone} {
     font-size: 20px;
@@ -48,13 +49,19 @@ export const Shell = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<{ $length: string }>`
   display: flex;
   width: 100%;
   margin-top: 60px;
+  height: ${(props) => {
+    if (props.$length === "2" || props.$length === "1") {
+      return "920px";
+    }
+  }};
 
   ${media.phone} {
     flex-direction: column;
+    height: auto;
   }
 `;
 
@@ -111,6 +118,7 @@ export const ImgBlock = styled.div`
 export const Img = styled.img<{ $length: string }>`
   width: calc(50% - 12px);
   height: 506px;
+  object-fit: cover;
   &:nth-child(1) {
     width: ${(props) => {
       if (props.$length === "3" || props.$length === "1") {
@@ -137,19 +145,24 @@ export const TextDescription = styled.div`
   }
 `;
 
-export const ButtonProduct = styled.button`
+export const ButtonProduct = styled.button<{ $length: string }>`
   background-color: #d30000;
   color: white;
   font-size: 24px;
   padding: 28px 126px;
   border-radius: 24px;
   width: 25%;
-  margin-top: 60px;
   margin-left: auto;
-
+  margin-top: ${(props) => {
+    if (props.$length === "2" || props.$length === "1") {
+      return "-90px";
+    } else if (props.$length === "3" || props.$length === "4") {
+      return "60px";
+    }
+  }};
   ${media.phone} {
     padding: 14px 60px;
-    font-size: 20px;
+    font-size: 16px;
     width: 50%;
     margin-top: 30px;
   }
