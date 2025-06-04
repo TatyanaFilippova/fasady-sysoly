@@ -118,3 +118,7 @@ legend {
 input[type="file"] {
   max-width: 100%;
 }
+
+.ReactModal__Overlay {
+  width: 100vw;
+}

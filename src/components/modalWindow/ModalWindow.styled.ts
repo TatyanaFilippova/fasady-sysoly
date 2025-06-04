@@ -21,6 +21,11 @@ export const Title = styled.div`
     margin-bottom: 6px;
     margin-top: 5px;
   }
+  ${media.tablet} {
+    font-size: 24px;
+    margin-bottom: 6px;
+    margin-top: 5px;
+  }
 `;
 
 export const CloseImg = styled.img`
@@ -28,6 +33,11 @@ export const CloseImg = styled.img`
   height: 50px;
 
   ${media.phone} {
+    width: 40px;
+    height: 40px;
+  }
+
+  ${media.tablet} {
     width: 40px;
     height: 40px;
   }
@@ -61,6 +71,10 @@ export const Shell = styled.div`
   ${media.phone} {
     margin-bottom: 0;
   }
+
+  ${media.tablet} {
+    margin-bottom: 20px;
+  }
 `;
 
 export const Content = styled.div`
@@ -71,6 +85,10 @@ export const Content = styled.div`
   ${media.phone} {
     font-size: 16px;
     margin-bottom: 23px;
+  }
+
+  ${media.tablet} {
+    font-size: 20px;
   }
 `;
 

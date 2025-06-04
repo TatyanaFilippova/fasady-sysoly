@@ -40,6 +40,10 @@ export const HomeBannericon = styled.img`
     right: -130px;
     top: 95px;
   }
+
+  ${media.tablet} {
+    right: -90px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -53,6 +57,12 @@ export const Title = styled.h1`
     font-size: 40px;
     padding-top: 100px;
   }
+
+  ${media.tablet} {
+    font-size: 54px;
+    padding-top: 200px;
+    width: 84%;
+  }
 `;
 
 export const Description = styled.div`
@@ -65,6 +75,10 @@ export const Description = styled.div`
   ${media.phone} {
     gap: 30px;
     padding-right: 30px;
+  }
+
+  ${media.tablet} {
+    gap: 40px;
   }
 `;
 
@@ -115,5 +129,12 @@ export const ButtonHomeBanner = styled.button`
     width: 70%;
     font-size: 20px;
     padding: 15px 30px;
+  }
+
+  ${media.tablet} {
+    font-size: 20px;
+
+    height: 60px;
+    text-align: center;
   }
 `;

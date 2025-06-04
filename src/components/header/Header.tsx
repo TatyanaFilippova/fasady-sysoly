@@ -15,6 +15,7 @@ import {
   CompanyButton,
   MenuServices,
   MenuImg,
+  Container,
 } from "@/components/header/Header.styled";
 import { useState } from "react";
 import ModalMenu from "@/components/modalMenu/ModalMenu";
@@ -100,13 +101,15 @@ const Header = () => {
           </Company>
           <Company>Условия и гарантия</Company>
         </Shell>
-        <MenuImg
-          src={menu.src}
-          onClick={() => {
-            setMenu(!isMenu);
-          }}
-        />
-        <Number>8 800 555 35 35</Number>
+        <Container>
+          <MenuImg
+            src={menu.src}
+            onClick={() => {
+              setMenu(!isMenu);
+            }}
+          />
+          <Number>8 800 555 35 35</Number>
+        </Container>
         {isMenu && <ModalMenu isMenu={isMenu} setMenu={setMenu}></ModalMenu>}
       </Wrapper>
     </Border>
