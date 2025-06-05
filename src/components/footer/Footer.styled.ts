@@ -14,6 +14,10 @@ export const Title = styled.div`
   font-weight: 300;
   color: white;
 
+  ${media.tablet} {
+    font-size: 38px;
+  }
+
   ${media.phone} {
     font-size: 32px;
   }
@@ -78,6 +82,12 @@ export const ShellBlock = styled.div`
     align-items: end;
   }
 
+  ${media.tablet} {
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 0;
+  }
+
   ${media.phone} {
     flex-wrap: wrap;
     gap: 20px;
@@ -89,6 +99,11 @@ export const Number = styled.div`
   color: white;
   font-size: 36px;
   font-weight: 300;
+
+  ${media.tablet} {
+    font-size: 28px;
+  }
+
   ${media.phone} {
     font-size: 24px;
   }

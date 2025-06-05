@@ -53,15 +53,15 @@ export const Title = styled.h1`
   padding-top: 280px;
   width: 80%;
 
-  ${media.phone} {
-    font-size: 40px;
-    padding-top: 100px;
-  }
-
   ${media.tablet} {
     font-size: 54px;
     padding-top: 200px;
     width: 84%;
+  }
+
+  ${media.phone} {
+    font-size: 40px;
+    padding-top: 100px;
   }
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { h1, layout } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -21,6 +21,7 @@ export const Title = styled.div`
   font-weight: 400;
   margin-bottom: 10px;
 
+  ${h1};
   ${media.phone} {
     font-size: 28px;
   }
@@ -30,6 +31,7 @@ export const Img = styled.img`
   height: 800px;
   width: 950px;
   object-fit: cover;
+
   ${media.phone} {
     height: 500px;
     margin: 0;
@@ -39,6 +41,11 @@ export const Img = styled.img`
 `;
 
 export const ImgFacade = styled.img`
+  ${media.tablet} {
+    height: 180px;
+    width: 120px;
+  }
+
   ${media.phone} {
     height: 160px;
     width: 104px;
@@ -52,6 +59,11 @@ export const Shell = styled.div`
   margin-left: 40px;
   width: 50%;
 
+  ${media.tablet} {
+    row-gap: 38px;
+    column-gap: 15px;
+  }
+
   ${media.phone} {
     margin-left: 0;
     gap: 10px;
@@ -64,6 +76,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
+  ${media.tablet} {
+    align-items: flex-start;
+  }
+
   ${media.phone} {
     flex-direction: column;
     width: 100%;
@@ -75,6 +91,10 @@ export const ShellFacade = styled.div`
   flex-direction: column;
   gap: 14px;
   font-size: 24px;
+
+  ${media.tablet} {
+    font-size: 18px;
+  }
 
   ${media.phone} {
     gap: 4px;
@@ -90,6 +110,12 @@ export const Description = styled.div`
     line-height: normal;
   }
 
+  ${media.tablet} {
+    font-size: 20px;
+    width: 100%;
+    line-height: 30px;
+  }
+
   ${media.phone} {
     font-size: 20px;
     line-height: 30px;
@@ -103,6 +129,12 @@ export const ShellDescription = styled.div`
   justify-content: center;
   padding-bottom: 10px;
   align-items: flex-end;
+
+  ${media.tablet} {
+    margin-top: 64px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
   ${media.phone} {
     flex-direction: column;
@@ -135,6 +167,12 @@ export const ButtonFacade = styled.button`
     transition: all 0.2s;
   }
 
+  ${media.tablet} {
+    padding: 20px 30px;
+    font-size: 18px;
+    width: 100%;
+  }
+
   ${media.phone} {
     width: 100%;
     padding: 16px 30px;
@@ -146,6 +184,11 @@ export const ButtonFacade = styled.button`
 export const ImgWrapper = styled.div`
   margin-left: -110px;
   width: 60%;
+
+  ${media.tablet} {
+    width: 100%;
+  }
+
   ${media.phone} {
     margin: 0 -24px;
     width: calc(100% + 48px);

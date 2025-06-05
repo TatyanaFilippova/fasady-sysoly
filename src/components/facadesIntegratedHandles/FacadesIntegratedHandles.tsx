@@ -26,7 +26,7 @@ const FacadesIntegratedHandles = () => {
           <ImgWrapper>
             <Img src={kitchenIntegrated.src} />
           </ImgWrapper>
-          <Shell>
+          <Shell $length={homeFacadesIntegrated.length.toString()}>
             {homeFacadesIntegrated.map((facade) => (
               <div key={facade.img}>
                 <ImgFacade src={facade.img} />
@@ -45,7 +45,6 @@ const FacadesIntegratedHandles = () => {
               <Description>Красиво смотрятся, легко ухаживать</Description>
             </div>
             <div>
-              {" "}
               <ButtonFacade>Посмотреть все варианты ручек</ButtonFacade>
             </div>
           </ShellDescription>

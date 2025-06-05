@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { h1, layout } from "@/styles";
 import { media } from "@/constants/media";
 
 export const ShellText = styled.div`
@@ -7,6 +7,10 @@ export const ShellText = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   gap: 50px 140px;
+
+  ${media.tablet} {
+    flex-direction: row;
+  }
 
   ${media.phone} {
     flex-direction: row;
@@ -20,6 +24,12 @@ export const Wrapper = styled.div`
   height: 350px;
   margin-bottom: 146px;
   ${layout};
+
+  ${media.tablet} {
+    flex-direction: column;
+    gap: 36px;
+    margin-bottom: 246px;
+  }
 
   ${media.phone} {
     flex-direction: column;
@@ -35,6 +45,7 @@ export const Title = styled.div`
   color: black;
   white-space: nowrap;
 
+  ${h1};
   ${media.phone} {
     font-size: 28px;
   }
@@ -45,6 +56,10 @@ export const TitleDescription = styled.div`
   font-weight: 300;
   color: black;
   padding-bottom: 10px;
+
+  ${media.tablet} {
+    font-size: 20px;
+  }
 
   ${media.phone} {
     font-size: 18px;

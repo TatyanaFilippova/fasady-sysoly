@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { h1, layout } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Title = styled.div`
@@ -7,6 +7,7 @@ export const Title = styled.div`
   font-weight: 400;
   color: black;
 
+  ${h1};
   ${media.phone} {
     font-size: 28px;
   }
@@ -16,7 +17,11 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 255px;
-  ${layout}
+  ${layout};
+
+  ${media.tablet} {
+    gap: 20px;
+  }
 
   ${media.phone} {
     flex-direction: column;
@@ -32,6 +37,10 @@ export const Content = styled.div`
   ul {
     color: black;
     margin: 8px 0;
+  }
+
+  ${media.tablet} {
+    font-size: 16px;
   }
 
   ${media.phone} {
@@ -55,6 +64,12 @@ export const MapShell = styled.div`
   display: flex;
   flex-direction: column;
   width: 70%;
+
+  ${media.tablet} {
+    width: 55%;
+    height: 350px;
+    margin-top: 30px;
+  }
 
   ${media.phone} {
     height: 300px;

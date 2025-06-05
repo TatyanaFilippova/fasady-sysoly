@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { h1, layout } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Title = styled.div`
@@ -10,6 +10,7 @@ export const Title = styled.div`
   font-weight: 400;
   margin-bottom: 10px;
 
+  ${h1};
   ${media.phone} {
     font-size: 28px;
   }
@@ -31,10 +32,14 @@ export const Img = styled.img`
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
   height: 600px;
   width: 100%;
+  object-fit: cover;
+
+  ${media.tablet} {
+    height: 400px;
+  }
 
   ${media.phone} {
     height: 400px;
-    object-fit: cover;
   }
 `;
 
@@ -71,6 +76,11 @@ export const ButtonFacade = styled.button`
     transition: all 0.2s;
   }
 
+  ${media.tablet} {
+    padding: 16px 30px;
+    font-size: 16px;
+  }
+
   ${media.phone} {
     padding: 16px 30px;
     font-size: 16px;
@@ -82,6 +92,11 @@ export const Description = styled.div`
   font-size: 36px;
   color: black;
   font-weight: 300;
+
+  ${media.tablet} {
+    font-size: 20px;
+    padding-top: 10px;
+  }
 
   ${media.phone} {
     font-size: 20px;
@@ -95,6 +110,10 @@ export const ShellDescription = styled.div`
   justify-content: center;
   padding-bottom: 10px;
   align-items: flex-end;
+
+  ${media.tablet} {
+    margin-top: 40px;
+  }
 
   ${media.phone} {
     margin-top: 20px;

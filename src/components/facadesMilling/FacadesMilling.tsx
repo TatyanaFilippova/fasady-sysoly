@@ -42,7 +42,7 @@ const FacadesMilling = () => {
             <Description>Красиво смотрятся, легко ухаживать</Description>
           </div>
           <div>
-            <ButtonFacade>Посмотреть все варианты фрезеровок</ButtonFacade>
+            <ButtonFacade>Посмотреть все варианты</ButtonFacade>
           </div>
         </ShellDescription>
       </Wrapper>
