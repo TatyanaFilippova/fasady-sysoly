@@ -39,7 +39,7 @@ export const Img = styled.img`
   }
 
   ${media.phone} {
-    height: 400px;
+    height: 350px;
   }
 `;
 
@@ -100,7 +100,7 @@ export const Description = styled.div`
 
   ${media.phone} {
     font-size: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 `;
 

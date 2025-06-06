@@ -69,6 +69,15 @@ export const TableTdButton = styled.td`
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 14px;
+
+  ${media.tablet} {
+    padding-top: 5px;
+    padding-bottom: 35px;
+  }
+  ${media.phone} {
+    padding-top: 5px;
+    padding-bottom: 35px;
+  }
 `;
 
 export const TableTdTitle = styled.td`

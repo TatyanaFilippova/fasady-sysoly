@@ -56,7 +56,7 @@ export const ShellText = styled.div`
 
   ${media.phone} {
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
   }
 `;
 

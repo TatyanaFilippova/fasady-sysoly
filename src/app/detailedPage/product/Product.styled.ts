@@ -26,6 +26,7 @@ export const Title = styled.div`
   }
   ${media.phone} {
     font-size: 20px;
+    width: 80%;
     padding-bottom: 16px;
   }
 `;
@@ -142,6 +143,7 @@ export const WrapperImage = styled.div<{ $length: string }>`
     //gap: 14px;
     //justify-content: space-between;
     overflow: hidden;
+    gap: 10px;
   }
 `;
 
@@ -195,6 +197,15 @@ export const Img = styled.img<{ $length: string }>`
 
   ${media.phone} {
     height: 230px;
+    width: calc(50% - 5px);
+    &:nth-child(1) {
+        width: ${(props) => {
+          if (props.$length === "2") {
+            return "calc(50% - 5px)";
+          }
+        }};
+    }
+    }
   }
 `;
 

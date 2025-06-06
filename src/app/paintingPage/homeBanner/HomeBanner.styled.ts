@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
 
 export const ImgBanner = styled.img`
   margin-bottom: 64px;
+
   ${media.phone} {
     margin-top: 0;
     height: 160px;
@@ -28,6 +29,10 @@ export const Title = styled.div`
   color: black;
   font-weight: 400;
 
+  ${media.tablet} {
+    font-size: 54px;
+    width: 90%;
+  }
   ${media.phone} {
     ${layout};
     font-size: 40px;
@@ -39,9 +44,12 @@ export const Description = styled.div`
   font-size: 32px;
   color: black;
 
+  ${media.tablet} {
+    font-size: 20px;
+  }
   ${media.phone} {
     ${layout};
-    font-size: 16px;
+    font-size: 20px;
     padding-left: 0;
     margin-left: 0;
   }
@@ -97,8 +105,14 @@ export const ButtonHome = styled.button`
     transition: all 0.2s;
   }
 
-  ${media.phone} {
-    padding: 15px 80px;
+  ${media.tablet} {
+    width: 40%;
     font-size: 20px;
+    padding: 20px 30px;
+  }
+  ${media.phone} {
+    padding: 15px 40px;
+    font-size: 16px;
+    width: 60%;
   }
 `;

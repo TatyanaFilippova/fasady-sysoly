@@ -32,6 +32,9 @@ export const Container = styled.div`
     flex-direction: row-reverse;
     gap: 40px;
   }
+  ${media.phone} {
+    display: block;
+  }
 `;
 
 export const Shell = styled.div`
@@ -141,9 +144,10 @@ export const MenuServices = styled.div`
 export const MenuImg = styled.img`
   display: none;
 
-  ${media.phone} {
+  ${media.tablet} {
     display: block;
     cursor: pointer;
+    height: 20px;
     &:hover {
       opacity: 0.7;
     }
@@ -152,11 +156,9 @@ export const MenuImg = styled.img`
       transform: scale(0.85);
     }
   }
-
-  ${media.tablet} {
+  ${media.phone} {
     display: block;
     cursor: pointer;
-    height: 20px;
     &:hover {
       opacity: 0.7;
     }
