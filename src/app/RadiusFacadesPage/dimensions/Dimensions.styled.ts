@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { h1, layout } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -14,6 +14,10 @@ export const Wrapper = styled.div`
 export const ImgScheme = styled.img`
   width: 80%;
 
+  ${media.tablet} {
+    width: 100%;
+    margin-top: 80px;
+  }
   ${media.phone} {
     width: 100%;
   }
@@ -24,7 +28,11 @@ export const Title = styled.div`
   color: black;
   font-weight: 300;
   margin-bottom: 30px;
+  ${h1};
 
+  ${media.tablet} {
+    width: 80%;
+  }
   ${media.phone} {
     font-size: 20px;
     margin-bottom: 15px;
@@ -50,6 +58,10 @@ export const ShellBlock = styled.div`
   justify-content: space-between;
   align-items: end;
 
+  ${media.tablet} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   ${media.phone} {
     flex-direction: column;
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { h1, layout } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -19,6 +19,7 @@ export const Title = styled.div`
   font-size: 40px;
   color: black;
   font-weight: 300;
+  ${h1};
 
   ${media.phone} {
     font-size: 20px;
@@ -34,9 +35,18 @@ export const Shell = styled.div`
     flex-direction: row-reverse;
     justify-content: space-between;
 
+    ${media.tablet} {
+      flex-direction: column;
+      align-items: normal;
+    }
     ${media.phone} {
       flex-direction: column;
     }
+  }
+
+  ${media.tablet} {
+    flex-direction: column;
+    align-items: normal;
   }
   ${media.phone} {
     flex-direction: column;
@@ -44,10 +54,16 @@ export const Shell = styled.div`
   }
 `;
 
-export const ImgBlock = styled.img``;
+export const ImgBlock = styled.img`
+  object-fit: cover;
+`;
 
 export const TitleShell = styled.div`
   width: 30%;
+
+  ${media.tablet} {
+    width: 100%;
+  }
   ${media.phone} {
     width: 100%;
   }
@@ -56,6 +72,10 @@ export const TitleShell = styled.div`
 export const TitleBlock = styled.div`
   width: 40%;
 
+  ${media.tablet} {
+    width: 80%;
+    text-align: left;
+  }
   ${media.phone} {
     width: 100%;
   }

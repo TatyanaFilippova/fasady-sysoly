@@ -5,6 +5,7 @@ import {
   Title,
   Description,
   Ul,
+  DescriptionCursor,
 } from "@/app/../components/modalMenu/ModalMenu.styled";
 import close from "./img/close.png";
 import { useRouter } from "next/navigation";
@@ -49,21 +50,21 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
           {item.label}
         </Ul>
       ))}
-      <Description
+      <DescriptionCursor
         onClick={() => {
           router.push("/pricesPage");
         }}
       >
         Цены
-      </Description>
-      <Description
+      </DescriptionCursor>
+      <DescriptionCursor
         onClick={() => {
           router.push("/companyPage");
         }}
       >
         О компании
-      </Description>
-      <Description>Гарантия и сроки</Description>
+      </DescriptionCursor>
+      <DescriptionCursor>Гарантия и сроки</DescriptionCursor>
     </Wrapper>
   );
 };

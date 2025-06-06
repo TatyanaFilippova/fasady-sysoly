@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
 export const CloseIcon = styled.img`
   width: 20px;
   height: 20px;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -31,6 +32,7 @@ export const CloseIcon = styled.img`
   transition: all 0.2s;
   position: relative;
   top: 0;
+  right: 20px;
 
   &:active {
     top: 3px;
@@ -55,7 +57,16 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-size: 20px;
   font-weight: 300;
+`;
 
+export const DescriptionCursor = styled.div`
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+
+  &:hover {
+    opacity: 0.8;
+  }
   &:last-child {
     text-decoration: line-through;
   }
@@ -63,4 +74,9 @@ export const Description = styled.div`
 
 export const Ul = styled.ul`
   padding-left: 20px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;

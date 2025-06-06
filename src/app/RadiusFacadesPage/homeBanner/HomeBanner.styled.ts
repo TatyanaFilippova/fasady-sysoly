@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
   ${layout};
   margin-bottom: 228px;
 
+  ${media.tablet} {
+    padding: 0;
+    margin-bottom: 164px;
+  }
   ${media.phone} {
     padding: 0;
     margin-bottom: 100px;
@@ -20,6 +24,11 @@ export const Title = styled.div`
   font-weight: 400;
   margin-bottom: 26px;
 
+  ${media.tablet} {
+    ${layout};
+    margin-left: 0;
+    font-size: 54px;
+  }
   ${media.phone} {
     ${layout};
     font-size: 40px;
@@ -31,6 +40,11 @@ export const Description = styled.div`
   font-size: 32px;
   color: black;
 
+  ${media.tablet} {
+    ${layout};
+    font-size: 20px;
+    margin-left: 0;
+  }
   ${media.phone} {
     ${layout};
     font-size: 16px;
@@ -41,6 +55,11 @@ export const Description = styled.div`
 export const ImgBlock = styled.img`
   margin-top: 46px;
   margin-bottom: 46px;
+
+  ${media.tablet} {
+    margin-top: 0;
+    height: auto;
+  }
 
   ${media.phone} {
     margin-top: 0;

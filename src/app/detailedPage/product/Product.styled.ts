@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { h1, layout } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -19,7 +19,11 @@ export const Title = styled.div`
   font-weight: 300;
   padding-bottom: 30px;
   width: 70%;
+  ${h1};
 
+  ${media.tablet} {
+    padding-bottom: 0;
+  }
   ${media.phone} {
     font-size: 20px;
     padding-bottom: 16px;
@@ -41,6 +45,10 @@ export const Shell = styled.div`
   width: 40%;
   justify-content: space-between;
 
+  ${media.tablet} {
+    width: 60%;
+    justify-content: normal;
+  }
   ${media.phone} {
     flex-direction: row-reverse;
     width: 100%;
@@ -59,6 +67,13 @@ export const Container = styled.div<{ $length: string }>`
     }
   }};
 
+  ${media.tablet} {
+    height: ${(props) => {
+      if (props.$length === "2" || props.$length === "1") {
+        return "800px";
+      }
+    }};
+  }
   ${media.phone} {
     flex-direction: column;
     height: auto;
@@ -98,16 +113,35 @@ export const TextBlockShell = styled.div`
   }
 `;
 
-export const WrapperImage = styled.div`
+export const WrapperImage = styled.div<{ $length: string }>`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   gap: 24px;
 
+  ${media.tablet} {
+    flex-direction: ${(props) => {
+      if (props.$length === "2" || props.$length === "1") {
+        return "column-reverse";
+      }
+    }};
+    align-items: ${(props) => {
+      if (props.$length === "2" || props.$length === "1") {
+        return "flex-end";
+      }
+    }};
+    justify-content: ${(props) => {
+      if (props.$length === "2" || props.$length === "1") {
+        return "start";
+      }
+    }};
+  }
   ${media.phone} {
     margin-top: 50px;
     width: 100%;
-    justify-content: space-between;
+    //gap: 14px;
+    //justify-content: space-between;
+    overflow: hidden;
   }
 `;
 
@@ -131,8 +165,36 @@ export const Img = styled.img<{ $length: string }>`
     }};
   }
 
+  ${media.tablet} {
+    height: ${(props) => {
+      if (props.$length === "3") {
+        return "auto";
+      } else if (props.$length === "2") {
+        return "300px";
+      } else {
+        return "500px"; // значение по умолчанию
+      }
+    }};
+    &:nth-child(1) {
+      width: ${(props) => {
+        if (props.$length === "1") {
+          return "100%";
+        } else if (props.$length === "2" || props.$length === "4") {
+          return "100%";
+        }
+      }};
+    }
+    width: ${(props) => {
+      if (props.$length === "1") {
+        return "100%";
+      } else if (props.$length === "2" || props.$length === "4") {
+        return "100%";
+      }
+    }};
+  }
+
   ${media.phone} {
-    height: 254px;
+    height: 230px;
   }
 `;
 
@@ -160,6 +222,12 @@ export const ButtonProduct = styled.button<{ $length: string }>`
       return "60px";
     }
   }};
+
+  ${media.tablet} {
+    padding: 20px 60px;
+    width: 40%;
+    font-size: 20px;
+  }
   ${media.phone} {
     padding: 14px 60px;
     font-size: 16px;

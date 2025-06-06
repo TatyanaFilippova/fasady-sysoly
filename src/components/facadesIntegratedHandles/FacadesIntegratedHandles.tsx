@@ -45,7 +45,7 @@ const FacadesIntegratedHandles = () => {
               <Description>Красиво смотрятся, легко ухаживать</Description>
             </div>
             <div>
-              <ButtonFacade>Посмотреть все варианты ручек</ButtonFacade>
+              <ButtonFacade>Посмотреть все варианты</ButtonFacade>
             </div>
           </ShellDescription>
         </div>

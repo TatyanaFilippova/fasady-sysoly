@@ -168,11 +168,10 @@ export const ButtonFacade = styled.button`
   }
 
   ${media.tablet} {
-    padding: 20px 30px;
+    padding: 20px 20px;
     font-size: 18px;
     width: 100%;
   }
-
   ${media.phone} {
     width: 100%;
     padding: 16px 30px;

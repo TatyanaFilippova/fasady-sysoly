@@ -75,7 +75,7 @@ const Product = ({
             <TextBlock>Матовый или глянцевый</TextBlock>
           </TextBlockShell>
         </Shell>
-        <WrapperImage>
+        <WrapperImage $length={imgList.length.toString()}>
           {imgList.map((item) => (
             <Img src={item} key={item} $length={imgList.length.toString()} />
           ))}

@@ -7,6 +7,11 @@ export const Wrapper = styled.div`
   margin-bottom: 300px;
   ${layout}
 
+  ${media.tablet} {
+    padding: 0;
+    margin-bottom: 164px;
+    margin-top: 0;
+  }
   ${media.phone} {
     padding: 0;
     margin-bottom: 100px;
@@ -16,6 +21,12 @@ export const Wrapper = styled.div`
 
 export const ImgBanner = styled.img`
   margin-bottom: 184px;
+
+  ${media.tablet} {
+    margin-top: 0;
+    height: auto;
+    margin-bottom: 46px;
+  }
   ${media.phone} {
     margin-top: 0;
     height: 160px;
@@ -28,6 +39,11 @@ export const Title = styled.div`
   color: black;
   font-weight: 400;
 
+  ${media.tablet} {
+    margin-left: 0;
+    font-size: 54px;
+    width: 90%;
+  }
   ${media.phone} {
     ${layout};
     font-size: 40px;
@@ -39,6 +55,10 @@ export const Description = styled.div`
   font-size: 32px;
   color: black;
 
+  ${media.tablet} {
+    font-size: 20px;
+    margin-left: 0;
+  }
   ${media.phone} {
     ${layout};
     font-size: 16px;
@@ -54,6 +74,12 @@ export const Container = styled.div`
   width: 100%;
   align-items: end;
 
+  ${media.tablet} {
+    flex-direction: column;
+    align-items: start;
+    ${layout};
+    gap: 60px;
+  }
   ${media.phone} {
     flex-direction: column;
     ${layout};
@@ -67,6 +93,10 @@ export const Shell = styled.div`
   flex-direction: column;
   gap: 30px;
   width: 50%;
+
+  ${media.tablet} {
+    width: 100%;
+  }
   ${media.phone} {
     width: 100%;
   }
@@ -79,6 +109,10 @@ export const ButtonHome = styled.button`
   font-size: 36px;
   border-radius: 16px;
 
+  ${media.tablet} {
+    padding: 20px 62px;
+    font-size: 20px;
+  }
   ${media.phone} {
     padding: 15px 80px;
     font-size: 20px;
