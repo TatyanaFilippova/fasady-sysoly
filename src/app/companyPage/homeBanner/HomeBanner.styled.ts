@@ -31,8 +31,8 @@ export const Title = styled.div`
   font-weight: 400;
 
   ${media.phone} {
-    font-size: 20px;
-    margin-bottom: 26px;
+    font-size: 40px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -43,7 +43,7 @@ export const Description = styled.div`
   font-weight: 300;
 
   ${media.phone} {
-    font-size: 16px;
+    font-size: 20px;
     width: 90%;
   }
 `;

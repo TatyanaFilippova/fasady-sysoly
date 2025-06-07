@@ -1,19 +1,15 @@
 import styled from "styled-components";
-import { h1, layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Title = styled.div`
-  font-size: 48px;
   color: black;
   text-align: left;
   width: 60%;
   font-weight: 400;
   margin-bottom: 10px;
 
-  ${h1};
-  ${media.phone} {
-    font-size: 28px;
-  }
+  ${typography.h2};
 `;
 export const Wrapper = styled.div`
   display: flex;

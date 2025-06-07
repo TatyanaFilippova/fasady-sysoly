@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { h1, layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -16,14 +16,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 40px;
   color: black;
   font-weight: 300;
-  ${h1};
 
-  ${media.phone} {
-    font-size: 20px;
-  }
+  ${typography.h1};
 `;
 
 export const Shell = styled.div`

@@ -1,16 +1,12 @@
 import styled from "styled-components";
-import { h1, layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Title = styled.div`
-  font-size: 48px;
   font-weight: 400;
   color: black;
 
-  ${h1};
-  ${media.phone} {
-    font-size: 28px;
-  }
+  ${typography.h2};
 `;
 
 export const Wrapper = styled.div`
@@ -22,7 +18,6 @@ export const Wrapper = styled.div`
   ${media.tablet} {
     gap: 20px;
   }
-
   ${media.phone} {
     flex-direction: column;
     margin-bottom: 100px;

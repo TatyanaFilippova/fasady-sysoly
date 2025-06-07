@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -39,17 +39,15 @@ export const Description = styled.div`
 export const Title = styled.div`
   padding-top: 46px;
   padding-bottom: 30px;
-  font-size: 40px;
   font-weight: 300;
   color: black;
 
+  ${typography.h1};
   ${media.tablet} {
-    font-size: 28px;
     padding-top: 26px;
     padding-bottom: 15px;
   }
   ${media.phone} {
-    font-size: 24px;
     padding-top: 26px;
     padding-bottom: 15px;
   }

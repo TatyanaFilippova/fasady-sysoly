@@ -7,7 +7,7 @@ import { CMS_URL } from "@/constant";
 export default async function Home() {
   const data = await fetch(CMS_URL + "/api/facades?populate=*", {
     next: {
-      revalidate: 10,
+      revalidate: 1,
     },
   });
   console.log(data);

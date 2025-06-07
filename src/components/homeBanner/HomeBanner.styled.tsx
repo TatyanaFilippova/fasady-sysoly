@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Shell = styled.img`
@@ -50,18 +50,11 @@ export const Title = styled.h1`
   font-weight: 400;
   font-size: 96px;
   color: black;
-  padding-top: 280px;
   width: 80%;
 
+  ${typography.h1}
   ${media.tablet} {
-    font-size: 54px;
-    padding-top: 200px;
     width: 84%;
-  }
-
-  ${media.phone} {
-    font-size: 40px;
-    padding-top: 100px;
   }
 `;
 
