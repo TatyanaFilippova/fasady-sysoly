@@ -4,36 +4,48 @@ import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   display: flex;
-  margin-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   align-items: center;
 
   ${layout};
 
   ${media.phone} {
-    margin-top: 16px;
-    padding-bottom: 16px;
     justify-content: space-between;
+    padding-bottom: 12px;
+    padding-top: 12px;
   }
 
   ${media.tablet} {
-    margin-top: 16px;
-    padding-bottom: 16px;
     justify-content: space-between;
   }
 `;
 
 export const Container = styled.div`
-  display: none;
+  :nth-child(1) {
+    display: none;
+  }
 
   ${media.tablet} {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     gap: 40px;
+    :nth-child(2) {
+      display: none;
+    }
+    :nth-child(1) {
+      display: block;
+    }
   }
   ${media.phone} {
-    display: block;
+    :nth-child(2) {
+    display: none;
+  }
+    :nth-child(1) {
+      display: block;
+    }
+  }
   }
 `;
 
@@ -166,5 +178,21 @@ export const MenuImg = styled.img`
       opacity: 1;
       transform: scale(0.85);
     }
+  }
+`;
+
+export const ShellTitle = styled.div`
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  ${media.phone} {
+    gap: 10px;
+  }
+`;
+
+export const Icon = styled.img`
+  ${media.phone} {
+    width: 40px;
   }
 `;

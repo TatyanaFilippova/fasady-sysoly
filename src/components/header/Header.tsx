@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import menu from "./img/menu.png";
+import icon from "./img/icon.png";
 import {
   Wrapper,
   Shell,
@@ -16,6 +17,8 @@ import {
   MenuServices,
   MenuImg,
   Container,
+  ShellTitle,
+  Icon,
 } from "@/components/header/Header.styled";
 import { useState } from "react";
 import ModalMenu from "@/components/modalMenu/ModalMenu";
@@ -45,7 +48,11 @@ const Header = () => {
   return (
     <Border>
       <Wrapper>
-        <Title onClick={() => router.push("/")}>Фасады Сысолы</Title>
+        <ShellTitle>
+          <Icon src={icon.src} />
+          <Title onClick={() => router.push("/")}>Фасады Сысолы</Title>
+        </ShellTitle>
+
         <Shell>
           <ShellMenu
             onMouseOver={() => {
@@ -108,7 +115,7 @@ const Header = () => {
               setMenu(!isMenu);
             }}
           />
-          <Number>8 800 555 35 35</Number>
+          <Number>8 (8212) 569-884</Number>
         </Container>
         {isMenu && <ModalMenu isMenu={isMenu} setMenu={setMenu}></ModalMenu>}
       </Wrapper>
