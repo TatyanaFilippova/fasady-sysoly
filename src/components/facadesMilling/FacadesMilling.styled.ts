@@ -19,7 +19,7 @@ export const Title = styled.div`
   font-size: 48px;
   color: black;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   ${typography.h2};
   ${media.phone} {
@@ -74,7 +74,6 @@ export const Shell = styled.div`
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
 
   ${media.tablet} {
     align-items: flex-start;
@@ -103,19 +102,15 @@ export const ShellFacade = styled.div`
 
 export const Description = styled.div`
   width: 65%;
-  font-size: 32px;
-  line-height: 60px;
-
-  &:first-child {
-    line-height: normal;
-  }
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: black;
 
   ${media.tablet} {
     font-size: 20px;
     width: 100%;
     line-height: 30px;
   }
-
   ${media.phone} {
     font-size: 20px;
     line-height: 30px;

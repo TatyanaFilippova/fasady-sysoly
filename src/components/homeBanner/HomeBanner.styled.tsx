@@ -50,11 +50,20 @@ export const Title = styled.h1`
   font-weight: 400;
   font-size: 96px;
   color: black;
-  width: 80%;
 
   ${typography.h1}
   ${media.tablet} {
     width: 84%;
+  }
+`;
+
+export const Address = styled.div`
+  font-size: 20px;
+  color: black;
+  text-align: right;
+
+  ${media.phone} {
+    display: none;
   }
 `;
 
@@ -86,8 +95,12 @@ export const Content = styled.div`
 `;
 
 export const BlockText = styled.div`
-  font-size: 20px;
+  font-size: 36px;
+  color: black;
 
+  ${media.tablet} {
+    font-size: 24px;
+  }
   ${media.phone} {
     font-size: 16px;
   }
@@ -99,7 +112,7 @@ export const ButtonHomeBanner = styled.button`
   font-size: 36px;
   height: 100px;
   border-radius: 10px;
-  width: 35%;
+  width: 30%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 
   &:hover {
@@ -117,17 +130,15 @@ export const ButtonHomeBanner = styled.button`
     transition: all 0.2s;
   }
 
-  ${media.phone} {
-    height: auto;
-    width: 70%;
-    font-size: 20px;
-    padding: 15px 30px;
-  }
-
   ${media.tablet} {
     font-size: 20px;
-
     height: 60px;
     text-align: center;
+  }
+  ${media.phone} {
+    height: auto;
+    width: 60%;
+    font-size: 16px;
+    padding: 15px 30px;
   }
 `;

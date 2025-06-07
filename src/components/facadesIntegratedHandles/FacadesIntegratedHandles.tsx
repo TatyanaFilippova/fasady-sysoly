@@ -39,13 +39,18 @@ const FacadesIntegratedHandles = () => {
           <ShellDescription>
             <div>
               <Description>
-                Производство и покраска готовых фасадов с фрезеровкой
+                Беспроигрышное решение для современных кухонь: никаких
+                выступающих элементов, только чистые линии и эргономичный
+                профиль.
               </Description>
-              <Description>Большой выбор фрезерово</Description>
-              <Description>Красиво смотрятся, легко ухаживать</Description>
+              <Description>
+                Встроенная ручка – это не только красиво, но и практично: ничего
+                не мешает при готовке, не цепляется за одежду и безопасно для
+                детей.
+              </Description>
             </div>
             <div>
-              <ButtonFacade>Посмотреть все варианты</ButtonFacade>
+              <ButtonFacade>Посмотреть все</ButtonFacade>
             </div>
           </ShellDescription>
         </div>

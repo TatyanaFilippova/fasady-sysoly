@@ -36,13 +36,17 @@ const FacadesMilling = () => {
         <ShellDescription>
           <div>
             <Description>
-              Производство и покраска готовых фасадов с фрезеровкой
+              Идеальный способ добавить интерьеру индивидуальности и
+              благородства.
             </Description>
-            <Description>Большой выбор фрезеровок</Description>
-            <Description>Красиво смотрятся, легко ухаживать</Description>
+            <Description>
+              Точные линии, красивые узоры и глубокая проработка деталей –
+              каждая кухня с такими фасадами выглядит по-настоящему дорого и
+              стильно.
+            </Description>
           </div>
           <div>
-            <ButtonFacade>Посмотреть все варианты</ButtonFacade>
+            <ButtonFacade>Посмотреть все</ButtonFacade>
           </div>
         </ShellDescription>
       </Wrapper>

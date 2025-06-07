@@ -30,14 +30,17 @@ const RadiusFacades = () => {
         <ShellDescription>
           <div>
             <Description>
-              Производство и покраска готовых фасадов с фрезеровкой
+              Мягкие изгибы, обтекаемые формы и безупречная геометрия –
+              радиусные фасады добавят интерьеру динамики и стиля.
             </Description>
-            <Description>Большой выбор фрезеровок</Description>
-            <Description>Красиво смотрятся, легко ухаживать</Description>
+            <Description>
+              Идеальное решение для современных кухонь с нестандартной
+              планировкой.
+            </Description>
           </div>
           <div>
             <ButtonFacade onClick={() => router.push("/RadiusFacadesPage")}>
-              Подробнее о радиусных фасадах
+              Подробнее
             </ButtonFacade>
           </div>
         </ShellDescription>
