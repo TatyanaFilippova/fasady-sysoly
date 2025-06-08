@@ -27,7 +27,7 @@ const OtherServices = () => {
       </Container>
       <div>
         <ShellDescription>
-          <ButtonFacade onClick={() => router.push("otherServicesPage")}>
+          <ButtonFacade onClick={() => router.push("other-services")}>
             Посмотреть все услуги
           </ButtonFacade>
         </ShellDescription>

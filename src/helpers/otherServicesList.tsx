@@ -1,8 +1,8 @@
-import img1 from "./../../src/app/otherServicesPage/img/image1.png";
-import img2 from "./../../src/app/otherServicesPage/img/image2.png";
-import img3 from "./../../src/app/otherServicesPage/img/image3.png";
-import img4 from "./../../src/app/otherServicesPage/img/image4.png";
-import img5 from "./../../src/app/otherServicesPage/img/image5.png";
+import img1 from "./../../src/app/other-services/img/image1.png";
+import img2 from "./../../src/app/other-services/img/image2.png";
+import img3 from "./../../src/app/other-services/img/image3.png";
+import img4 from "./../../src/app/other-services/img/image4.png";
+import img5 from "./../../src/app/other-services/img/image5.png";
 
 export interface Services {
   img: string;

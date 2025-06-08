@@ -39,7 +39,7 @@ const RadiusFacades = () => {
             </Description>
           </div>
           <div>
-            <ButtonFacade onClick={() => router.push("/RadiusFacadesPage")}>
+            <ButtonFacade onClick={() => router.push("/radius-facades")}>
               Подробнее
             </ButtonFacade>
           </div>

@@ -24,18 +24,18 @@ import { useState } from "react";
 import ModalMenu from "@/components/modalMenu/ModalMenu";
 
 export const options = [
-  { value: "1", label: "Фасады с фрезеровкой", href: "/detailedPage" },
+  { value: "1", label: "Фасады с фрезеровкой", href: "/detailed" },
   {
     value: "2",
     label: "Фасады с интегрированными ручками",
-    href: "/detailedPage",
+    href: "/detailed",
   },
-  { value: "3", label: "Радиусные фасады", href: "/RadiusFacadesPage" },
+  { value: "3", label: "Радиусные фасады", href: "/radius-facades" },
 ];
 
 export const optionsServices = [
-  { value: "1", label: "Покраска", href: "/paintingPage" },
-  { value: "2", label: "Все товары и услуги", href: "/otherServicesPage" },
+  { value: "1", label: "Покраска", href: "/painting" },
+  { value: "2", label: "Все товары и услуги", href: "/other-services" },
 ];
 
 const Header = () => {
@@ -100,10 +100,10 @@ const Header = () => {
               </MenuServices>
             )}
           </ShellMenu>
-          <Company type="button" onClick={() => router.push("/pricesPage")}>
+          <Company type="button" onClick={() => router.push("/prices")}>
             Цены
           </Company>
-          <Company type="button" onClick={() => router.push("/companyPage")}>
+          <Company type="button" onClick={() => router.push("/company")}>
             О компании
           </Company>
           <Company>Условия и гарантия</Company>

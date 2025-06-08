@@ -52,14 +52,14 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
       ))}
       <DescriptionCursor
         onClick={() => {
-          router.push("/pricesPage");
+          router.push("/prices");
         }}
       >
         Цены
       </DescriptionCursor>
       <DescriptionCursor
         onClick={() => {
-          router.push("/companyPage");
+          router.push("/company");
         }}
       >
         О компании

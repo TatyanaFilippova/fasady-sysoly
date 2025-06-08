@@ -1,7 +1,7 @@
-import img1 from "./../../src/app/otherServicesPage/img/image1.png";
-import img2 from "./../../src/app/otherServicesPage/img/image2.png";
-import img3 from "./../../src/app/otherServicesPage/img/image3.png";
-import img4 from "./../../src/app/otherServicesPage/img/image4.png";
+import img1 from "./../../src/app/other-services/img/image1.png";
+import img2 from "./../../src/app/other-services/img/image2.png";
+import img3 from "./../../src/app/other-services/img/image3.png";
+import img4 from "./../../src/app/other-services/img/image4.png";
 
 export interface PaintingCardListProps {
   img: string;
