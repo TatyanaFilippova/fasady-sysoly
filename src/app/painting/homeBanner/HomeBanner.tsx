@@ -1,6 +1,6 @@
 "use client";
 
-import paint from "../img/paint.png";
+import paint from "../img/banner.png";
 import {
   Wrapper,
   ImgBanner,

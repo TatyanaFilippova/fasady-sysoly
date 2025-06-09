@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   ${layout};
 
+  ${media.tablet} {
+    margin-top: 0;
+  }
   ${media.phone} {
     margin-top: 0;
     padding-left: 0;
@@ -19,6 +22,9 @@ export const WrapperBlock = styled.div`
   display: flex;
   margin-bottom: 98px;
 
+  ${media.tablet} {
+    flex-direction: column;
+  }
   ${media.phone} {
     flex-direction: column;
     margin-bottom: 60px;
@@ -26,12 +32,12 @@ export const WrapperBlock = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 62px;
   color: black;
   font-weight: 400;
+  ${typography.h2};
+  margin-top: 0;
 
   ${media.phone} {
-    font-size: 40px;
     margin-bottom: 16px;
   }
 `;
@@ -42,6 +48,10 @@ export const Description = styled.div`
   width: 70%;
   font-weight: 300;
 
+  ${media.tablet} {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
   ${media.phone} {
     font-size: 20px;
     width: 90%;
@@ -74,6 +84,9 @@ export const DescriptionBlock = styled.div`
   font-size: 24px;
   color: black;
 
+  ${media.tablet} {
+    font-size: 20px;
+  }
   ${media.phone} {
     ${layout};
     margin-left: 0;

@@ -6,6 +6,7 @@ import { CMS_URL } from "@/constant";
 export interface ProductListProps {
   data: {
     title: string;
+    summary?: string;
     ImgProduct?: {
       url: string;
     };
@@ -26,7 +27,7 @@ const ProductList = ({ data }: ProductListProps) => {
       {data.map((product) => (
         <Product
           title={product.title}
-          description="Описание раздела. Может его не быть"
+          summary={product.summary}
           imgProduct={CMS_URL + product?.ImgProduct?.url}
           imgList={
             product?.imgList?.map((product) => CMS_URL + product.url) ?? []
@@ -37,7 +38,7 @@ const ProductList = ({ data }: ProductListProps) => {
           thickness={product.thickness}
           color={product.color}
           key={product.title}
-        ></Product>
+        />
       ))}
     </div>
   );

@@ -2,7 +2,6 @@
 import {
   Title,
   Img,
-  Shell,
   DescriptionBlock,
   CardStyled,
 } from "@/app/painting/content/Content.styled";
@@ -14,13 +13,11 @@ interface ICard {
 }
 const Card = ({ title, summary, cardImage }: ICard) => {
   return (
-    <Shell>
-      <CardStyled>
-        <Img src={cardImage} />
-        <Title>{title}</Title>
-        <DescriptionBlock>{summary}</DescriptionBlock>
-      </CardStyled>
-    </Shell>
+    <CardStyled>
+      <Img src={cardImage} />
+      <Title>{title}</Title>
+      <DescriptionBlock>{summary}</DescriptionBlock>
+    </CardStyled>
   );
 };
 

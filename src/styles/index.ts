@@ -42,11 +42,10 @@ export const typography = {
     font-size: 36px;
 
     ${media.tablet} {
-      font-size: 20px;
+      font-size: 28px;
     }
     ${media.phone} {
-      font-size: 40px;
-      margin-top: 100px;
+      font-size: 24px;
     }
   `,
   h4: css`

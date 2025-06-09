@@ -16,6 +16,7 @@ import {
   Description,
   ShellDescription,
 } from "@/components/facadesMilling/FacadesMilling.styled";
+import { Fragment } from "react";
 
 const FacadesIntegratedHandles = () => {
   return (
@@ -28,9 +29,9 @@ const FacadesIntegratedHandles = () => {
           </ImgWrapper>
           <Shell $length={homeFacadesIntegrated.length.toString()}>
             {homeFacadesIntegrated.map((facade) => (
-              <div key={facade.img}>
+              <Fragment key={facade.img}>
                 <ImgFacade src={facade.img} />
-              </div>
+              </Fragment>
             ))}
             <ImgPen src={pen.src} />
           </Shell>

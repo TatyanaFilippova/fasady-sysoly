@@ -1,4 +1,4 @@
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import styled from "styled-components";
 import { media } from "@/constants/media";
 
@@ -35,18 +35,16 @@ export const ImgBanner = styled.img`
 `;
 
 export const Title = styled.div`
-  font-size: 64px;
   color: black;
   font-weight: 400;
+  ${typography.h2};
 
   ${media.tablet} {
     margin-left: 0;
-    font-size: 54px;
     width: 90%;
   }
   ${media.phone} {
     ${layout};
-    font-size: 40px;
     padding-left: 0;
   }
 `;

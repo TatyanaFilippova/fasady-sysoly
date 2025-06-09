@@ -5,7 +5,6 @@ import { media } from "@/constants/media";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 200px;
   ${layout}
 `;
 
@@ -32,7 +31,7 @@ export const Description = styled.div`
   ${media.phone} {
     font-size: 20px;
     width: 100%;
-    margin-bottom: 164px;
+    margin-bottom: 100px;
   }
 `;
 
@@ -42,7 +41,7 @@ export const Title = styled.div`
   font-weight: 300;
   color: black;
 
-  ${typography.h1};
+  ${typography.h3};
   ${media.tablet} {
     padding-top: 26px;
     padding-bottom: 15px;
@@ -71,21 +70,12 @@ export const Img = styled.img`
 
   ${media.tablet} {
     width: 100%;
-    height: auto;
+    height: 260px;
   }
   ${media.phone} {
     width: 100%;
-    height: auto;
+    height: 224px;
   }
-`;
-
-export const Shell = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-
-  row-gap: 80px;
-  justify-content: space-between;
 `;
 
 export const CardStyled = styled.div`

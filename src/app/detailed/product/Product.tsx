@@ -16,7 +16,6 @@ import {
 
 interface IProduct {
   title: string;
-  description: string;
   imgProduct: string;
   imgList: string[];
   dimensions: string;
@@ -24,11 +23,12 @@ interface IProduct {
   thickness: string;
   width: string;
   color: string;
+  summary?: string;
 }
 
 const Product = ({
   title,
-  description,
+  summary,
   imgProduct,
   dimensions,
   thickness,
@@ -41,18 +41,16 @@ const Product = ({
     <Wrapper>
       <div>
         <Title>{title}</Title>
-        <Description>{description}</Description>
-        <Description>{description}</Description>
+        <Description>{summary}</Description>
       </div>
       <Container $length={imgList.length.toString()}>
         <Shell>
           <ImgBlock>
             <ImgProduct src={imgProduct} />
           </ImgBlock>
-
           <TextBlockShell>
             <TextBlock>
-              <b>Размеры (min и max):</b> {dimensions}
+              <b>Размеры (min и max)</b>
             </TextBlock>
             <TextBlock>
               <b>Толщина h:</b> {thickness}
@@ -63,16 +61,11 @@ const Product = ({
             <TextBlock>
               <b>Ширина:</b> {width}
             </TextBlock>
+            <TextDescription>{dimensions}</TextDescription>
             <TextDescription>
-              Рекомендуется изготавливать в МДФ толщиной не менее 19 мм
+              <b>Цвет:</b>
             </TextDescription>
-            <TextDescription>
-              <b>Цвет:</b> {color}
-            </TextDescription>
-            <TextBlock>
-              С каталога RAL, NCS, Wood Color, Color System или подбор
-            </TextBlock>
-            <TextBlock>Матовый или глянцевый</TextBlock>
+            <TextBlock>{color}</TextBlock>
           </TextBlockShell>
         </Shell>
         <WrapperImage $length={imgList.length.toString()}>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
@@ -14,14 +14,10 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 36px;
   color: black;
   font-weight: 300;
   margin-bottom: 24px;
-
-  ${media.phone} {
-    font-size: 20px;
-  }
+  ${typography.h3};
 `;
 
 export const Content = styled.div`
@@ -29,6 +25,9 @@ export const Content = styled.div`
   color: black;
   font-size: 24px;
 
+  ${media.tablet} {
+    font-size: 20px;
+  }
   ${media.phone} {
     font-size: 16px;
   }
@@ -46,12 +45,12 @@ export const WrapperMap = styled.div`
   flex-direction: column;
   width: 100%;
 
+  ${media.tablet} {
+    margin-top: 60px;
+  }
   ${media.phone} {
     height: 300px;
     width: calc(100% + 48px);
-    margin-top: 60px;
-    margin-bottom: 100px;
-    margin-left: -24px;
-    margin-right: -24px;
+    margin: 60px -24px 100px -24px;
   }
 `;

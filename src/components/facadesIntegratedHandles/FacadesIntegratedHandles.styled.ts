@@ -43,41 +43,35 @@ export const Img = styled.img`
 export const Shell = styled.div<{ $length: string }>`
   display: flex;
   flex-wrap: wrap;
-  gap: 48px;
+  gap: 12px;
   margin-left: 40px;
   width: 50%;
 
   & > div {
-    width: calc(50% - 24px);
+    width: calc(50% - 6px);
   }
 
   ${media.tablet} {
+    flex-direction: column;
     align-items: flex-start;
-    gap: 0;
-
-    & > div:nth-child(4) {
+    margin-left: 20px;
+    gap: 20px;
+    :nth-child(4) {
       display: ${(props) => {
         if (props.$length === "4") {
           return "none";
         } else return "block";
       }};
     }
-
     & > div {
       width: 100%;
     }
   }
-
   ${media.phone} {
-    gap: 14px;
+    gap: 10px;
     width: 100%;
-    margin-top: 20px;
-    justify-content: flex-start;
+    margin-top: 10px;
     margin-left: 0;
-    & > div {
-      width: calc(50% - 7px);
-    }
-
     & > div:nth-child(4) {
       display: block;
     }
@@ -94,8 +88,8 @@ export const Container = styled.div`
 `;
 
 export const ImgFacade = styled.img`
-  width: 100%;
-  height: 220px;
+  width: calc(50% - 12px);
+  height: 240px;
   object-fit: cover;
 
   ${media.tablet} {
@@ -105,11 +99,9 @@ export const ImgFacade = styled.img`
 
   ${media.phone} {
     height: 140px;
-    width: 100%;
+    width: calc(50% - 5px);
   }
 `;
-
-export const ContainerImg = styled.div``;
 
 export const ImgPen = styled.img`
   object-fit: cover;

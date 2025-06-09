@@ -19,7 +19,7 @@ export const Title = styled.div`
   padding-bottom: 30px;
   width: 70%;
 
-  ${typography.h1};
+  ${typography.h3};
   ${media.tablet} {
     padding-bottom: 0;
   }
@@ -152,20 +152,44 @@ export const ImgBlock = styled.div`
 
 export const Img = styled.img<{ $length: string }>`
   width: calc(50% - 12px);
-  height: 506px;
+  height: 406px;
   object-fit: cover;
   &:nth-child(1) {
     width: ${(props) => {
       if (props.$length === "3" || props.$length === "1") {
         return "100%";
-      } else if (props.$length === "2" || props.$length === "4") {
+      } else if (props.$length === "4") {
         return "calc(50% - 12px)";
+      } else if (props.$length === "2") {
+        return "calc(40% - 12px)";
       } else {
-        return "auto"; // значение по умолчанию
+        return "auto";
       }
     }};
+      height: ${(props) => {
+        if (props.$length === "3") {
+          return "706px";
+        } else if (props.$length === "2") {
+          return "406px";
+        } else if (props.$length === "1") {
+          return "100%";
+        }
+      }};
   }
 
+    &:nth-child(2) {
+        width: ${(props) => {
+          if (props.$length === "2") {
+            return "calc(60% - 12px)";
+          }
+        }};
+        height: ${(props) => {
+          if (props.$length === "2") {
+            return "706px";
+          }
+        }};
+    }
+    
   ${media.tablet} {
     height: ${(props) => {
       if (props.$length === "3") {
@@ -226,9 +250,11 @@ export const ButtonProduct = styled.button<{ $length: string }>`
   width: 25%;
   margin-left: auto;
   margin-top: ${(props) => {
-    if (props.$length === "2" || props.$length === "1") {
+    if (props.$length === "2") {
       return "-90px";
     } else if (props.$length === "3" || props.$length === "4") {
+      return "60px";
+    } else if (props.$length === "1") {
       return "60px";
     }
   }};

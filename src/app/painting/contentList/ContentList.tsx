@@ -2,7 +2,7 @@
 
 import { CMS_URL } from "@/constant";
 import Card from "@/app/painting/card/Card";
-import { Wrapper } from "@/app/painting/content/Content.styled";
+import { Wrapper } from "@/app/painting/content/../contentList/ContentList.styled";
 
 export interface ContentListProps {
   data: {
@@ -23,7 +23,7 @@ const ContentList = ({ data }: ContentListProps) => {
           title={card.title}
           summary={card.summary}
           cardImage={CMS_URL + card.cardImage.url}
-          key={card.sort}
+          key={card.title}
         />
       ))}
     </Wrapper>

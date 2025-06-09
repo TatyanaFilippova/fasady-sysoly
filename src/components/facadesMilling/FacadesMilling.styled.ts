@@ -62,6 +62,7 @@ export const Shell = styled.div`
   ${media.tablet} {
     row-gap: 38px;
     column-gap: 15px;
+    margin-left: 20px;
   }
 
   ${media.phone} {

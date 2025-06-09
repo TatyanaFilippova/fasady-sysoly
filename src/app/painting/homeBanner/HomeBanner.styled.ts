@@ -1,4 +1,4 @@
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import styled from "styled-components";
 import { media } from "@/constants/media";
 
@@ -25,33 +25,41 @@ export const ImgBanner = styled.img`
 `;
 
 export const Title = styled.div`
-  font-size: 64px;
   color: black;
   font-weight: 400;
+  ${typography.h2};
+  margin-top: 0;
 
   ${media.tablet} {
-    font-size: 54px;
-    width: 90%;
+    width: 83%;
+    margin-left: 0;
+    margin-top: 0;
+    padding-left: 0;
   }
   ${media.phone} {
     ${layout};
-    font-size: 40px;
+    margin-left: 0;
+    margin-top: 0;
     padding-left: 0;
+    width: 100%;
   }
 `;
 
 export const Description = styled.div`
   font-size: 32px;
   color: black;
+  width: 70%;
 
   ${media.tablet} {
     font-size: 20px;
+    width: 90%;
   }
   ${media.phone} {
     ${layout};
     font-size: 20px;
     padding-left: 0;
     margin-left: 0;
+    width: 100%;
   }
 `;
 
@@ -60,7 +68,6 @@ export const Container = styled.div`
   gap: 46px;
   justify-content: space-between;
   width: 100%;
-
   flex-direction: column;
 
   ${media.phone} {
@@ -84,10 +91,10 @@ export const Shell = styled.div`
 export const ButtonHome = styled.button`
   background-color: #4f4f4f;
   color: white;
-  padding: 32px 60px;
-  font-size: 24px;
+  padding: 32px 40px;
+  font-size: 20px;
   border-radius: 16px;
-  width: 30%;
+  width: 25%;
   text-align: center;
 
   &:hover {
