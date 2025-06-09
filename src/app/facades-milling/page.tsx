@@ -4,6 +4,7 @@ import ProductList from "@/app/../components/productList/ProductList";
 import Footer from "@/components/footer/Footer";
 import { CMS_URL } from "@/constant";
 import homeBanner from "./img/homeBanner.png";
+import WriteToUs from "@/components/writeToUs/WriteToUs";
 
 export default async function Home() {
   const data = await fetch(
@@ -25,6 +26,7 @@ export default async function Home() {
         summary="Четкие линии, ровные грани, идеальная покраска. Выглядит дорого, служит долго, ухаживать легко."
       />
       <ProductList data={posts.data} />
+      <WriteToUs />
       <Footer />
     </div>
   );

@@ -4,6 +4,7 @@ import HomeBanner from "@/app/painting/homeBanner/HomeBanner";
 import { CMS_URL } from "@/constant";
 import ContentList from "@/app/painting/contentList/ContentList";
 import Content from "@/app/painting/content/Content";
+import WriteToUs from "@/components/writeToUs/WriteToUs";
 
 export default async function Home() {
   const data = await fetch(CMS_URL + "/api/paintings?populate=*", {
@@ -18,6 +19,7 @@ export default async function Home() {
       <HomeBanner />
       <Content />
       <ContentList data={posts.data} />
+      <WriteToUs />
       <Footer />
     </>
   );

@@ -34,9 +34,11 @@ export const Description = styled.div`
   font-size: 20px;
   color: black;
   margin-bottom: 40px;
+  width: 70%;
 
   ${media.phone} {
     font-size: 16px;
+    width: 90%;
   }
 `;
 

@@ -37,7 +37,7 @@ const Footer = () => {
             <Description>Контактная информация</Description>
           </Shell>
           <Shell>
-            <Description>г.Сыктывкар,Индустриальная, 2</Description>
+            <Description>г.Сыктывкар, ул.Гаражная 9/5</Description>
             <Number>8 (8212) 569-884</Number>
           </Shell>
         </ShellBlock>
