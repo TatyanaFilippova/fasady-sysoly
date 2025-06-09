@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { layout } from "@/styles";
 
 export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  ${layout};
   height: 100vh;
   margin: 0;
   position: fixed;
@@ -12,11 +16,14 @@ export const Wrapper = styled.div`
   background-color: white;
   z-index: 100;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
   gap: 32px;
   padding-top: 24px;
-  ${layout}
+`;
+
+export const WrapperMenu = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const CloseIcon = styled.img`
@@ -79,4 +86,12 @@ export const Ul = styled.ul`
   &:hover {
     opacity: 0.8;
   }
+`;
+
+export const Number = styled.div`
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  font-weight: 300;
+  margin-bottom: 30px;
 `;

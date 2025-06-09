@@ -88,7 +88,7 @@ export const Container = styled.div`
 `;
 
 export const ImgFacade = styled.img`
-  width: calc(50% - 12px);
+  width: calc(50% - 6px);
   height: 240px;
   object-fit: cover;
 
@@ -106,9 +106,13 @@ export const ImgFacade = styled.img`
 export const ImgPen = styled.img`
   object-fit: cover;
   width: 100%;
+  height: 290px;
 
   ${media.tablet} {
     display: none;
+  }
+  ${media.phone} {
+    height: 160px;
   }
 `;
 
