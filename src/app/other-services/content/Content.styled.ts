@@ -1,15 +1,20 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   display: flex;
   ${layout};
   flex-wrap: wrap;
-  column-gap: 150px;
-  row-gap: 140px;
+  row-gap: 100px;
+  column-gap: 30px;
   margin-bottom: 220px;
+  justify-content: space-between;
 
+  ${media.tablet} {
+    column-gap: 0;
+    row-gap: 100px;
+  }
   ${media.phone} {
     row-gap: 46px;
     margin-bottom: 100px;
@@ -17,40 +22,54 @@ export const Wrapper = styled.div`
 `;
 
 export const ImgContent = styled.img`
-  width: 574px;
+  width: 690px;
   height: 434px;
-  background-size: cover;
+  object-fit: cover;
 
+  ${media.tablet} {
+    height: 260px;
+    width: 100%;
+  }
   ${media.phone} {
     object-fit: cover;
+    height: 280px;
   }
 `;
 
 export const Shell = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 46px;
-  width: 40%;
+  width: calc(50% - 30px);
 
+  ${media.tablet} {
+    width: calc(50% - 12px);
+    row-gap: 0;
+  }
   ${media.phone} {
     width: 100%;
-    row-gap: 20px;
   }
 `;
 
 export const Title = styled.div`
-  font-size: 40px;
   color: black;
   font-weight: 300;
-
-  ${media.phone} {
-    font-size: 20px;
+  padding-top: 26px;
+  padding-bottom: 15px;
+  ${typography.h3};
+  
+  ${media.phone}{
+    padding-top: 26px;
+    padding-bottom: 15px;
+  }
   }
 `;
 
 export const Description = styled.div`
   font-size: 24px;
 
+  ${media.tablet} {
+    font-size: 18px;
+  }
   ${media.phone} {
     font-size: 16px;
   }

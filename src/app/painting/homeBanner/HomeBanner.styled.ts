@@ -120,6 +120,6 @@ export const ButtonHome = styled.button`
   ${media.phone} {
     padding: 15px 40px;
     font-size: 16px;
-    width: 60%;
+    width: 68%;
   }
 `;

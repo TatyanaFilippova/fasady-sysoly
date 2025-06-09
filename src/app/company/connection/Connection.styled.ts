@@ -21,7 +21,7 @@ export const Title = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 85%;
+  width: 88%;
   color: black;
   font-size: 24px;
 

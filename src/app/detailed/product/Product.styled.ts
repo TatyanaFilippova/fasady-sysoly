@@ -148,6 +148,7 @@ export const WrapperImage = styled.div<{ $length: string }>`
 
 export const ImgBlock = styled.div`
   width: 100%;
+  margin-left: 18px;
 `;
 
 export const Img = styled.img<{ $length: string }>`

@@ -1,12 +1,15 @@
 import styled from "styled-components";
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
   margin-bottom: 180px;
   padding-bottom: 10px;
-  ${layout}
+  ${layout};
 
+  ${media.tablet} {
+    margin-bottom: 120px;
+  }
   ${media.phone} {
     padding: 0;
     margin-bottom: 100px;
@@ -18,6 +21,10 @@ export const ImgHome = styled.img`
   margin-top: 46px;
   margin-bottom: 46px;
 
+  ${media.tablet} {
+    margin-top: 24px;
+    margin-bottom: 64px;
+  }
   ${media.phone} {
     margin-top: 0;
     margin-bottom: 40px;
@@ -26,13 +33,12 @@ export const ImgHome = styled.img`
 `;
 
 export const Title = styled.div`
-  font-size: 64px;
   font-weight: 400;
   color: black;
+  ${typography.h2};
 
   ${media.phone} {
     margin-top: 0;
-    font-size: 40px;
   }
 `;
 
@@ -43,6 +49,12 @@ export const Content = styled.div`
   width: 60%;
   margin-bottom: 46px;
 
+  ${media.tablet} {
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
   ${media.phone} {
     font-size: 16px;
     margin-left: 0;
@@ -75,6 +87,12 @@ export const Button = styled.button`
     transition: all 0.2s;
   }
 
+  ${media.tablet} {
+    margin-top: 16px;
+    width: 40%;
+    font-size: 20px;
+    padding: 20px 30px;
+  }
   ${media.phone} {
     padding: 15px 30px;
     font-size: 16px;

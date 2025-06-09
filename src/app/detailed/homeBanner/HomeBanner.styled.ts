@@ -112,7 +112,7 @@ export const ButtonHome = styled.button`
     font-size: 20px;
   }
   ${media.phone} {
-    padding: 15px 80px;
-    font-size: 20px;
+    padding: 15px 60px;
+    font-size: 16px;
   }
 `;

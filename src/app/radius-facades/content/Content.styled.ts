@@ -18,8 +18,7 @@ export const Wrapper = styled.div`
 export const Title = styled.div`
   color: black;
   font-weight: 300;
-
-  ${typography.h1};
+  ${typography.h3};
 `;
 
 export const Shell = styled.div`

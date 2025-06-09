@@ -28,7 +28,7 @@ export const Title = styled.div`
   font-weight: 300;
   margin-bottom: 30px;
 
-  ${typography.h1};
+  ${typography.h3};
   ${media.tablet} {
     width: 80%;
   }
