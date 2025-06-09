@@ -28,7 +28,6 @@ export const Wrapper = styled.div`
 `;
 
 export const Img = styled.img`
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
   height: 600px;
   width: 100%;
   object-fit: cover;

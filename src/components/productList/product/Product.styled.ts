@@ -290,7 +290,7 @@ export const ButtonProduct = styled.button<{ $length: string }>`
     } else if (props.$length === "3" || props.$length === "4") {
       return "60px";
     } else if (props.$length === "1") {
-      return "-60px";
+      return "60px";
     }
   }};
 

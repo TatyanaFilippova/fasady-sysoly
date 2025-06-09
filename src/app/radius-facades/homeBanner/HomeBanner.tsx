@@ -5,12 +5,12 @@ import {
   Title,
   Description,
 } from "@/app/radius-facades/homeBanner/HomeBanner.styled";
-import homeBannerRadius from "./../../../img/homeBannerRadius.png";
+import banner from "../img/banner.png";
 
 const HomeBanner = () => {
   return (
     <Wrapper>
-      <ImgBlock src={homeBannerRadius.src} />
+      <ImgBlock src={banner.src} />
       <Title>Радиусные фасады</Title>
       <Description>
         Краткое описание фасада с интегрированной ручкой

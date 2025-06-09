@@ -14,6 +14,7 @@ import {
 } from "@/components/facadesMilling/FacadesMilling.styled";
 import { homeFacadesList } from "@/helpers/homeFacadesList";
 import kitchen from "../../img/kitchen.png";
+import { router } from "next/client";
 
 const FacadesMilling = () => {
   return (
@@ -46,7 +47,9 @@ const FacadesMilling = () => {
             </Description>
           </div>
           <div>
-            <ButtonFacade>Посмотреть все</ButtonFacade>
+            <ButtonFacade onClick={() => router.push("/facades-milling")}>
+              Посмотреть все
+            </ButtonFacade>
           </div>
         </ShellDescription>
       </Wrapper>

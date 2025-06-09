@@ -17,6 +17,7 @@ import {
   ShellDescription,
 } from "@/components/facadesMilling/FacadesMilling.styled";
 import { Fragment } from "react";
+import { router } from "next/client";
 
 const FacadesIntegratedHandles = () => {
   return (
@@ -51,7 +52,11 @@ const FacadesIntegratedHandles = () => {
               </Description>
             </div>
             <div>
-              <ButtonFacade>Посмотреть все</ButtonFacade>
+              <ButtonFacade
+                onClick={() => router.push("/facades-integrated-handles")}
+              >
+                Посмотреть все
+              </ButtonFacade>
             </div>
           </ShellDescription>
         </div>
