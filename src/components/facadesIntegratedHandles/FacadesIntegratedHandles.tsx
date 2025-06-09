@@ -17,9 +17,10 @@ import {
   ShellDescription,
 } from "@/components/facadesMilling/FacadesMilling.styled";
 import { Fragment } from "react";
-import { router } from "next/client";
+import { useRouter } from "next/navigation";
 
 const FacadesIntegratedHandles = () => {
+  const router = useRouter();
   return (
     <>
       <Wrapper>

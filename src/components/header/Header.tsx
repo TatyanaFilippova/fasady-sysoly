@@ -62,7 +62,7 @@ const Header = () => {
               setMenuOpen(false);
             }}
           >
-            <CompanyButton> Производство фасадов</CompanyButton>
+            <CompanyButton>Каталог фасадов</CompanyButton>
             {isMenuOpen && (
               <Menu>
                 {options.map((item) => {

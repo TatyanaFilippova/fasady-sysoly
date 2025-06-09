@@ -7,7 +7,7 @@ export const Title = styled.div`
   text-align: left;
   width: 60%;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   ${typography.h2};
 `;

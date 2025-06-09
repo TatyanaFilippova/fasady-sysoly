@@ -29,7 +29,7 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
           <CloseIcon src={close.src} onClick={() => setMenu(!isMenu)} />
         </Shell>
 
-        <Description>Производство фасадов </Description>
+        <Description>Каталог фасадов</Description>
         {options.map((item) => (
           <Ul
             key={item.value}

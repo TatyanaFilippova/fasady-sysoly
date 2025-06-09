@@ -14,9 +14,10 @@ import {
 } from "@/components/facadesMilling/FacadesMilling.styled";
 import { homeFacadesList } from "@/helpers/homeFacadesList";
 import kitchen from "../../img/kitchen.png";
-import { router } from "next/client";
+import { useRouter } from "next/navigation";
 
 const FacadesMilling = () => {
+  const router = useRouter();
   return (
     <>
       <Wrapper>
