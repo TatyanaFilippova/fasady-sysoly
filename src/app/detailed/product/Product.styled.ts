@@ -21,7 +21,7 @@ export const Title = styled.div`
 
   ${typography.h3};
   ${media.tablet} {
-    padding-bottom: 0;
+    padding-bottom: 30px;
   }
   ${media.phone} {
     width: 80%;
@@ -33,6 +33,7 @@ export const Title = styled.div`
 export const Description = styled.div`
   font-size: 20px;
   color: black;
+  margin-bottom: 40px;
 
   ${media.phone} {
     font-size: 16px;
@@ -52,7 +53,6 @@ export const Shell = styled.div`
   ${media.phone} {
     flex-direction: row-reverse;
     width: 100%;
-    gap: 30px;
     justify-content: space-between;
   }
 `;
@@ -60,7 +60,6 @@ export const Shell = styled.div`
 export const Container = styled.div<{ $length: string }>`
   display: flex;
   width: 100%;
-  margin-top: 60px;
   height: ${(props) => {
     if (props.$length === "2" || props.$length === "1") {
       return "920px";
@@ -89,12 +88,12 @@ export const ImgProduct = styled.img`
     width: 100%;
     height: auto;
     margin-bottom: 0;
+    margin-top: 20px;
   }
 `;
 
 export const TextBlock = styled.div`
   font-size: 16px;
-
   :last-child {
     margin-bottom: 10px;
   }
@@ -103,6 +102,7 @@ export const TextBlock = styled.div`
 export const TextBlockShell = styled.div`
   line-height: 1.4;
   margin-right: 30px;
+  margin-top: 20px;
 
   :nth-child(1) {
     margin-bottom: 20px;
@@ -121,13 +121,15 @@ export const WrapperImage = styled.div<{ $length: string }>`
 
   ${media.tablet} {
     flex-direction: ${(props) => {
-      if (props.$length === "2" || props.$length === "1") {
+      if (props.$length === "1") {
         return "column-reverse";
+      } else if (props.$length === "2") {
+        return "column";
       }
     }};
     align-items: ${(props) => {
       if (props.$length === "2" || props.$length === "1") {
-        return "flex-end";
+        return "flex-start";
       }
     }};
     justify-content: ${(props) => {
@@ -137,10 +139,8 @@ export const WrapperImage = styled.div<{ $length: string }>`
     }};
   }
   ${media.phone} {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
-    //gap: 14px;
-    //justify-content: space-between;
     overflow: hidden;
     gap: 10px;
   }
@@ -193,7 +193,7 @@ export const Img = styled.img<{ $length: string }>`
   ${media.tablet} {
     height: ${(props) => {
       if (props.$length === "3") {
-        return "auto";
+        return "250px";
       } else if (props.$length === "2") {
         return "300px";
       } else {
@@ -208,7 +208,29 @@ export const Img = styled.img<{ $length: string }>`
           return "100%";
         }
       }};
+        height: ${(props) => {
+          if (props.$length === "2") {
+            return "300px";
+          } else if (props.$length === "3") {
+            return "406px";
+          } else if (props.$length === "1") {
+            return "500px";
+          }
+        }};
     }
+      &:nth-child(2) {
+          width: ${(props) => {
+            if (props.$length === "2") {
+              return "100%";
+            }
+          }};
+          height: ${(props) => {
+            if (props.$length === "2") {
+              return "300px";
+            }
+          }};
+      }
+      
     width: ${(props) => {
       if (props.$length === "1") {
         return "100%";
@@ -219,7 +241,7 @@ export const Img = styled.img<{ $length: string }>`
   }
 
   ${media.phone} {
-    height: 230px;
+    height: 200px;
     width: calc(50% - 5px);
     &:nth-child(1) {
         width: ${(props) => {
@@ -227,7 +249,20 @@ export const Img = styled.img<{ $length: string }>`
             return "calc(50% - 5px)";
           }
         }};
-    }
+        height: 230px;
+    }; 
+      &:nth-child(2) {
+          width: ${(props) => {
+            if (props.$length === "2") {
+              return "calc(50% - 5px)";
+            }
+          }};
+          height: ${(props) => {
+            if (props.$length === "2") {
+              return "230px";
+            }
+          }};
+      }
     }
   }
 `;
@@ -235,7 +270,6 @@ export const Img = styled.img<{ $length: string }>`
 export const TextDescription = styled.div`
   font-size: 16px;
   padding: 10px 0;
-
   &:last-child {
     padding-top: 0;
   }
@@ -255,7 +289,7 @@ export const ButtonProduct = styled.button<{ $length: string }>`
     } else if (props.$length === "3" || props.$length === "4") {
       return "60px";
     } else if (props.$length === "1") {
-      return "60px";
+      return "-60px";
     }
   }};
 
@@ -263,9 +297,14 @@ export const ButtonProduct = styled.button<{ $length: string }>`
     padding: 20px 60px;
     width: 40%;
     font-size: 20px;
+    margin-top: ${(props) => {
+      if (props.$length === "1") {
+        return "-180px";
+      }
+    }};
   }
   ${media.phone} {
-    padding: 14px 60px;
+    padding: 14px 30px;
     font-size: 16px;
     width: 50%;
     margin-top: 30px;

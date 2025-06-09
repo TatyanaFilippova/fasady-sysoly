@@ -41,7 +41,7 @@ const Product = ({
     <Wrapper>
       <div>
         <Title>{title}</Title>
-        <Description>{summary}</Description>
+        {summary && <Description>{summary}</Description>}
       </div>
       <Container $length={imgList.length.toString()}>
         <Shell>
