@@ -20,7 +20,7 @@ const HomeBanner = () => {
         <Content>
           Ознакомьтесь со списком наших услуг, или перейдите сразу в цены
         </Content>
-        <Button type="button" onClick={() => router.push("/pricesPage")}>
+        <Button type="button" onClick={() => router.push("/prices")}>
           Посмотреть цены
         </Button>
       </Container>

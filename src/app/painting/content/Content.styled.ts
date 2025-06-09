@@ -20,7 +20,15 @@ export const Description = styled.div`
   li {
     padding-left: 20px;
     color: black;
+    list-style-type: none;
+    margin-bottom: 10px;
+
+    &::before {
+      content: "•";
+      padding-right: 16px;
+    }
   }
+
   margin-bottom: 194px;
 
   ${media.tablet} {
