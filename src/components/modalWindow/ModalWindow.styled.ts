@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: 65%;
   text-align: center;
+
+  ${media.phone} {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.div`
