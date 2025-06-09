@@ -1,6 +1,6 @@
 "use client";
 
-import Product from "@/app/detailed/product/Product";
+import Product from "./product/Product";
 import { CMS_URL } from "@/constant";
 
 export interface ProductListProps {

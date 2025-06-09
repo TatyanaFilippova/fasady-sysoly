@@ -24,11 +24,11 @@ import { useState } from "react";
 import ModalMenu from "@/components/modalMenu/ModalMenu";
 
 export const options = [
-  { value: "1", label: "Фасады с фрезеровкой", href: "/detailed" },
+  { value: "1", label: "Фасады с фрезеровкой", href: "/facades-milling" },
   {
     value: "2",
     label: "Фасады с интегрированными ручками",
-    href: "/detailed",
+    href: "/facades-integrated-handles",
   },
   { value: "3", label: "Радиусные фасады", href: "/radius-facades" },
 ];

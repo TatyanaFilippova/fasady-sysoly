@@ -56,7 +56,7 @@ function ModalWindow({ isOpen, setIsOpen }: Props) {
             <div>
               <QrImg src={qr.src} />
             </div>
-            <Title>https://vk.com/centrcveta?from=groups</Title>
+            <Title>https://vk.com/centrcveta</Title>
 
             <form>
               <input />
