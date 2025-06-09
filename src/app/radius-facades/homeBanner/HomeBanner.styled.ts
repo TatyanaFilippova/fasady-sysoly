@@ -53,7 +53,7 @@ export const Description = styled.div`
 `;
 
 export const ImgBlock = styled.img`
-  margin-top: 46px;
+  margin-top: 24px;
   margin-bottom: 46px;
 
   ${media.tablet} {

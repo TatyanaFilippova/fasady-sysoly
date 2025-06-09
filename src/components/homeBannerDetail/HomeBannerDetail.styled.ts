@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ImgBanner = styled.img`
-  margin-bottom: 184px;
+  margin-bottom: 64px;
 
   ${media.tablet} {
     margin-top: 0;

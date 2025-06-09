@@ -9,6 +9,8 @@ import {
   Container,
   ButtonHome,
 } from "./HomeBannerDetail.styled";
+import ModalWindow from "@/components/modalWindow/ModalWindow";
+import { useState } from "react";
 
 interface HomeBannerDetailProps {
   title: string;
@@ -21,6 +23,7 @@ const HomeBannerDetail = ({
   homeBanner,
   title,
 }: HomeBannerDetailProps) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Wrapper>
       <ImgBanner src={homeBanner} />
@@ -29,8 +32,9 @@ const HomeBannerDetail = ({
           <Title>{title}</Title>
           <Description>{summary}</Description>
         </Shell>
-        <ButtonHome>Заказать</ButtonHome>
+        <ButtonHome onClick={() => setIsOpen(!isOpen)}>Заказать</ButtonHome>
       </Container>
+      {isOpen && <ModalWindow isOpen={isOpen} setIsOpen={setIsOpen} />}
     </Wrapper>
   );
 };
