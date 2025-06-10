@@ -1,35 +1,29 @@
+"use client";
+
 import {
   Container,
-  Img,
   Title,
   Wrapper,
   ButtonFacade,
-  Description,
   ShellDescription,
 } from "@/components/otherServices/OtherServices.styled";
-import services from "@/img/services.png";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import ContentList, {
+  ContentListProps,
+} from "@/components/contentList/ContentList";
 
-const OtherServices = () => {
-  const router = useRouter();
+const OtherServices = ({ data }: ContentListProps) => {
   return (
     <Wrapper>
       <Title>Другие услуги</Title>
       <Container>
-        <div>
-          <Img src={services.src} />
-          <Description>Покраска в камере</Description>
-        </div>
-        <div>
-          <Img src={services.src} />
-          <Description>Уборка помещений</Description>
-        </div>
+        <ContentList data={data.slice(0, 2)} />
       </Container>
       <div>
         <ShellDescription>
-          <ButtonFacade onClick={() => router.push("other-services")}>
-            Посмотреть все услуги
-          </ButtonFacade>
+          <Link href="/other-services">
+            <ButtonFacade>Посмотреть все услуги</ButtonFacade>
+          </Link>
         </ShellDescription>
       </div>
     </Wrapper>

@@ -101,11 +101,11 @@ export const Description = styled.div`
 `;
 
 export const ShellDescription = styled.div`
-  margin-top: 80px;
   display: flex;
   justify-content: center;
   padding-bottom: 10px;
   align-items: flex-end;
+  margin-top: -200px;
 
   ${media.tablet} {
     margin-top: 40px;
