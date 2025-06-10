@@ -103,6 +103,7 @@ export const BlockText = styled.div`
   }
   ${media.phone} {
     font-size: 16px;
+    width: 90%;
   }
 `;
 

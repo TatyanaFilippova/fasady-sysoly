@@ -5,18 +5,19 @@ import { media } from "@/constants/media";
 export const Title = styled.div`
   color: black;
   text-align: left;
-  width: 60%;
+  width: 70%;
   font-weight: 400;
   margin-bottom: 20px;
-
+  ${layout};
+  margin-left: 0;
   ${typography.h2};
 `;
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 146px;
   margin-bottom: 146px;
-  ${layout};
 
   ${media.phone} {
     margin-top: 100px;
@@ -56,6 +57,7 @@ export const ButtonFacade = styled.button`
   font-size: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  ${layout};
 
   &:hover {
     opacity: 0.8;

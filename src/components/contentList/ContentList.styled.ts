@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { layout } from "@/styles";
 import { media } from "@/constants/media";
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -13,9 +13,10 @@ export const Wrapper = styled.div`
 
   ${media.tablet} {
     column-gap: 0;
+    margin-bottom: 0;
   }
   ${media.phone} {
     row-gap: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
 `;

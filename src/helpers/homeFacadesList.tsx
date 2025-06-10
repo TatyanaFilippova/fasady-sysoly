@@ -12,11 +12,11 @@ export interface Facade {
 export const homeFacadesList: Facade[] = [
   {
     img: catamaran.src,
-    title: "Катамаран",
+    title: "Выборка",
   },
   {
     img: contik.src,
-    title: "Контик",
+    title: "Степ",
   },
   {
     img: forest.src,
@@ -24,7 +24,7 @@ export const homeFacadesList: Facade[] = [
   },
   {
     img: well.src,
-    title: "Скважина",
+    title: "Волна",
   },
-  { img: abascal.src, title: "Абаскаль" },
+  { img: abascal.src, title: "Капричо" },
 ];

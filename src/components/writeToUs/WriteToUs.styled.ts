@@ -31,6 +31,7 @@ export const Description = styled.div`
   ${media.phone} {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 16px;
   }
 `;
 

@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   margin-bottom: 146px;
-
   ${layout};
 
   ${media.phone} {
@@ -20,8 +19,8 @@ export const Title = styled.div`
   color: black;
   font-weight: 400;
   margin-bottom: 20px;
-
   ${typography.h2};
+
   ${media.phone} {
     font-size: 28px;
   }
@@ -45,7 +44,6 @@ export const ImgFacade = styled.img`
     height: 180px;
     width: 120px;
   }
-
   ${media.phone} {
     height: 160px;
     width: 104px;
@@ -64,7 +62,6 @@ export const Shell = styled.div`
     column-gap: 15px;
     margin-left: 20px;
   }
-
   ${media.phone} {
     margin-left: 0;
     gap: 10px;
@@ -79,7 +76,6 @@ export const Container = styled.div`
   ${media.tablet} {
     align-items: flex-start;
   }
-
   ${media.phone} {
     flex-direction: column;
     width: 100%;
@@ -95,7 +91,6 @@ export const ShellFacade = styled.div`
   ${media.tablet} {
     font-size: 18px;
   }
-
   ${media.phone} {
     gap: 4px;
   }
@@ -109,7 +104,7 @@ export const Description = styled.div`
 
   ${media.tablet} {
     font-size: 20px;
-    width: 100%;
+    width: 90%;
     line-height: 30px;
   }
   ${media.phone} {
@@ -131,7 +126,6 @@ export const ShellDescription = styled.div`
     justify-content: space-between;
     align-items: flex-end;
   }
-
   ${media.phone} {
     flex-direction: column;
     align-items: center;
@@ -183,7 +177,6 @@ export const ImgWrapper = styled.div`
   ${media.tablet} {
     width: 100%;
   }
-
   ${media.phone} {
     margin: 0 -24px;
     width: calc(100% + 48px);

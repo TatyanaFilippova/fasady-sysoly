@@ -6,6 +6,7 @@ import { CMS_URL } from "@/constant";
 import ContentList from "@/app/../components/contentList/ContentList";
 import banner from "./img/homeBanner.png";
 import type { Metadata } from "next";
+import { Wrapper } from "@/app/other-services/styled";
 
 export const metadata: Metadata = {
   title:
@@ -29,7 +30,9 @@ export default async function Home() {
         summary="С полным списком можете ознакомится в разделе цены"
         imgBanner={banner.src}
       />
-      <ContentList data={posts.data} />
+      <Wrapper>
+        <ContentList data={posts.data} />
+      </Wrapper>
       <WriteToUs />
       <Footer />
     </div>
