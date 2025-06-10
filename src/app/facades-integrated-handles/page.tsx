@@ -5,6 +5,14 @@ import Footer from "@/components/footer/Footer";
 import { CMS_URL } from "@/constant";
 import homeBanner from "./img/homeBanner.png";
 import WriteToUs from "@/components/writeToUs/WriteToUs";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Фасады МДФ с интегрированными ручками | Современный дизайн без выступающих элементов",
+  description:
+    "Изготавливаем фасады МДФ с интегрированными ручками для современной мебели. Чистые линии, безопасность для детей, удобство в уходе. Индивидуальные размеры и дизайн.",
+};
 
 export default async function Home() {
   const data = await fetch(

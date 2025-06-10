@@ -5,6 +5,14 @@ import Footer from "@/components/footer/Footer";
 import { CMS_URL } from "@/constant";
 import homeBanner from "./img/homeBanner.png";
 import WriteToUs from "@/components/writeToUs/WriteToUs";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Фрезеровка МДФ фасадов – Современные мебельные решения | Каталог с фото",
+  description:
+    "Фрезеровка МДФ фасадов позволяет создать объемные 3D-панели для кухни, шкафов и гардеробных. Широкий выбор дизайнов, покраска в любой цвет RAL. Бесплатный дизайн-проект!",
+};
 
 export default async function Home() {
   const data = await fetch(

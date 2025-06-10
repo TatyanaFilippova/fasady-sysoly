@@ -6,6 +6,14 @@ import ContentList from "@/app/../components/contentList/ContentList";
 import Content from "./content/Content";
 import WriteToUs from "@/components/writeToUs/WriteToUs";
 import banner from "./img/banner.png";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Покраска МДФ фасадов и не только в любой цвет RAL | Качественное покрытие эмалью",
+  description:
+    "Профессиональная покраска МДФ фасадов в любой цвет по каталогу RAL. Используем высококачественные эмали, обеспечивающие идеально гладкую поверхность и долговечность покрытия. Доступные цены, гарантия качества.",
+};
 
 export default async function Home() {
   const data = await fetch(CMS_URL + "/api/paintings?populate=*", {

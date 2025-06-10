@@ -5,6 +5,14 @@ import Footer from "@/components/footer/Footer";
 import Dimensions from "@/app/radius-facades/dimensions/Dimensions";
 import WriteToUs from "@/components/writeToUs/WriteToUs";
 import banner from "./img/banner.png";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Изготовление радиусных фасадов из МДФ | Индивидуальные криволинейные формы",
+  description:
+    "Производим радиусные фасады МДФ любой сложности. Идеальные плавные изгибы для эргономичных кухонь, шкафов и гарнитуров. Современные технологии обработки, точность до 1 мм.",
+};
 
 export default function Home() {
   return (

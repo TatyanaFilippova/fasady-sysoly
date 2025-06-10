@@ -5,6 +5,14 @@ import WriteToUs from "@/components/writeToUs/WriteToUs";
 import { CMS_URL } from "@/constant";
 import ContentList from "@/app/../components/contentList/ContentList";
 import banner from "./img/homeBanner.png";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Дополнительная обработка мебельных фасадов | Качественные решения под ключ",
+  description:
+    "Комплексная подготовка мебельных фасадов из МДФ: точный раскрой, обработка кромок, декоративная фрезеровка, финишная отделка. Работаем с любыми объемами, индивидуальный подход к каждому заказу.",
+};
 
 export default async function Home() {
   const data = await fetch(CMS_URL + "/api/services?populate=*", {
