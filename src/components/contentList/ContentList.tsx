@@ -1,8 +1,8 @@
 "use client";
 
 import { CMS_URL } from "@/constant";
-import Card from "@/app/painting/card/Card";
-import { Wrapper } from "@/app/painting/content/../contentList/ContentList.styled";
+import Card from "./card/Card";
+import { Wrapper } from "./ContentList.styled";
 
 export interface ContentListProps {
   data: {

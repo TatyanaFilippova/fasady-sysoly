@@ -1,6 +1,5 @@
 "use client";
 
-import paint from "../img/banner.png";
 import {
   Wrapper,
   ImgBanner,
@@ -12,18 +11,21 @@ import {
 } from "./HomeBanner.styled";
 import { useRouter } from "next/navigation";
 
-const HomeBanner = () => {
+interface HomeBannerProps {
+  title: string;
+  summary: string;
+  imgBanner: string;
+}
+
+const HomeBanner = ({ title, summary, imgBanner }: HomeBannerProps) => {
   const router = useRouter();
   return (
     <Wrapper>
-      <ImgBanner src={paint.src} />
+      <ImgBanner src={imgBanner} />
       <Container>
         <Shell>
-          <Title>Покраска фасадов и прочих изделий</Title>
-          <Description>
-            Профессиональная покраска любых поверхностей – идеальное покрытие
-            для ваших изделий!
-          </Description>
+          <Title>{title}</Title>
+          <Description>{summary}</Description>
         </Shell>
         <ButtonHome
           onClick={() => {

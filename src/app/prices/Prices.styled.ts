@@ -1,4 +1,4 @@
-import { layout } from "@/styles";
+import { layout, typography } from "@/styles";
 import styled from "styled-components";
 import { media } from "@/constants/media";
 
@@ -12,17 +12,17 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.caption`
-  font-size: 44px;
   color: black;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 60px;
   text-align: left;
   margin-top: 100px;
+  ${typography.h2};
 
   ${media.phone} {
-    font-size: 24px;
     margin-top: 60px;
     margin-bottom: 40px;
+    text-align: center;
   }
 `;
 
