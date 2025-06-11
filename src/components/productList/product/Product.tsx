@@ -13,6 +13,7 @@ import {
   TextDescription,
   ButtonProduct,
 } from "./Product.styled";
+import EmptyProduct from "@/components/productList/emptyProduct/EmptyProduct";
 
 interface IProduct {
   title: string;
@@ -37,6 +38,20 @@ const Product = ({
   color,
   imgList,
 }: IProduct) => {
+  if (imgList.length === 0) {
+    return (
+      <EmptyProduct
+        title={title}
+        imgProduct={imgProduct}
+        dimensions={dimensions}
+        height={height}
+        thickness={thickness}
+        width={width}
+        color={color}
+        summary={summary}
+      />
+    );
+  }
   return (
     <Wrapper>
       <div>
