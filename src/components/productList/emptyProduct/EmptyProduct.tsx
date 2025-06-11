@@ -12,6 +12,7 @@ import {
   TitleMobile,
   WrapperMobile,
   ContentMobile,
+  WrapperButton,
 } from "./EmptyProduct.styled";
 
 interface IProduct {
@@ -44,7 +45,6 @@ const EmptyProduct = ({
           <Shell>
             <Title>{title}</Title>
             {summary && <Description>{summary}</Description>}
-
             <TextBlockShell>
               <TextBlock>
                 <b>Размеры (min и max)</b>
@@ -67,7 +67,9 @@ const EmptyProduct = ({
           </Shell>
         </Container>
       </WrapperMobile>
-      <ButtonProduct>Заказать</ButtonProduct>
+      <WrapperButton>
+        <ButtonProduct>Заказать</ButtonProduct>
+      </WrapperButton>
     </Wrapper>
   );
 };

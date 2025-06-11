@@ -3,7 +3,6 @@ import { layout, typography } from "@/styles";
 import { media } from "@/constants/media";
 
 export const Wrapper = styled.div`
-  display: flex;
   margin-bottom: 208px;
   ${layout};
   gap: 100px;
@@ -16,8 +15,6 @@ export const Wrapper = styled.div`
 `;
 
 export const ContentMobile = styled.div`
-  display: none;
-
   ${media.tablet} {
     display: block;
   }
@@ -42,10 +39,11 @@ export const Title = styled.div`
 `;
 
 export const WrapperMobile = styled.div`
-  display: none;
+  display: flex;
+  gap: 120px;
 
   ${media.tablet} {
-    display: flex;
+    flex-direction: row;
   }
   ${media.phone} {
     display: flex;
@@ -90,7 +88,7 @@ export const Shell = styled.div`
   justify-content: space-between;
 
   ${media.tablet} {
-    width: 60%;
+    width: 100%;
     justify-content: normal;
   }
   ${media.phone} {
@@ -119,6 +117,9 @@ export const ImgProduct = styled.img`
   height: 400px;
   width: 20%;
 
+  ${media.tablet} {
+    width: 40%;
+  }
   ${media.phone} {
     width: 40%;
     height: 250px;
@@ -176,4 +177,8 @@ export const ButtonProduct = styled.button`
     width: 50%;
     margin-top: 30px;
   }
+`;
+
+export const WrapperButton = styled.div`
+  display: flex;
 `;

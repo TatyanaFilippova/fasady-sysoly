@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   margin-bottom: 260px;
 
   ${media.phone} {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
   }
 `;
 
@@ -36,30 +36,28 @@ export const Description = styled.div`
 `;
 
 export const Shell = styled.div`
-  width: 30%;
+  width: 400px;
+
   border: 1px solid #cccccc;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
   ${media.tablet} {
-    width: calc(33% - 12px);
+    width: 220px;
   }
   ${media.phone} {
-    width: 80%;
+    width: 300px;
+    height: 200px;
   }
 `;
 
 export const ImgIcon = styled.img`
+  width: 60px;
+  height: 60px;
   object-fit: cover;
-  padding: 76px 116px 46px 116px;
-
-  ${media.tablet} {
-    padding: 20px 70px;
-  }
-  ${media.phone} {
-    padding: 26px 96px 16px 96px;
-  }
+  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 export const ShellIcon = styled.div`
@@ -94,8 +92,35 @@ export const WrapperIcon = styled.div`
   justify-content: center;
 
   ${media.phone} {
-    flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
     gap: 20px;
+
+    &::after {
+      content: "";
+      display: block;
+      padding-right: 12px;
+    }
+  }
+`;
+
+export const Container = styled.div`
+  ${media.phone} {
+    width: calc(100% + 48px);
+    overflow: auto;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+`;
+
+export const WrapperCard = styled.div`
+  width: 30%;
+
+  ${media.tablet} {
+    width: 100%;
+  }
+  ${media.phone} {
+    width: 100%;
   }
 `;

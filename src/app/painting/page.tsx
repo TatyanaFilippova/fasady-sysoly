@@ -7,6 +7,7 @@ import Content from "./content/Content";
 import WriteToUs from "@/components/writeToUs/WriteToUs";
 import banner from "./img/banner.png";
 import type { Metadata } from "next";
+import { Wrapper } from "@/app/painting/styled";
 
 export const metadata: Metadata = {
   title:
@@ -31,7 +32,9 @@ export default async function Home() {
         imgBanner={banner.src}
       />
       <Content />
-      <ContentList data={posts.data} />
+      <Wrapper>
+        <ContentList data={posts.data} />
+      </Wrapper>
       <WriteToUs />
       <Footer />
     </>
