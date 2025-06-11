@@ -14,15 +14,6 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ContentMobile = styled.div`
-  ${media.tablet} {
-    display: block;
-  }
-  ${media.phone} {
-    display: block;
-  }
-`;
-
 export const Title = styled.div`
   color: black;
   font-weight: 300;

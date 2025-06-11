@@ -11,7 +11,6 @@ import {
   ButtonProduct,
   TitleMobile,
   WrapperMobile,
-  ContentMobile,
   WrapperButton,
 } from "./EmptyProduct.styled";
 
