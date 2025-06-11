@@ -51,20 +51,17 @@ function ModalWindow({ isOpen, setIsOpen }: Props) {
         <Shell>
           <button onClick={closeModal}>
             <CloseImg src={close.src} />
-          </button>{" "}
+          </button>
           <Wrapper>
             <div>
               <QrImg src={qr.src} />
             </div>
             <Title>https://vk.com/centrcveta</Title>
-
             <form>
-              <input />
               <Content>
                 Чтобы заказать фасад, услугу или просто задать вопрос, напишите
                 нам в Вк
               </Content>
-
               <Link
                 href="https://vk.com/centrcveta?from=groups"
                 target="_blank"

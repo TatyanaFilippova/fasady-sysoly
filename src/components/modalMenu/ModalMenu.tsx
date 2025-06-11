@@ -28,7 +28,6 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
           <Title>Меню</Title>
           <CloseIcon src={close.src} onClick={() => setMenu(!isMenu)} />
         </Shell>
-
         <Description>Каталог фасадов</Description>
         {options.map((item) => (
           <Ul

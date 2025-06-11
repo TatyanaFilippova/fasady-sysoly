@@ -157,6 +157,10 @@ export const MenuImg = styled.img`
   display: none;
 
   ${media.tablet} {
+    z-index: 101;
+    position: fixed;
+    right: 24px;
+    top: 34px;
     display: block;
     cursor: pointer;
     height: 20px;
@@ -169,6 +173,10 @@ export const MenuImg = styled.img`
     }
   }
   ${media.phone} {
+    z-index: 101;
+    position: fixed;
+    right: 24px;
+    top: 24px;
     display: block;
     cursor: pointer;
     &:hover {
@@ -194,5 +202,28 @@ export const ShellTitle = styled.div`
 export const Icon = styled.img`
   ${media.phone} {
     width: 40px;
+  }
+`;
+
+export const ShellMobile = styled.div`
+  ${media.tablet} {
+    background-color: rgba(255, 255, 255, 0.47);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 100;
+    position: fixed;
+    right: 13px;
+    top: 18px;
+  }
+  ${media.phone} {
+    background-color: rgba(255, 255, 255, 0.47);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 100;
+    position: fixed;
+    right: 13px;
+    top: 8px;
   }
 `;

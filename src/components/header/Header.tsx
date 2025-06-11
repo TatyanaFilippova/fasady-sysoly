@@ -19,6 +19,7 @@ import {
   Container,
   ShellTitle,
   Icon,
+  ShellMobile,
 } from "@/components/header/Header.styled";
 import { useState } from "react";
 import ModalMenu from "@/components/modalMenu/ModalMenu";
@@ -52,7 +53,6 @@ const Header = () => {
           <Icon src={icon.src} />
           <Title onClick={() => router.push("/")}>Фасады Сысолы</Title>
         </ShellTitle>
-
         <Shell>
           <ShellMenu
             onMouseOver={() => {
@@ -109,12 +109,14 @@ const Header = () => {
           <Company>Условия и гарантия</Company>
         </Shell>
         <Container>
-          <MenuImg
-            src={menu.src}
-            onClick={() => {
-              setMenu(!isMenu);
-            }}
-          />
+          <ShellMobile>
+            <MenuImg
+              src={menu.src}
+              onClick={() => {
+                setMenu(!isMenu);
+              }}
+            />
+          </ShellMobile>
           <Number>8 (8212) 569-884</Number>
         </Container>
         {isMenu && <ModalMenu isMenu={isMenu} setMenu={setMenu}></ModalMenu>}

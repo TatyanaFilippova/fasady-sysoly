@@ -37,7 +37,6 @@ export const Description = styled.div`
 
 export const Shell = styled.div`
   width: 400px;
-
   border: 1px solid #cccccc;
   display: flex;
   flex-direction: column;
@@ -94,7 +93,6 @@ export const WrapperIcon = styled.div`
   ${media.phone} {
     justify-content: flex-start;
     gap: 20px;
-
     &::after {
       content: "";
       display: block;
