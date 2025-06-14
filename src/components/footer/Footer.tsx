@@ -10,6 +10,7 @@ import {
   ShellBlock,
   Number,
 } from "@/components/footer/Footer.styled";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -19,22 +20,36 @@ const Footer = () => {
         <Title>Сысолы</Title>
         <ShellBlock>
           <Shell>
-            <TitleDescription>Производство фасадов</TitleDescription>
-            <Description>Прямые фасады</Description>
-            <Description>Фасады с интегрированными ручками</Description>
-            <Description>Фасады с фрезеровками</Description>
+            <TitleDescription>Каталог фасадов</TitleDescription>
+            <Link href="/facades-milling">
+              <Description>Фасады с фрезеровками</Description>
+            </Link>
+            <Link href="/facades-integrated-handles">
+              <Description>Фасады с интегрированными ручками</Description>
+            </Link>
+            <Link href="/radius-facades">
+              <Description>Радиусные фасады</Description>
+            </Link>
           </Shell>
           <Shell>
             <TitleDescription>Услуги</TitleDescription>
-            <Description>Покраска фасадов</Description>
-            <Description>Покрытие пленкой</Description>
-            <Description>Покраска любых изделий</Description>
+            <Link href="/painting">
+              <Description>Покраска фасадов</Description>
+            </Link>
+            <Link href="/other-services">
+              <Description>Все товары и услуги</Description>
+            </Link>
           </Shell>
           <Shell>
             <TitleDescription>О компании</TitleDescription>
+            <Link href="/"></Link>
             <Description>Гарантия и сроки</Description>
-            <Description>Цены</Description>
-            <Description>Контактная информация</Description>
+            <Link href="/prices">
+              <Description>Цены</Description>
+            </Link>
+            <Link href="/company">
+              <Description>Контактная информация</Description>
+            </Link>
           </Shell>
           <Shell>
             <Description>г.Сыктывкар, ул.Гаражная 9/5</Description>

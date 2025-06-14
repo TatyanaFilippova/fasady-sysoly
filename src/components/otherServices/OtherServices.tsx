@@ -17,7 +17,7 @@ const OtherServices = ({ data }: ContentListProps) => {
     <Wrapper>
       <Title>Другие услуги</Title>
       <Container>
-        <ContentList data={data.slice(0, 2)} />
+        <ContentList data={data.slice(0, 3)} />
       </Container>
       <div>
         <ShellDescription>

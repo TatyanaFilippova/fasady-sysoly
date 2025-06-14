@@ -8,9 +8,14 @@ export const Title = styled.div`
   width: 70%;
   font-weight: 400;
   margin-bottom: 20px;
-  ${layout};
-  margin-left: 0;
   ${typography.h2};
+
+  ${media.tablet} {
+    margin-left: 0;
+  }
+  ${media.phone} {
+    margin-left: 0;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -18,6 +23,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   margin-top: 146px;
   margin-bottom: 146px;
+  ${layout};
+  background-color: #f5f5f5;
+  padding-top: 104px;
 
   ${media.phone} {
     margin-top: 100px;

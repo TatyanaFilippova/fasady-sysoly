@@ -5,7 +5,7 @@ import { media } from "@/constants/media";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  ${layout}
+  ${layout};
 `;
 
 export const Description = styled.div`
@@ -44,8 +44,7 @@ export const Description = styled.div`
 `;
 
 export const Title = styled.div`
-  padding-top: 46px;
-  padding-bottom: 30px;
+  padding: 16px 24px;
   font-weight: 300;
   color: black;
 
@@ -62,6 +61,7 @@ export const Title = styled.div`
 
 export const DescriptionBlock = styled.div`
   font-size: 24px;
+  padding: 16px 24px 58px 24px;
 
   ${media.tablet} {
     font-size: 18px;
@@ -72,8 +72,8 @@ export const DescriptionBlock = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 690px;
-  height: 434px;
+  width: 443px;
+  height: 319px;
   object-fit: cover;
 
   ${media.tablet} {
@@ -87,7 +87,9 @@ export const Img = styled.img`
 `;
 
 export const CardStyled = styled.div`
-  width: calc(50% - 30px);
+  width: calc(33% - 24px);
+  border: 1px solid #d2d2d2;
+  background-color: white;
 
   ${media.tablet} {
     width: calc(50% - 12px);
