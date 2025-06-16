@@ -277,39 +277,3 @@ export const TextDescription = styled.div`
     padding-top: 0;
   }
 `;
-
-export const ButtonProduct = styled.button<{ $length: string }>`
-  background-color: #d30000;
-  color: white;
-  font-size: 24px;
-  padding: 28px 126px;
-  border-radius: 24px;
-  width: 25%;
-  margin-left: auto;
-  margin-top: ${(props) => {
-    if (props.$length === "2") {
-      return "-90px";
-    } else if (props.$length === "3" || props.$length === "4") {
-      return "60px";
-    } else if (props.$length === "1") {
-      return "60px";
-    }
-  }};
-
-  ${media.tablet} {
-    padding: 20px 60px;
-    width: 40%;
-    font-size: 20px;
-    margin-top: ${(props) => {
-      if (props.$length === "1") {
-        return "-180px";
-      }
-    }};
-  }
-  ${media.phone} {
-    padding: 14px 30px;
-    font-size: 16px;
-    width: 50%;
-    margin-top: 30px;
-  }
-`;

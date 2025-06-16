@@ -8,10 +8,8 @@ import {
   TextBlock,
   TextBlockShell,
   TextDescription,
-  ButtonProduct,
   TitleMobile,
   WrapperMobile,
-  WrapperButton,
 } from "./EmptyProduct.styled";
 
 interface IProduct {
@@ -66,9 +64,6 @@ const EmptyProduct = ({
           </Shell>
         </Container>
       </WrapperMobile>
-      <WrapperButton>
-        <ButtonProduct>Заказать</ButtonProduct>
-      </WrapperButton>
     </Wrapper>
   );
 };

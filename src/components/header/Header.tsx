@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+
 import menu from "./img/menu.png";
 import icon from "./img/icon.png";
 import {
@@ -43,15 +43,12 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isMenuOpenServices, setMenuOpenServices] = useState(false);
   const [isMenu, setMenu] = useState(false);
-
-  const router = useRouter();
-
   return (
     <Border>
       <Wrapper>
         <ShellTitle>
           <Icon src={icon.src} />
-          <Title onClick={() => router.push("/")}>Фасады Сысолы</Title>
+          <Title href="/">Фасады Сысолы</Title>
         </ShellTitle>
         <Shell>
           <ShellMenu
@@ -68,9 +65,7 @@ const Header = () => {
                 {options.map((item) => {
                   return (
                     <ShellLabel key={item.value}>
-                      <LabelMenu onClick={() => router.push(item.href)}>
-                        {item.label}
-                      </LabelMenu>
+                      <LabelMenu href={item.href}>{item.label}</LabelMenu>
                     </ShellLabel>
                   );
                 })}
@@ -91,22 +86,16 @@ const Header = () => {
                 {optionsServices.map((item) => {
                   return (
                     <ShellLabel key={item.value}>
-                      <LabelMenu onClick={() => router.push(item.href)}>
-                        {item.label}
-                      </LabelMenu>
+                      <LabelMenu href={item.href}>{item.label}</LabelMenu>
                     </ShellLabel>
                   );
                 })}
               </MenuServices>
             )}
           </ShellMenu>
-          <Company type="button" onClick={() => router.push("/prices")}>
-            Цены
-          </Company>
-          <Company type="button" onClick={() => router.push("/company")}>
-            О компании
-          </Company>
-          <Company>Условия и гарантия</Company>
+          <Company href="/prices">Цены</Company>
+          <Company href="/company">О компании</Company>
+          <Company href="/">Условия и гарантия</Company>
         </Shell>
         <Container>
           <ShellMobile>

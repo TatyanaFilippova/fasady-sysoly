@@ -44,7 +44,7 @@ export const Description = styled.div`
 `;
 
 export const Title = styled.div`
-  padding: 16px 24px;
+  padding: 16px 24px 0;
   font-weight: 300;
   color: black;
 
@@ -60,7 +60,7 @@ export const Title = styled.div`
 `;
 
 export const DescriptionBlock = styled.div`
-  font-size: 24px;
+  font-size: 16px;
   padding: 16px 24px 58px 24px;
 
   ${media.tablet} {

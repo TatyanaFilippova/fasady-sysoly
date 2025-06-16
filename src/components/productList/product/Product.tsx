@@ -11,7 +11,6 @@ import {
   ImgBlock,
   Img,
   TextDescription,
-  ButtonProduct,
 } from "./Product.styled";
 import EmptyProduct from "@/components/productList/emptyProduct/EmptyProduct";
 
@@ -89,9 +88,6 @@ const Product = ({
           ))}
         </WrapperImage>
       </Container>
-      <ButtonProduct $length={imgList.length.toString()}>
-        Заказать
-      </ButtonProduct>
     </Wrapper>
   );
 };

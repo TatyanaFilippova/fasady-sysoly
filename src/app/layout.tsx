@@ -3,6 +3,9 @@ import "./globals.css";
 
 import LocalFont from "next/font/local";
 import StyledComponentsRegistry from "@/app/lib/registry";
+import ProgressBar from "@/components/progressBar/ProgressBar";
+import Providers from "@/components/progressBar/ProgressBar";
+import { ReactNode } from "react";
 
 const inter = LocalFont({
   src: [
@@ -40,13 +43,13 @@ export const viewport: Viewport = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          {children}
+          <Providers> {children} </Providers>
           <div id="Modal"></div>
         </StyledComponentsRegistry>
       </body>

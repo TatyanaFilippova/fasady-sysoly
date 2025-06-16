@@ -37,7 +37,7 @@ export const typography = {
     }
   `,
   h3: css`
-    font-size: 36px;
+    font-size: 28px;
 
     ${media.tablet} {
       font-size: 28px;

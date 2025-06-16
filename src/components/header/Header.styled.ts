@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { layout } from "@/styles";
 import { media } from "@/constants/media";
+import Link from "next/link";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -65,7 +66,7 @@ export const Shell = styled.div`
   }
 `;
 
-export const Title = styled.div`
+export const Title = styled(Link)`
   font-size: 32px;
   font-weight: 400;
   cursor: pointer;
@@ -94,7 +95,7 @@ export const Border = styled.div`
   border: 1px solid #e6e6e6;
 `;
 
-export const Company = styled.button`
+export const Company = styled(Link)`
   height: 20px;
   &:hover {
     opacity: 0.7;
@@ -127,7 +128,7 @@ export const ShellMenu = styled.div`
   cursor: pointer;
 `;
 
-export const LabelMenu = styled.div`
+export const LabelMenu = styled(Link)`
   color: #4f4f4f;
   line-height: 24px;
   width: 100%;

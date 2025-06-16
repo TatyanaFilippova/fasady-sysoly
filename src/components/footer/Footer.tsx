@@ -16,8 +16,10 @@ const Footer = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Фасады</Title>
-        <Title>Сысолы</Title>
+        <Link href="/">
+          <Title>Фасады</Title>
+          <Title>Сысолы</Title>
+        </Link>
         <ShellBlock>
           <Shell>
             <TitleDescription>Каталог фасадов</TitleDescription>

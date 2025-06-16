@@ -146,30 +146,3 @@ export const TextDescription = styled.div`
     padding-top: 0;
   }
 `;
-
-export const ButtonProduct = styled.button`
-  background-color: #d30000;
-  color: white;
-  font-size: 24px;
-  padding: 28px 126px;
-  border-radius: 24px;
-  margin-left: auto;
-  margin-top: 30px;
-
-  ${media.tablet} {
-    padding: 20px 60px;
-    width: 40%;
-    font-size: 20px;
-    //margin-top:
-  }
-  ${media.phone} {
-    padding: 14px 30px;
-    font-size: 16px;
-    width: 50%;
-    margin-top: 30px;
-  }
-`;
-
-export const WrapperButton = styled.div`
-  display: flex;
-`;
