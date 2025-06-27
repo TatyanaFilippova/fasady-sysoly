@@ -3,7 +3,6 @@ import "./globals.css";
 
 import LocalFont from "next/font/local";
 import StyledComponentsRegistry from "@/app/lib/registry";
-import ProgressBar from "@/components/progressBar/ProgressBar";
 import Providers from "@/components/progressBar/ProgressBar";
 import { ReactNode } from "react";
 
