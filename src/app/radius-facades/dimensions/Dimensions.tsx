@@ -1,5 +1,6 @@
 "use client";
-import scheme from "./../img/scheme.png";
+import scheme1 from "./../img/scheme1.png";
+import scheme2 from "./../img/scheme2.png";
 
 import {
   Wrapper,
@@ -8,12 +9,21 @@ import {
   Title,
   Container,
   ShellBlock,
+  ShellBlockImg,
 } from "@/app/radius-facades/dimensions/Dimensions.styled";
 
 const Dimensions = () => {
   return (
     <Wrapper>
       <ShellBlock>
+        <ShellBlockImg>
+          <Title>Наружный фасад</Title>
+          <ImgScheme src={scheme1.src} />
+        </ShellBlockImg>
+        <ShellBlockImg>
+          <Title>Внутренний фасад</Title>
+          <ImgScheme src={scheme2.src} />
+        </ShellBlockImg>
         <Container>
           <Title>Большой спектр допустимых размеров</Title>
           <Content>
@@ -23,7 +33,6 @@ const Dimensions = () => {
             <ul> • толщина фасада +/- 1 мм;</ul>
           </Content>
         </Container>
-        <ImgScheme src={scheme.src} />
       </ShellBlock>
     </Wrapper>
   );

@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 146px;
-  margin-bottom: 146px;
+  margin-bottom: 46px;
   ${layout};
   background-color: #f5f5f5;
   padding-top: 104px;

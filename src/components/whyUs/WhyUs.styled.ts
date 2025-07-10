@@ -4,9 +4,10 @@ import { media } from "@/constants/media";
 
 export const ShellText = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 50px 140px;
+  width: 100%;
 
   ${media.tablet} {
     flex-direction: row;
@@ -21,8 +22,9 @@ export const ShellText = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   gap: 226px;
-  height: 350px;
+  height: auto;
   margin-bottom: 146px;
+
   ${layout};
 
   ${media.tablet} {
@@ -42,7 +44,7 @@ export const Wrapper = styled.div`
 export const Title = styled.div`
   font-weight: 400;
   color: black;
-  white-space: nowrap;
+  width: 30%;
 
   ${typography.h2};
 `;
@@ -70,6 +72,19 @@ export const Container = styled.div`
   }
 `;
 
-export const TextBlock = styled.div`
+export const TextBlock = styled.ul`
   font-size: 16px;
+  margin-bottom: 8px;
+`;
+
+export const ShellWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Box = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 100px;
 `;

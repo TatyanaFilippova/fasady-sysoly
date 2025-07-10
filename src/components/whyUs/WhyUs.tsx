@@ -7,21 +7,43 @@ import {
   TitleDescription,
   Container,
   TextBlock,
+  ShellWrapper,
+  Box,
 } from "@/components/whyUs/WhyUs.styled";
-import { description } from "@/helpers/whyUsDescription";
+import { conditions, description } from "@/helpers/whyUsDescription";
 
 const WhyUs = () => {
   return (
     <Wrapper>
-      <Title>Почему мы</Title>
-      <ShellText>
-        {description.map((item) => (
-          <Container key={item.title}>
-            <TitleDescription>{item.title}</TitleDescription>
-            <TextBlock>{item.text}</TextBlock>
-          </Container>
-        ))}
-      </ShellText>
+      <ShellWrapper>
+        <Box>
+          <Title>Почему мы</Title>
+          <ShellText>
+            {description.map((item) => (
+              <Container key={item.title}>
+                <TitleDescription>{item.title}</TitleDescription>
+                {item.text && <TextBlock>▪️ {item.text}</TextBlock>}
+              </Container>
+            ))}
+          </ShellText>
+        </Box>
+        <Box>
+          <Title>При заказе указать</Title>
+          <ShellText>
+            {conditions.map((item) => (
+              <Container key={item.title}>
+                <TitleDescription>{item.title}</TitleDescription>
+                {item["1"] && <TextBlock>▪️ {item["1"]}</TextBlock>}
+                {item["2"] && <TextBlock>▪️ {item["2"]}</TextBlock>}
+                {item["3"] && <TextBlock>▪️ {item["3"]}</TextBlock>}
+                {item["4"] && <TextBlock>▪️ {item["4"]}</TextBlock>}
+                {item["5"] && <TextBlock>▪️ {item["5"]}</TextBlock>}
+                {item["6"] && <TextBlock>▪️ {item["6"]}</TextBlock>}
+              </Container>
+            ))}
+          </ShellText>
+        </Box>
+      </ShellWrapper>
     </Wrapper>
   );
 };

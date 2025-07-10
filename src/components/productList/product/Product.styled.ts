@@ -24,7 +24,7 @@ export const Title = styled.div`
     padding-bottom: 30px;
   }
   ${media.phone} {
-    width: 80%;
+    width: 84%;
     padding-bottom: 16px;
     font-weight: 400;
   }
@@ -42,11 +42,17 @@ export const Description = styled.div`
   }
 `;
 
-export const Shell = styled.div`
+export const Shell = styled.div<{ $length: string }>`
   display: flex;
   flex-direction: column;
   width: 40%;
-  justify-content: space-between;
+  justify-content: ${(props) => {
+    if (props.$length === "2") {
+      return "";
+    } else {
+      return "space-between";
+    }
+  }};
 
   ${media.tablet} {
     width: 60%;
@@ -62,11 +68,6 @@ export const Shell = styled.div`
 export const Container = styled.div<{ $length: string }>`
   display: flex;
   width: 100%;
-  height: ${(props) => {
-    if (props.$length === "2" || props.$length === "1") {
-      return "920px";
-    }
-  }};
 
   ${media.tablet} {
     height: ${(props) => {
@@ -150,7 +151,10 @@ export const WrapperImage = styled.div<{ $length: string }>`
 
 export const ImgBlock = styled.div`
   width: 100%;
-  margin-left: 18px;
+
+  ${media.phone} {
+    margin-left: 18px;
+  }
 `;
 
 export const Img = styled.img<{ $length: string }>`
@@ -175,7 +179,7 @@ export const Img = styled.img<{ $length: string }>`
         } else if (props.$length === "2") {
           return "406px";
         } else if (props.$length === "1") {
-          return "100%";
+          return "920px";
         }
       }};
   }

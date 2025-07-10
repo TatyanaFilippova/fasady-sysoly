@@ -58,7 +58,7 @@ const Product = ({
         {summary && <Description>{summary}</Description>}
       </div>
       <Container $length={imgList.length.toString()}>
-        <Shell>
+        <Shell $length={imgList.length.toString()}>
           <ImgBlock>
             <ImgProduct src={imgProduct} />
           </ImgBlock>

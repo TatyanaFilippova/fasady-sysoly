@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ImgScheme = styled.img`
-  width: 80%;
+  width: 70%;
 
   ${media.tablet} {
     width: 100%;
@@ -54,7 +54,7 @@ export const Container = styled.div`
 export const ShellBlock = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  flex-direction: column;
 
   ${media.tablet} {
     flex-direction: column;
@@ -63,4 +63,12 @@ export const ShellBlock = styled.div`
   ${media.phone} {
     flex-direction: column;
   }
+`;
+
+export const ShellBlockImg = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid rgba(164, 164, 164, 0.53);
+  margin-bottom: 80px;
 `;
