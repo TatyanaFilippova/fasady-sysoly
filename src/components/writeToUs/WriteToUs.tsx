@@ -13,6 +13,7 @@ import {
   WrapperCard,
 } from "@/components/writeToUs/WriteToUs.styled";
 import { iconList } from "@/helpers/iconList";
+import Link from "next/link";
 
 const WriteToUs = () => {
   return (
@@ -25,13 +26,15 @@ const WriteToUs = () => {
         <WrapperIcon>
           {iconList.map((icon) => (
             <WrapperCard key={icon.img}>
-              <Shell>
-                <ShellIcon>
-                  <ImgIcon src={icon.img} />
-                </ShellIcon>
-                <ShellText>{icon.title}</ShellText>
-                <ShellSummary>{icon.summary}</ShellSummary>
-              </Shell>
+              <Link href={icon.link} target="_blank">
+                <Shell>
+                  <ShellIcon>
+                    <ImgIcon src={icon.img} />
+                  </ShellIcon>
+                  <ShellText>{icon.title}</ShellText>
+                  <ShellSummary>{icon.summary}</ShellSummary>
+                </Shell>
+              </Link>
             </WrapperCard>
           ))}
         </WrapperIcon>

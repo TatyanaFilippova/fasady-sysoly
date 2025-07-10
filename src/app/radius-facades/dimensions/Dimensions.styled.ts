@@ -71,4 +71,8 @@ export const ShellBlockImg = styled.div`
   align-items: flex-end;
   border-bottom: 2px solid rgba(164, 164, 164, 0.53);
   margin-bottom: 80px;
+
+  ${media.phone} {
+    flex-direction: column;
+  }
 `;

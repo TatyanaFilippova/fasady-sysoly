@@ -29,7 +29,6 @@ export const Wrapper = styled.div`
 
   ${media.phone} {
     margin-top: 100px;
-    margin-bottom: 100px;
   }
 `;
 

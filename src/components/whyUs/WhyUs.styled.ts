@@ -15,7 +15,8 @@ export const ShellText = styled.div`
 
   ${media.phone} {
     flex-direction: row;
-    gap: 25px 60px;
+    gap: 25px 10px;
+    justify-content: space-between;
   }
 `;
 
@@ -47,6 +48,10 @@ export const Title = styled.div`
   width: 30%;
 
   ${typography.h2};
+  ${media.phone} {
+    width: 100%;
+    margin-bottom: 60px;
+  }
 `;
 
 export const TitleDescription = styled.div`
@@ -68,7 +73,7 @@ export const Container = styled.div`
   width: 34%;
 
   ${media.phone} {
-    width: 40%;
+    width: 46%;
   }
 `;
 
@@ -87,4 +92,8 @@ export const Box = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-top: 100px;
+
+  ${media.phone} {
+    flex-direction: column;
+  }
 `;

@@ -115,16 +115,14 @@ export const ButtonHomeBanner = styled.button`
   border-radius: 10px;
   width: 30%;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
-  &:hover {
-    opacity: 0.8;
-  }
-
   display: inline-block;
   transition: all 0.2s;
   position: relative;
   top: 0;
 
+  &:hover {
+    opacity: 0.8;
+  }
   &:active {
     top: 3px;
     box-shadow: 0 2px 0 #387796;
