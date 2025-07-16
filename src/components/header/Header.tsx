@@ -23,7 +23,6 @@ import {
 } from "@/components/header/Header.styled";
 import { useState } from "react";
 import ModalMenu from "@/components/modalMenu/ModalMenu";
-import Link from "next/link";
 
 export const options = [
   { value: "1", label: "Фасады с фрезеровкой", href: "/facades-milling" },
