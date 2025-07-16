@@ -75,7 +75,7 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
           При заказе
         </DescriptionCursor>
       </WrapperMenu>
-      <Number>8 (8212) 569-884</Number>
+      <Number href="tel: 8 (8212) 569-884 ">8 (8212) 569-884</Number>
     </Wrapper>
   );
 };

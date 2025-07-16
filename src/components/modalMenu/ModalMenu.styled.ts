@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { layout } from "@/styles";
+import Link from "next/link";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -85,7 +86,7 @@ export const Ul = styled.ul`
   }
 `;
 
-export const Number = styled.div`
+export const Number = styled(Link)`
   text-align: center;
   font-size: 30px;
   color: black;
