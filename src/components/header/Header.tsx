@@ -11,7 +11,6 @@ import {
   Company,
   Menu,
   ShellMenu,
-  LabelMenu,
   ShellLabel,
   CompanyButton,
   MenuServices,
@@ -46,9 +45,9 @@ const Header = () => {
   return (
     <Border>
       <Wrapper>
-        <ShellTitle>
+        <ShellTitle href="/">
           <Icon src={icon.src} />
-          <Title href="/">Фасады Сысолы</Title>
+          <Title>Фасады Сысолы</Title>
         </ShellTitle>
         <Shell>
           <ShellMenu
@@ -64,8 +63,8 @@ const Header = () => {
               <Menu>
                 {options.map((item) => {
                   return (
-                    <ShellLabel key={item.value}>
-                      <LabelMenu href={item.href}>{item.label}</LabelMenu>
+                    <ShellLabel key={item.value} href={item.href}>
+                      {item.label}
                     </ShellLabel>
                   );
                 })}
@@ -85,8 +84,8 @@ const Header = () => {
               <MenuServices>
                 {optionsServices.map((item) => {
                   return (
-                    <ShellLabel key={item.value}>
-                      <LabelMenu href={item.href}>{item.label}</LabelMenu>
+                    <ShellLabel key={item.value} href={item.href}>
+                      {item.label}
                     </ShellLabel>
                   );
                 })}

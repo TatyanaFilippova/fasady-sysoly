@@ -19,7 +19,6 @@ const Contacts = () => {
           <Content>
             Телефон: <b>{contactsList.phone}</b>
           </Content>
-          <Content>Телеграм: {contactsList.telegram}</Content>
           <Content>Группа в ВК: {contactsList.vk}</Content>
           <Content>
             Работаем:{" "}

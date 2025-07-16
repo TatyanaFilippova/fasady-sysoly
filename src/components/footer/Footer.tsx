@@ -44,8 +44,9 @@ const Footer = () => {
           </Shell>
           <Shell>
             <TitleDescription>О компании</TitleDescription>
-            <Link href="/"></Link>
-            <Description>Гарантия и сроки</Description>
+            <Link href="/#section1">
+              <Description>При заказе</Description>
+            </Link>
             <Link href="/prices">
               <Description>Цены</Description>
             </Link>

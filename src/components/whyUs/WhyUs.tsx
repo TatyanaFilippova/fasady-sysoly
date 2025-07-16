@@ -17,7 +17,7 @@ const WhyUs = () => {
     <Wrapper>
       <ShellWrapper>
         <Box>
-          <Title id="section1">Почему мы</Title>
+          <Title>Почему мы</Title>
           <ShellText>
             {description.map((item) => (
               <Container key={item.title}>
@@ -28,7 +28,7 @@ const WhyUs = () => {
           </ShellText>
         </Box>
         <Box>
-          <Title>При заказе указать</Title>
+          <Title id="section1">При заказе указать</Title>
           <ShellText>
             {conditions.map((item) => (
               <Container key={item.title}>

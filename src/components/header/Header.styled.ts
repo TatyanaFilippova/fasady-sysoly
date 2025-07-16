@@ -66,7 +66,7 @@ export const Shell = styled.div`
   }
 `;
 
-export const Title = styled(Link)`
+export const Title = styled.div`
   font-size: 32px;
   font-weight: 400;
   cursor: pointer;
@@ -109,6 +109,8 @@ export const CompanyButton = styled.button`
 `;
 
 export const Menu = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 328px;
   background-color: white;
   overflow: hidden;
@@ -125,14 +127,11 @@ export const ShellMenu = styled.div`
   cursor: pointer;
 `;
 
-export const LabelMenu = styled(Link)`
+export const ShellLabel = styled(Link)`
+  padding: 10px 16px;
   color: #4f4f4f;
   line-height: 24px;
   width: 100%;
-`;
-
-export const ShellLabel = styled.div`
-  padding: 10px 16px;
 
   &:hover {
     background-color: rgba(214, 212, 212, 0.91);
@@ -140,6 +139,8 @@ export const ShellLabel = styled.div`
 `;
 
 export const MenuServices = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 200px;
   background-color: white;
   overflow: hidden;
@@ -187,7 +188,7 @@ export const MenuImg = styled.img`
   }
 `;
 
-export const ShellTitle = styled.div`
+export const ShellTitle = styled(Link)`
   display: flex;
   gap: 20px;
   align-items: center;

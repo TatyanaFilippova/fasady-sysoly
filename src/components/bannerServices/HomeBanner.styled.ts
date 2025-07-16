@@ -16,6 +16,8 @@ export const Wrapper = styled.div`
 
 export const ImgBanner = styled.img`
   margin-bottom: 64px;
+  height: 370px;
+  width: 100%;
 
   ${media.phone} {
     margin-top: 0;

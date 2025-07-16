@@ -21,6 +21,8 @@ export const Wrapper = styled.div`
 
 export const ImgBanner = styled.img`
   margin-bottom: 64px;
+  width: 100%;
+  height: 370px;
 
   ${media.tablet} {
     margin-top: 0;
