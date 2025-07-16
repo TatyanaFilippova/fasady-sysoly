@@ -23,6 +23,7 @@ import {
 } from "@/components/header/Header.styled";
 import { useState } from "react";
 import ModalMenu from "@/components/modalMenu/ModalMenu";
+import Link from "next/link";
 
 export const options = [
   { value: "1", label: "Фасады с фрезеровкой", href: "/facades-milling" },
@@ -95,7 +96,7 @@ const Header = () => {
           </ShellMenu>
           <Company href="/prices">Цены</Company>
           <Company href="/company">О компании</Company>
-          <Company href="/">Условия и гарантия</Company>
+          <Company href="/#section1">При заказе</Company>
         </Shell>
         <Container>
           <ShellMobile>

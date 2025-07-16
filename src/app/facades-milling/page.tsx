@@ -16,7 +16,8 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const data = await fetch(
-    CMS_URL + "/api/facades?populate=*&filters[type][$eq]=milling",
+    CMS_URL +
+      "/api/facades?populate=*&filters[type][$eq]=milling&sort[0]=sort&sort[1]=title",
     {
       next: {
         revalidate: 1,

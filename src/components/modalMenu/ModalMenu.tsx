@@ -66,7 +66,14 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
         >
           О компании
         </DescriptionCursor>
-        <DescriptionCursor>Гарантия и сроки</DescriptionCursor>
+        <DescriptionCursor
+          onClick={() => {
+            router.push("/#section1");
+            setMenu(!isMenu);
+          }}
+        >
+          При заказе
+        </DescriptionCursor>
       </WrapperMenu>
       <Number>8 (8212) 569-884</Number>
     </Wrapper>

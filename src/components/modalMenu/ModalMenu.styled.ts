@@ -74,9 +74,6 @@ export const DescriptionCursor = styled.div`
   &:hover {
     opacity: 0.8;
   }
-  &:last-child {
-    text-decoration: line-through;
-  }
 `;
 
 export const Ul = styled.ul`

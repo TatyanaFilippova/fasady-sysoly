@@ -100,9 +100,6 @@ export const Company = styled(Link)`
   &:hover {
     opacity: 0.7;
   }
-  &:last-child {
-    text-decoration: line-through;
-  }
 `;
 export const CompanyButton = styled.button`
   height: 40px;

@@ -17,7 +17,7 @@ const WhyUs = () => {
     <Wrapper>
       <ShellWrapper>
         <Box>
-          <Title>Почему мы</Title>
+          <Title id="section1">Почему мы</Title>
           <ShellText>
             {description.map((item) => (
               <Container key={item.title}>
