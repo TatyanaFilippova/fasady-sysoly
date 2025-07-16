@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { layout } from "@/styles";
 import { media } from "@/constants/media";
+import Link from "next/link";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -95,7 +96,7 @@ export const ShellBlock = styled.div`
   }
 `;
 
-export const Number = styled.div`
+export const Number = styled(Link)`
   color: white;
   font-size: 36px;
   font-weight: 300;

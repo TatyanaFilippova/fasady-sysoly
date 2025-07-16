@@ -56,7 +56,7 @@ const Footer = () => {
           </Shell>
           <Shell>
             <Description>г.Сыктывкар, ул.Гаражная 9/5</Description>
-            <Number>8 (8212) 569-884</Number>
+            <Number href="tel: 8 (8212) 569-884">8 (8212) 569-884</Number>
           </Shell>
         </ShellBlock>
       </Container>

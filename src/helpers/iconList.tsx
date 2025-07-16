@@ -20,12 +20,12 @@ export const iconList: iProps[] = [
     img: whatsapp.src,
     title: "WhatsApp",
     summary: "https://wa.me/89048686163",
-    link: "",
+    link: "https://api.whatsapp.com/send?phone=89048686163",
   },
   {
     img: phone.src,
     title: "Позвоните нам",
     summary: "8 (8212) 569-884",
-    link: "",
+    link: "tel: 8 (8212) 569-884",
   },
 ];
