@@ -23,7 +23,6 @@ const Connection = () => {
           <Content>
             • Телефон: <b>{contactsList.phone}</b>
           </Content>
-          <Content> • Телеграм: {contactsList.telegram}</Content>
           <Content> • Группа в ВК: {contactsList.vk}</Content>
         </Shell>
         <Content>Мы находимся по адресу: {contactsList.location}</Content>
