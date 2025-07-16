@@ -105,7 +105,7 @@ const Header = () => {
               }}
             />
           </ShellMobile>
-          <Number>8 (8212) 569-884</Number>
+          <Number href="tel: 8 (8212) 569-884 ">8 (8212) 569-884</Number>
         </Container>
         {isMenu && <ModalMenu isMenu={isMenu} setMenu={setMenu}></ModalMenu>}
       </Wrapper>

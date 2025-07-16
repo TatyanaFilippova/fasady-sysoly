@@ -80,7 +80,7 @@ export const Title = styled.div`
   }
 `;
 
-export const Number = styled.div`
+export const Number = styled(Link)`
   font-size: 24px;
   margin-left: 40px;
   color: black;
