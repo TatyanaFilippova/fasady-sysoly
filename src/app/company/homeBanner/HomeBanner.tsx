@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Img,
   Wrapper,
   Title,
   Description,
@@ -9,13 +8,11 @@ import {
   DescriptionBlock,
   WrapperBlock,
 } from "@/app/company/homeBanner/HomeBanner.styled";
-import homeBanner from "../../../img/homeBannerCompany.png";
 
 const HomeBanner = () => {
   return (
     <Wrapper>
       <WrapperBlock>
-        <Img src={homeBanner.src} />
         <Shell>
           <Description>Фабрика по производству мебельных фасадов</Description>
           <Title>Фасады Сысолы</Title>

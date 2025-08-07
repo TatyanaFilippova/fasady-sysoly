@@ -15,7 +15,7 @@ export const ImgScheme = styled.img`
   width: 70%;
 
   ${media.tablet} {
-    width: 100%;
+    width: 80%;
     margin-top: 80px;
   }
   ${media.phone} {

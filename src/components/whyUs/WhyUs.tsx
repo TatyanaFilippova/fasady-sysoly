@@ -23,6 +23,7 @@ const WhyUs = () => {
               <Container key={item.title}>
                 <TitleDescription>{item.title}</TitleDescription>
                 {item.text && <TextBlock>▪️ {item.text}</TextBlock>}
+                {item.text2 && <TextBlock>▪️ {item.text2}</TextBlock>}
               </Container>
             ))}
           </ShellText>

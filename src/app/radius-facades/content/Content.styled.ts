@@ -64,18 +64,6 @@ export const TitleShell = styled.div`
   }
 `;
 
-export const TitleBlock = styled.div`
-  width: 40%;
-
-  ${media.tablet} {
-    width: 80%;
-    text-align: left;
-  }
-  ${media.phone} {
-    width: 100%;
-  }
-`;
-
 export const ShellImg = styled.div`
   display: flex;
   gap: 20px;

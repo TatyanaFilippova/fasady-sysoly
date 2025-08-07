@@ -58,15 +58,6 @@ export const Description = styled.div`
   }
 `;
 
-export const Img = styled.img`
-  margin-right: 100px;
-
-  ${media.phone} {
-    margin-right: 0;
-    margin-bottom: 40px;
-  }
-`;
-
 export const Shell = styled.div`
   display: flex;
   flex-direction: column;
@@ -74,6 +65,7 @@ export const Shell = styled.div`
 
   ${media.phone} {
     flex-direction: column-reverse;
+    margin-top: 50px;
     ${layout}
   }
 `;

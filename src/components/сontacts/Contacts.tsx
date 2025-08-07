@@ -21,7 +21,7 @@ const Contacts = () => {
           </Content>
           <Content>Группа в ВК: {contactsList.vk}</Content>
           <Content>
-            Работаем:{" "}
+            Работаем:
             <ul>
               {contactsList.work.map((item) => (
                 <li key={item}> • {item}</li>
