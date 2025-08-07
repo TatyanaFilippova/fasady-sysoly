@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const data = await fetch(
-    CMS_URL + "/api/paintings?populate=*&sort[0]=sort&sort[1]=title",
+    CMS_URL + "/api/services?populate=*&sort[0]=sort&sort[1]=title",
     {
       next: {
         revalidate: 1,
@@ -30,7 +30,7 @@ export default async function Home() {
     <>
       <Header />
       <HomeBanner
-        title="Покраска фасадов и прочих изделий"
+        title="Покраска фасадов и прочие услуги"
         summary="Профессиональная покраска любых поверхностей – идеальное покрытие для ваших изделий!"
         imgBanner={banner.src}
       />

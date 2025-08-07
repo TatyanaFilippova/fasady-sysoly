@@ -36,10 +36,7 @@ const Footer = () => {
           <Shell>
             <TitleDescription>Услуги</TitleDescription>
             <Link href="/painting">
-              <Description>Покраска фасадов</Description>
-            </Link>
-            <Link href="/other-services">
-              <Description>Все товары и услуги</Description>
+              <Description>Покраска и прочие услуги</Description>
             </Link>
           </Shell>
           <Shell>

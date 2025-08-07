@@ -40,18 +40,14 @@ const ModalMenu = ({ setMenu, isMenu }: ModalMenuProps) => {
             {item.label}
           </Ul>
         ))}
-        <Description>Товары и услуги</Description>
-        {optionsServices.map((item) => (
-          <Ul
-            key={item.value}
-            onClick={() => {
-              router.push(item.href);
-              setMenu(!isMenu);
-            }}
-          >
-            {item.label}
-          </Ul>
-        ))}
+        <DescriptionCursor
+          onClick={() => {
+            router.push("/painting");
+          }}
+        >
+          Покраска и прочие услуги
+        </DescriptionCursor>
+
         <DescriptionCursor
           onClick={() => {
             router.push("/prices");

@@ -33,11 +33,6 @@ export const options = [
   { value: "3", label: "Радиусные фасады", href: "/radius-facades" },
 ];
 
-export const optionsServices = [
-  { value: "1", label: "Покраска", href: "/painting" },
-  { value: "2", label: "Все товары и услуги", href: "/other-services" },
-];
-
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isMenuOpenServices, setMenuOpenServices] = useState(false);
@@ -71,27 +66,7 @@ const Header = () => {
               </Menu>
             )}
           </ShellMenu>
-          <ShellMenu
-            onMouseOver={() => {
-              setMenuOpenServices(true);
-            }}
-            onMouseLeave={() => {
-              setMenuOpenServices(false);
-            }}
-          >
-            <CompanyButton>Товары и услуги</CompanyButton>
-            {isMenuOpenServices && (
-              <MenuServices>
-                {optionsServices.map((item) => {
-                  return (
-                    <ShellLabel key={item.value} href={item.href}>
-                      {item.label}
-                    </ShellLabel>
-                  );
-                })}
-              </MenuServices>
-            )}
-          </ShellMenu>
+          <Company href="/painting">Покраска и прочие услуги</Company>
           <Company href="/prices">Цены</Company>
           <Company href="/company">О компании</Company>
           <Company href="/#section1">При заказе</Company>

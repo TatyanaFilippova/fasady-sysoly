@@ -21,7 +21,7 @@ const OtherServices = ({ data }: ContentListProps) => {
       </Container>
       <div>
         <ShellDescription>
-          <Link href="/other-services">
+          <Link href="/painting">
             <ButtonFacade>Посмотреть все услуги</ButtonFacade>
           </Link>
         </ShellDescription>

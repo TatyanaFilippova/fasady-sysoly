@@ -11,6 +11,8 @@ export const ShellText = styled.div`
 
   ${media.tablet} {
     flex-direction: row;
+    gap: 50px 50px;
+    justify-content: space-between;
   }
 
   ${media.phone} {
@@ -31,7 +33,6 @@ export const Wrapper = styled.div`
   ${media.tablet} {
     flex-direction: column;
     gap: 36px;
-    margin-bottom: 246px;
   }
 
   ${media.phone} {
@@ -72,6 +73,9 @@ export const TitleDescription = styled.div`
 export const Container = styled.div`
   width: 34%;
 
+  ${media.tablet} {
+    width: 42%;
+  }
   ${media.phone} {
     width: 46%;
   }
