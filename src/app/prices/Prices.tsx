@@ -30,16 +30,22 @@ const Prices = () => {
             <Fragment key={price.title}>
               <TableTr>
                 <TableTd></TableTd>
-                <TableTdTitle>{price.title}</TableTdTitle>
+                <TableTdTitle
+                  dangerouslySetInnerHTML={{ __html: price.title }}
+                />
                 <TableTd></TableTd>
               </TableTr>
               {price.categories.map((price, key) => (
                 <Fragment key={key}>
-                  <TableTr>
-                    <TableTd></TableTd>
-                    <TableTdTitle>{price.title}</TableTdTitle>
-                    <TableTd></TableTd>
-                  </TableTr>
+                  {price.title && (
+                    <TableTr>
+                      <TableTd></TableTd>
+                      <TableTdTitle
+                        dangerouslySetInnerHTML={{ __html: price.title }}
+                      />
+                      <TableTd></TableTd>
+                    </TableTr>
+                  )}
 
                   <Products products={price.products} />
                 </Fragment>
