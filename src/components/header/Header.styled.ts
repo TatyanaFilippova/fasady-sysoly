@@ -138,20 +138,6 @@ export const ShellLabel = styled(Link)`
   }
 `;
 
-export const MenuServices = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  background-color: white;
-  overflow: hidden;
-  border: none;
-  z-index: 100;
-  cursor: pointer;
-  position: absolute;
-  top: 30px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
-`;
-
 export const MenuImg = styled.img`
   display: none;
 

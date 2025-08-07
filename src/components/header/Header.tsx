@@ -13,7 +13,6 @@ import {
   ShellMenu,
   ShellLabel,
   CompanyButton,
-  MenuServices,
   MenuImg,
   Container,
   ShellTitle,
@@ -35,7 +34,6 @@ export const options = [
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isMenuOpenServices, setMenuOpenServices] = useState(false);
   const [isMenu, setMenu] = useState(false);
   return (
     <Border>

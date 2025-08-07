@@ -11,7 +11,7 @@ import {
 } from "@/app/../components/modalMenu/ModalMenu.styled";
 import close from "./img/close.png";
 import { useRouter } from "next/navigation";
-import { options, optionsServices } from "@/components/header/Header";
+import { options } from "@/components/header/Header";
 
 interface ModalMenuProps {
   setMenu: (isMenu: boolean) => void;
