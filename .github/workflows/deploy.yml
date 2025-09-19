@@ -1,0 +1,102 @@
+name: Deploy Create React App
+
+on:
+  push:
+    branches:
+      - main # Укажите ветку, на которую будет происходить пуш
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20" # Укажите нужную версию Node.js
+
+      - name: Create Env file
+        run: |
+          echo "HOST=0.0.0.0" >> env
+          echo "PORT=1337" >> env
+          echo "APP_KEYS="toBeModified1,toBeModified2"" >> env
+          echo "API_TOKEN_SALT=tobemodified" >> env
+          echo "ADMIN_JWT_SECRET=tobemodified" >> env
+          echo "TRANSFER_TOKEN_SALT=tobemodified" >> env
+          echo "JWT_SECRET=tobemodified" >> env
+          echo "ENCRYPTION_KEY=tobemodified" >> env
+
+          echo "DATABASE_CLIENT=mysql" >> env
+          echo "DATABASE_HOST=${{ secrets.DATABASE_HOST }}" >> env
+          echo "DATABASE_NAME=${{ secrets.DATABASE_NAME }}" >> env
+          echo "DATABASE_USERNAME=${{ secrets.DATABASE_USERNAME }}" >> env
+          echo "DATABASE_PASSWORD=${{ secrets.DATABASE_PASSWORD }}" >> env
+
+          echo "YC_ACCESS_KEY_ID=${{ secrets.YC_ACCESS_KEY_ID }}" >> env
+          echo "YC_SECRET_ACCESS_KEY=${{ secrets.YC_SECRET_ACCESS_KEY }}" >> env
+          echo "YC_BUCKET_NAME=${{ secrets.YC_BUCKET_NAME }}" >> env
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the project
+        run: npm run build # Сборка приложения
+
+      - name: Archive build artifacts
+        run: |
+          mkdir -p artifacts
+          cp package.json artifacts/
+          cp env artifacts/
+          cp -r dist/ artifacts/
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: artifacts/
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build # Зависимость от job'а сборки
+
+    env:
+      # для SSH доступа
+      SERVER_USER: ${{ secrets.SERVER_USER }} # Имя пользователя для SSH
+      SERVER_IP: ${{ secrets.SERVER_IP }} # IP-адрес сервера
+      SERVER_PATH: ${{ secrets.SERVER_PATH }} # Путь на сервере, куда будут копироваться файлы
+      SERVER_PASSWORD: ${{ secrets.PASSWORD }} # Пароль для SSH
+
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+          path: artifacts/
+
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass # Установка sshpass для использования пароля
+
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H $SERVER_IP >> ~/.ssh/known_hosts
+
+      - name: Copy files to server via SSH
+
+        run: |
+          mv artifacts/env artifacts/.env
+          sshpass -p "$SERVER_PASSWORD" rsync -avz --include=".env" ./artifacts/ $SERVER_USER@$SERVER_IP:$SERVER_PATH
+
+      - name: Touch restart file
+        env:
+          SSHPASS: ${{ secrets.PASSWORD }}
+        run: |
+          sshpass -e ssh -o StrictHostKeyChecking=no \
+              $SERVER_USER@$SERVER_IP \
+              "touch $SERVER_PATH/tmp/restart.txt"
+
+      - name: Clean up after deployment
+        run: echo "Deployment completed successfully!" # Сообщение о завершении развертывания
