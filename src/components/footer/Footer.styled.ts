@@ -6,7 +6,7 @@ import Link from "next/link";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #4f4f4f;
+  background-color: #505050;
   align-items: start;
 `;
 
