@@ -1,11 +1,11 @@
 export const Map = () => {
   return (
     <iframe
-      id="map_548744113"
+      id="map_194070990"
       frameBorder="0"
       width="100%"
-      height="500px"
-      src="https://makemap.2gis.ru/widget?data=eJw1jk1Lw0AQhv_LeDSUTWq2MdCDVgzFEBoRikoPITu2C5tM2EyLNeS_O2l15vZ-zDwDkDfo0WRIDbK32EP6OQCfO4QUnrHio0cIoPPUoeeLP0BNjrz4N1-RkhWfLbupoV7eyr7IHlX-VHKR5etidVDvp9e9Wd2q_FT2D8ulxA32tbcdW2qlJMLPujX4DWmo_mcMYH-FOk8v_4g2ZFuWfE0CbtuKL8CxmiWRgNwFOpzpeKGjndStgTRWetwF0FTdhnp7_TeAqxjSKaqTRRwG4CZ5OjLX8_tEaIgaYQnliHCSc9sDovu4qOyPOP4CSQpgnw"
+      height="600px"
+      src="https://makemap.2gis.ru/widget?data=eJw1jt1qg0AQhd9lelkJq-v6B7lpSiVUJAmF0pZciDtNFlZX1k3aVHz3jtrO3M05Z843gLESLcocTYPOKuwh-xjA3TqEDJ6wcheL4EFnTYfWzfoAtdHGkn73GTBa0p1yekqw55d9X-YPrHjcuzIvtuXmzN6uh5Pc3LPielBf6zXZJfa1VZ1TpqUQHX62rcRvyHz2P6MHpwXqNlX-Ee2Mah35a0Pgqq3cDCzYKgl8HnIv8leRiOOEHymvJGSCh-PRg6bqdqZXS-EAunKQLd6UszBNuR-mvvBAT_r8LggDP4jiOBYiJj5jGqJL6CuRG61fz4j6fb46e8HxF_q7ZIc"
       sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
     ></iframe>
   );
